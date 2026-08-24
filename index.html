@@ -25,10 +25,6 @@
 
   <style>
 
-    /* =========================================================
-       ROOT
-    ========================================================= */
-
     :root {
       --bg: #050507;
       --bg-soft: #09090e;
@@ -60,11 +56,6 @@
         rgba(0,0,0,.48);
     }
 
-
-    /* =========================================================
-       RESET
-    ========================================================= */
-
     * {
       box-sizing: border-box;
       margin: 0;
@@ -94,19 +85,16 @@
           rgba(111,76,255,.15),
           transparent 29%
         ),
-
         radial-gradient(
           circle at 90% 16%,
           rgba(211,166,78,.08),
           transparent 27%
         ),
-
         radial-gradient(
           circle at 77% 72%,
           rgba(157,117,255,.065),
           transparent 28%
         ),
-
         linear-gradient(
           180deg,
           #050507 0%,
@@ -117,14 +105,10 @@
 
     body::before {
       content: "";
-
       position: fixed;
       inset: 0;
-
       z-index: -4;
-
       pointer-events: none;
-
       opacity: .15;
 
       background-image:
@@ -132,25 +116,20 @@
           rgba(255,255,255,.023) 1px,
           transparent 1px
         ),
-
         linear-gradient(
           90deg,
           rgba(255,255,255,.023) 1px,
           transparent 1px
         );
 
-      background-size:
-        62px 62px;
+      background-size: 62px 62px;
     }
 
     body::after {
       content: "";
-
       position: fixed;
       inset: 0;
-
       z-index: -3;
-
       pointer-events: none;
 
       background:
@@ -178,15 +157,9 @@
 
     ::selection {
       color: #fff;
-
       background:
         rgba(111,76,255,.55);
     }
-
-
-    /* =========================================================
-       GLOBAL
-    ========================================================= */
 
     .container {
       width:
@@ -195,16 +168,13 @@
           calc(100% - 36px)
         );
 
-      margin:
-        0 auto;
+      margin: 0 auto;
     }
 
     .scroll-progress {
       position: fixed;
-
       top: 0;
       left: 0;
-
       z-index: 5000;
 
       width: 0;
@@ -227,16 +197,13 @@
 
     .section {
       position: relative;
-
-      padding:
-        105px 0;
+      padding: 105px 0;
     }
 
     .section::before {
       content: "";
 
       position: absolute;
-
       top: 0;
       left: 50%;
 
@@ -263,9 +230,7 @@
 
     .section-head {
       max-width: 800px;
-
-      margin-bottom:
-        46px;
+      margin-bottom: 46px;
     }
 
     .section-kicker {
@@ -277,8 +242,7 @@
 
       letter-spacing: 1.9px;
 
-      text-transform:
-        uppercase;
+      text-transform: uppercase;
     }
 
     .section-title {
@@ -292,14 +256,11 @@
         );
 
       line-height: .98;
-
-      letter-spacing:
-        -2.2px;
+      letter-spacing: -2.2px;
     }
 
     .section-copy {
       max-width: 700px;
-
       margin-top: 17px;
 
       color:
@@ -308,14 +269,8 @@
       font-size: 16px;
     }
 
-
-    /* =========================================================
-       AMBIENT BACKGROUND
-    ========================================================= */
-
     .ambient {
       position: fixed;
-
       inset: 0;
 
       z-index: -2;
@@ -330,8 +285,7 @@
 
       border-radius: 50%;
 
-      filter:
-        blur(110px);
+      filter: blur(110px);
 
       opacity: .17;
 
@@ -363,8 +317,7 @@
       background:
         var(--purple-deep);
 
-      animation-delay:
-        -5s;
+      animation-delay: -5s;
     }
 
     .orb-three {
@@ -379,8 +332,7 @@
 
       opacity: .09;
 
-      animation-delay:
-        -9s;
+      animation-delay: -9s;
     }
 
     @keyframes orbFloat {
@@ -406,31 +358,23 @@
       }
     }
 
-
-    /* =========================================================
-       BUTTONS
-    ========================================================= */
-
     .button {
       min-height: 52px;
 
-      display:
-        inline-flex;
+      display: inline-flex;
 
       align-items: center;
       justify-content: center;
 
       gap: 9px;
 
-      padding:
-        0 22px;
+      padding: 0 22px;
 
       border:
         1px solid
         transparent;
 
-      border-radius:
-        13px;
+      border-radius: 13px;
 
       font-weight: 900;
 
@@ -488,11 +432,6 @@
       border-color:
         rgba(157,117,255,.32);
     }
-
-
-    /* =========================================================
-       HEADER
-    ========================================================= */
 
     header {
       position: fixed;
@@ -557,7 +496,6 @@
       box-shadow:
         0 0 24px
         rgba(111,76,255,.22),
-
         0 0 14px
         rgba(211,166,78,.1);
     }
@@ -577,9 +515,7 @@
 
     .brand-copy {
       display: flex;
-
       flex-direction: column;
-
       line-height: 1;
     }
 
@@ -587,11 +523,9 @@
       color: #fff;
 
       font-size: 14px;
-
       font-weight: 900;
 
-      letter-spacing:
-        1.5px;
+      letter-spacing: 1.5px;
     }
 
     .brand-sub {
@@ -601,18 +535,14 @@
         var(--gold);
 
       font-size: 8px;
-
       font-weight: 900;
 
-      letter-spacing:
-        3.1px;
+      letter-spacing: 3.1px;
     }
 
     .desktop-nav {
       display: flex;
-
       align-items: center;
-
       gap: 22px;
     }
 
@@ -620,7 +550,6 @@
       color: #b7b6bf;
 
       font-size: 12px;
-
       font-weight: 800;
 
       transition:
@@ -634,16 +563,12 @@
     .desktop-nav .nav-cta {
       min-height: 42px;
 
-      display:
-        inline-flex;
-
+      display: inline-flex;
       align-items: center;
 
-      padding:
-        0 16px;
+      padding: 0 16px;
 
-      border-radius:
-        10px;
+      border-radius: 10px;
 
       color: #fff;
 
@@ -658,11 +583,6 @@
           rgba(157,117,255,.12)
         );
     }
-
-
-    /* =========================================================
-       MOBILE NAVIGATION
-    ========================================================= */
 
     .menu-button {
       display: none;
@@ -688,17 +608,14 @@
 
     .menu-lines {
       width: 18px;
-
       display: grid;
-
       gap: 4px;
     }
 
     .menu-lines span {
       height: 2px;
 
-      border-radius:
-        10px;
+      border-radius: 10px;
 
       background:
         #e1e1e5;
@@ -729,9 +646,7 @@
 
     .mobile-menu {
       display: none;
-
-      padding-bottom:
-        18px;
+      padding-bottom: 18px;
     }
 
     .mobile-menu.open {
@@ -739,8 +654,7 @@
     }
 
     .mobile-menu a {
-      padding:
-        13px 2px;
+      padding: 13px 2px;
 
       color:
         #c8c7cf;
@@ -750,14 +664,8 @@
         rgba(255,255,255,.055);
 
       font-size: 14px;
-
       font-weight: 800;
     }
-
-
-    /* =========================================================
-       HERO
-    ========================================================= */
 
     .hero {
       position: relative;
@@ -765,7 +673,6 @@
       min-height: 920px;
 
       display: flex;
-
       align-items: center;
 
       padding:
@@ -823,21 +730,18 @@
     }
 
     .eyebrow {
-      display:
-        inline-flex;
+      display: inline-flex;
 
       align-items: center;
 
       gap: 9px;
 
-      margin-bottom:
-        24px;
+      margin-bottom: 24px;
 
       padding:
         8px 12px;
 
-      border-radius:
-        999px;
+      border-radius: 999px;
 
       color:
         #d5ceff;
@@ -850,14 +754,11 @@
         rgba(157,117,255,.24);
 
       font-size: 10px;
-
       font-weight: 900;
 
-      letter-spacing:
-        1.55px;
+      letter-spacing: 1.55px;
 
-      text-transform:
-        uppercase;
+      text-transform: uppercase;
     }
 
     .eyebrow::before {
@@ -888,8 +789,7 @@
 
       line-height: .89;
 
-      letter-spacing:
-        -5px;
+      letter-spacing: -5px;
 
       text-shadow:
         0 24px 60px
@@ -914,15 +814,13 @@
       background-clip:
         text;
 
-      color:
-        transparent;
+      color: transparent;
     }
 
     .hero-copy {
       max-width: 640px;
 
-      margin-top:
-        28px;
+      margin-top: 28px;
 
       color: #a3a2ab;
 
@@ -933,8 +831,7 @@
           19px
         );
 
-      line-height:
-        1.75;
+      line-height: 1.75;
     }
 
     .hero-actions {
@@ -944,8 +841,7 @@
 
       gap: 12px;
 
-      margin-top:
-        32px;
+      margin-top: 32px;
     }
 
     .hero-proof {
@@ -955,13 +851,11 @@
 
       gap: 17px;
 
-      margin-top:
-        30px;
+      margin-top: 30px;
 
       color: #888791;
 
       font-size: 11px;
-
       font-weight: 800;
     }
 
@@ -978,7 +872,6 @@
       height: 19px;
 
       display: grid;
-
       place-items: center;
 
       border-radius: 50%;
@@ -996,18 +889,12 @@
       font-size: 9px;
     }
 
-
-    /* =========================================================
-       HERO LOGO
-    ========================================================= */
-
     .hero-visual {
       position: relative;
 
       min-height: 620px;
 
       display: grid;
-
       place-items: center;
     }
 
@@ -1024,13 +911,9 @@
           circle at
           var(--mouse-x, 50%)
           var(--mouse-y, 50%),
-
           rgba(157,117,255,.33),
-
           rgba(111,76,255,.12) 34%,
-
           rgba(211,166,78,.05) 48%,
-
           transparent 70%
         );
 
@@ -1053,7 +936,6 @@
         1 / 1;
 
       display: grid;
-
       place-items: center;
 
       overflow: hidden;
@@ -1074,10 +956,8 @@
       box-shadow:
         0 65px 140px
         rgba(0,0,0,.53),
-
         0 0 78px
         rgba(111,76,255,.12),
-
         inset 0 1px 0
         rgba(255,255,255,.04);
     }
@@ -1086,7 +966,6 @@
       content: "";
 
       position: absolute;
-
       inset: 0;
 
       background:
@@ -1095,7 +974,6 @@
           rgba(157,117,255,.15),
           transparent 34%
         ),
-
         linear-gradient(
           125deg,
           transparent 42%,
@@ -1108,7 +986,6 @@
       content: "";
 
       position: absolute;
-
       inset: 18px;
 
       border-radius: 25px;
@@ -1122,7 +999,6 @@
 
     .main-logo {
       position: relative;
-
       z-index: 2;
 
       width: 91%;
@@ -1135,7 +1011,6 @@
           0 0 30px
           rgba(111,76,255,.19)
         )
-
         drop-shadow(
           0 0 12px
           rgba(211,166,78,.12)
@@ -1144,7 +1019,6 @@
 
     .floating-card {
       position: absolute;
-
       z-index: 4;
 
       padding:
@@ -1173,7 +1047,6 @@
         rgba(0,0,0,.4);
 
       font-size: 11px;
-
       font-weight: 900;
 
       animation:
@@ -1191,13 +1064,11 @@
       color: #777681;
 
       font-size: 8px;
-
       font-weight: 800;
 
       letter-spacing: 1px;
 
-      text-transform:
-        uppercase;
+      text-transform: uppercase;
     }
 
     .floating-one {
@@ -1209,8 +1080,7 @@
       right: -12px;
       top: 82px;
 
-      animation-delay:
-        -3s;
+      animation-delay: -3s;
     }
 
     @keyframes cardFloat {
@@ -1225,11 +1095,6 @@
           translateY(-6px);
       }
     }
-
-
-    /* =========================================================
-       VALUE STRIP
-    ========================================================= */
 
     .value-strip {
       padding:
@@ -1271,7 +1136,6 @@
 
     .value-item strong {
       display: block;
-
       font-size: 14px;
     }
 
@@ -1284,11 +1148,6 @@
 
       font-size: 10px;
     }
-
-
-    /* =========================================================
-       SERVICES
-    ========================================================= */
 
     .services-grid {
       display: grid;
@@ -1382,11 +1241,9 @@
         var(--purple-bright);
 
       font-size: 9px;
-
       font-weight: 900;
 
-      letter-spacing:
-        1.6px;
+      letter-spacing: 1.6px;
     }
 
     .service-card h3 {
@@ -1418,14 +1275,8 @@
         #c9bdff;
 
       font-size: 11px;
-
       font-weight: 900;
     }
-
-
-    /* =========================================================
-       PORTFOLIO
-    ========================================================= */
 
     .work-grid {
       display: grid;
@@ -1486,7 +1337,6 @@
       content: "";
 
       position: absolute;
-
       inset: 0;
 
       pointer-events: none;
@@ -1506,13 +1356,11 @@
           rgba(91,202,46,.24),
           transparent 34%
         ),
-
         radial-gradient(
           circle at 12% 82%,
           rgba(45,102,26,.18),
           transparent 35%
         ),
-
         linear-gradient(
           145deg,
           #050805,
@@ -1527,13 +1375,11 @@
           rgba(54,155,255,.27),
           transparent 34%
         ),
-
         radial-gradient(
           circle at 10% 88%,
           rgba(30,79,130,.15),
           transparent 34%
         ),
-
         linear-gradient(
           145deg,
           #05080c,
@@ -1551,9 +1397,7 @@
       height: 34px;
 
       display: flex;
-
       align-items: center;
-
       gap: 6px;
 
       padding:
@@ -1581,26 +1425,21 @@
 
     .work-preview small {
       position: relative;
-
       z-index: 2;
 
       color:
         #aaa9b1;
 
       font-size: 9px;
-
       font-weight: 900;
 
-      letter-spacing:
-        1.4px;
+      letter-spacing: 1.4px;
 
-      text-transform:
-        uppercase;
+      text-transform: uppercase;
     }
 
     .work-preview h3 {
       position: relative;
-
       z-index: 2;
 
       max-width: 430px;
@@ -1622,7 +1461,6 @@
 
     .work-preview p {
       position: relative;
-
       z-index: 2;
 
       max-width: 410px;
@@ -1664,7 +1502,6 @@
       display: flex;
 
       align-items: center;
-
       justify-content: center;
 
       border-radius: 10px;
@@ -1679,14 +1516,8 @@
         );
 
       font-size: 11px;
-
       font-weight: 900;
     }
-
-
-    /* =========================================================
-       PROCESS
-    ========================================================= */
 
     .process-grid {
       display: grid;
@@ -1729,7 +1560,6 @@
       height: 40px;
 
       display: grid;
-
       place-items: center;
 
       border-radius: 50%;
@@ -1749,13 +1579,11 @@
         rgba(211,166,78,.1);
 
       font-size: 11px;
-
       font-weight: 900;
     }
 
     .process-card h3 {
       margin-top: 26px;
-
       font-size: 18px;
     }
 
@@ -1767,11 +1595,6 @@
 
       font-size: 12px;
     }
-
-
-    /* =========================================================
-       PRICING
-    ========================================================= */
 
     .pricing-wrap {
       position: relative;
@@ -1819,7 +1642,6 @@
 
     .price-grid {
       position: relative;
-
       z-index: 2;
 
       display: grid;
@@ -1856,7 +1678,6 @@
       box-shadow:
         inset 0 0 0 1px
         rgba(211,166,78,.05),
-
         0 18px 50px
         rgba(0,0,0,.15);
     }
@@ -1870,8 +1691,7 @@
       padding:
         5px 8px;
 
-      border-radius:
-        999px;
+      border-radius: 999px;
 
       color:
         #d9c493;
@@ -1884,13 +1704,11 @@
         rgba(211,166,78,.18);
 
       font-size: 8px;
-
       font-weight: 900;
 
       letter-spacing: 1px;
 
-      text-transform:
-        uppercase;
+      text-transform: uppercase;
     }
 
     .price-label {
@@ -1898,14 +1716,11 @@
         var(--gold);
 
       font-size: 9px;
-
       font-weight: 900;
 
-      letter-spacing:
-        1.5px;
+      letter-spacing: 1.5px;
 
-      text-transform:
-        uppercase;
+      text-transform: uppercase;
     }
 
     .price-card h3 {
@@ -1918,7 +1733,6 @@
       margin-top: 13px;
 
       font-size: 38px;
-
       font-weight: 900;
 
       line-height: 1;
@@ -1929,7 +1743,6 @@
         #7a7983;
 
       font-size: 9px;
-
       font-weight: 700;
     }
 
@@ -1978,7 +1791,6 @@
       display: flex;
 
       align-items: center;
-
       justify-content: center;
 
       border-radius: 10px;
@@ -1993,7 +1805,6 @@
         rgba(255,255,255,.09);
 
       font-size: 11px;
-
       font-weight: 900;
 
       transition:
@@ -2022,11 +1833,6 @@
         rgba(157,117,255,.3);
     }
 
-
-    /* =========================================================
-       CTA
-    ========================================================= */
-
     .cta-section {
       padding:
         90px 0 115px;
@@ -2050,7 +1856,6 @@
           rgba(157,117,255,.2),
           transparent 42%
         ),
-
         linear-gradient(
           145deg,
           rgba(255,255,255,.05),
@@ -2116,7 +1921,6 @@
 
     .cta-content {
       position: relative;
-
       z-index: 2;
     }
 
@@ -2135,8 +1939,7 @@
 
       line-height: .95;
 
-      letter-spacing:
-        -3px;
+      letter-spacing: -3px;
     }
 
     .cta-box p {
@@ -2163,11 +1966,6 @@
       margin-top: 28px;
     }
 
-
-    /* =========================================================
-       FOOTER
-    ========================================================= */
-
     footer {
       padding:
         42px 0 34px;
@@ -2185,8 +1983,7 @@
 
       gap: 40px;
 
-      padding-bottom:
-        38px;
+      padding-bottom: 38px;
     }
 
     .footer-brand p {
@@ -2220,14 +2017,11 @@
         #c9c8d0;
 
       font-size: 9px;
-
       font-weight: 900;
 
-      letter-spacing:
-        1.4px;
+      letter-spacing: 1.4px;
 
-      text-transform:
-        uppercase;
+      text-transform: uppercase;
     }
 
     .footer-column a:hover {
@@ -2236,8 +2030,7 @@
     }
 
     .footer-bottom {
-      padding-top:
-        23px;
+      padding-top: 23px;
 
       display: flex;
 
@@ -2254,11 +2047,6 @@
 
       font-size: 10px;
     }
-
-
-    /* =========================================================
-       REVEAL
-    ========================================================= */
 
     .reveal {
       opacity: 0;
@@ -2278,16 +2066,10 @@
         translateY(0);
     }
 
-
-    /* =========================================================
-       TABLET
-    ========================================================= */
-
     @media (max-width: 1020px) {
 
       .hero-grid {
         grid-template-columns: 1fr;
-
         gap: 52px;
       }
 
@@ -2328,13 +2110,7 @@
         grid-template-columns:
           1fr 1fr;
       }
-
     }
-
-
-    /* =========================================================
-       SMALL TABLET
-    ========================================================= */
 
     @media (max-width: 820px) {
 
@@ -2370,13 +2146,7 @@
         grid-template-columns:
           1fr;
       }
-
     }
-
-
-    /* =========================================================
-       MOBILE
-    ========================================================= */
 
     @media (max-width: 620px) {
 
@@ -2423,8 +2193,7 @@
 
         line-height: .9;
 
-        letter-spacing:
-          -3.4px;
+        letter-spacing: -3.4px;
       }
 
       .hero-copy {
@@ -2454,15 +2223,13 @@
             100%
           );
 
-        border-radius:
-          26px;
+        border-radius: 26px;
       }
 
       .logo-stage::after {
         inset: 14px;
 
-        border-radius:
-          20px;
+        border-radius: 20px;
       }
 
       .main-logo {
@@ -2503,13 +2270,11 @@
 
       .services-grid,
       .process-grid {
-        grid-template-columns:
-          1fr;
+        grid-template-columns: 1fr;
       }
 
       .work-preview {
         min-height: 340px;
-
         padding: 22px;
       }
 
@@ -2532,22 +2297,14 @@
       }
 
       .footer-grid {
-        grid-template-columns:
-          1fr;
-
+        grid-template-columns: 1fr;
         gap: 26px;
       }
 
       .footer-bottom {
         flex-direction: column;
       }
-
     }
-
-
-    /* =========================================================
-       REDUCED MOTION
-    ========================================================= */
 
     @media (prefers-reduced-motion: reduce) {
 
@@ -2569,32 +2326,20 @@
 
       .reveal {
         opacity: 1;
-
         transform: none;
       }
-
     }
 
   </style>
 
 </head>
 
-
 <body>
-
-  <!-- =======================================================
-       SCROLL PROGRESS
-  ======================================================== -->
 
   <div
     class="scroll-progress"
     id="scrollProgress"
   ></div>
-
-
-  <!-- =======================================================
-       BACKGROUND
-  ======================================================== -->
 
   <div
     class="ambient"
@@ -2602,17 +2347,10 @@
   >
 
     <div class="orb orb-one"></div>
-
     <div class="orb orb-two"></div>
-
     <div class="orb orb-three"></div>
 
   </div>
-
-
-  <!-- =======================================================
-       HEADER
-  ======================================================== -->
 
   <header>
 
@@ -2629,7 +2367,7 @@
           <div class="brand-mark">
 
             <img
-              src="sursum-logo.jpg"
+              src="397D40D2-EA52-4B47-99D8-90CD02AD19E1.png"
               alt="Sursum Digital logo"
             >
 
@@ -2648,7 +2386,6 @@
           </div>
 
         </a>
-
 
         <nav
           class="desktop-nav"
@@ -2684,7 +2421,6 @@
 
         </nav>
 
-
         <button
           class="menu-button"
           id="menuButton"
@@ -2696,9 +2432,7 @@
           <span class="menu-lines">
 
             <span></span>
-
             <span></span>
-
             <span></span>
 
           </span>
@@ -2706,7 +2440,6 @@
         </button>
 
       </div>
-
 
       <nav
         class="mobile-menu"
@@ -2744,29 +2477,17 @@
 
   </header>
 
-
-  <!-- =======================================================
-       MAIN
-  ======================================================== -->
-
   <main id="top">
-
-
-    <!-- =====================================================
-         HERO
-    ====================================================== -->
 
     <section class="hero">
 
       <div class="container hero-grid">
-
 
         <div class="hero-copy-side">
 
           <div class="eyebrow">
             Custom Digital Experiences
           </div>
-
 
           <h1>
 
@@ -2778,7 +2499,6 @@
 
           </h1>
 
-
           <p class="hero-copy">
 
             Sursum Digital builds custom,
@@ -2788,7 +2508,6 @@
             and turn more visitors into real customers.
 
           </p>
-
 
           <div class="hero-actions">
 
@@ -2808,7 +2527,6 @@
 
           </div>
 
-
           <div class="hero-proof">
 
             <div class="proof-item">
@@ -2821,7 +2539,6 @@
 
             </div>
 
-
             <div class="proof-item">
 
               <span class="proof-check">
@@ -2831,7 +2548,6 @@
               Mobile First
 
             </div>
-
 
             <div class="proof-item">
 
@@ -2847,7 +2563,6 @@
 
         </div>
 
-
         <div
           class="hero-visual"
           id="heroVisual"
@@ -2858,15 +2573,13 @@
             id="logoAura"
           ></div>
 
-
           <div class="logo-stage">
 
             <img
               class="main-logo"
-              src="sursum-logo.jpg"
+              src="397D40D2-EA52-4B47-99D8-90CD02AD19E1.png"
               alt="Sursum Digital"
             >
-
 
             <div class="floating-card floating-one">
 
@@ -2877,7 +2590,6 @@
               </span>
 
             </div>
-
 
             <div class="floating-card floating-two">
 
@@ -2893,22 +2605,15 @@
 
         </div>
 
-
       </div>
 
     </section>
-
-
-    <!-- =====================================================
-         VALUE STRIP
-    ====================================================== -->
 
     <div class="value-strip">
 
       <div class="container">
 
         <div class="value-grid reveal">
-
 
           <div class="value-item">
 
@@ -2922,7 +2627,6 @@
 
           </div>
 
-
           <div class="value-item">
 
             <strong>
@@ -2934,7 +2638,6 @@
             </span>
 
           </div>
-
 
           <div class="value-item">
 
@@ -2948,7 +2651,6 @@
 
           </div>
 
-
           <div class="value-item">
 
             <strong>
@@ -2961,17 +2663,11 @@
 
           </div>
 
-
         </div>
 
       </div>
 
     </div>
-
-
-    <!-- =====================================================
-         SERVICES
-    ====================================================== -->
 
     <section
       class="section"
@@ -2979,7 +2675,6 @@
     >
 
       <div class="container">
-
 
         <div class="section-head reveal">
 
@@ -3004,9 +2699,7 @@
 
         </div>
 
-
         <div class="services-grid">
-
 
           <article class="service-card reveal">
 
@@ -3036,7 +2729,6 @@
             </a>
 
           </article>
-
 
           <article class="service-card reveal">
 
@@ -3068,7 +2760,6 @@
 
           </article>
 
-
           <article class="service-card reveal">
 
             <div class="service-number">
@@ -3098,7 +2789,6 @@
 
           </article>
 
-
           <article class="service-card reveal">
 
             <div class="service-number">
@@ -3126,7 +2816,6 @@
             </a>
 
           </article>
-
 
           <article class="service-card reveal">
 
@@ -3156,7 +2845,6 @@
             </a>
 
           </article>
-
 
           <article class="service-card reveal">
 
@@ -3188,18 +2876,11 @@
 
           </article>
 
-
         </div>
-
 
       </div>
 
     </section>
-
-
-    <!-- =====================================================
-         PORTFOLIO
-    ====================================================== -->
 
     <section
       class="section"
@@ -3207,7 +2888,6 @@
     >
 
       <div class="container">
-
 
         <div class="section-head reveal">
 
@@ -3232,27 +2912,19 @@
 
         </div>
 
-
         <div class="work-grid">
 
-
-          <!-- FRESHLINE -->
-
           <article class="work-card reveal">
-
 
             <div class="work-preview freshline-preview">
 
               <div class="browser-bar">
 
                 <span class="browser-dot"></span>
-
                 <span class="browser-dot"></span>
-
                 <span class="browser-dot"></span>
 
               </div>
-
 
               <small>
                 Exterior Cleaning
@@ -3271,7 +2943,6 @@
               </p>
 
             </div>
-
 
             <div class="work-info">
 
@@ -3298,27 +2969,19 @@
 
             </div>
 
-
           </article>
 
-
-          <!-- TWIN TURBO -->
-
           <article class="work-card reveal">
-
 
             <div class="work-preview twin-preview">
 
               <div class="browser-bar">
 
                 <span class="browser-dot"></span>
-
                 <span class="browser-dot"></span>
-
                 <span class="browser-dot"></span>
 
               </div>
-
 
               <small>
                 Mobile Auto Detailing
@@ -3338,7 +3001,6 @@
               </p>
 
             </div>
-
 
             <div class="work-info">
 
@@ -3365,21 +3027,13 @@
 
             </div>
 
-
           </article>
 
-
         </div>
-
 
       </div>
 
     </section>
-
-
-    <!-- =====================================================
-         PROCESS
-    ====================================================== -->
 
     <section
       class="section"
@@ -3387,7 +3041,6 @@
     >
 
       <div class="container">
-
 
         <div class="section-head reveal">
 
@@ -3412,9 +3065,7 @@
 
         </div>
 
-
         <div class="process-grid">
-
 
           <article class="process-card reveal">
 
@@ -3438,7 +3089,6 @@
 
           </article>
 
-
           <article class="process-card reveal">
 
             <div class="process-number">
@@ -3459,7 +3109,6 @@
             </p>
 
           </article>
-
 
           <article class="process-card reveal">
 
@@ -3482,7 +3131,6 @@
 
           </article>
 
-
           <article class="process-card reveal">
 
             <div class="process-number">
@@ -3504,18 +3152,11 @@
 
           </article>
 
-
         </div>
-
 
       </div>
 
     </section>
-
-
-    <!-- =====================================================
-         PRICING
-    ====================================================== -->
 
     <section
       class="section"
@@ -3524,21 +3165,17 @@
 
       <div class="container">
 
-
         <div class="pricing-wrap reveal">
-
 
           <div class="section-kicker">
             Starting Points
           </div>
-
 
           <h2 class="section-title">
 
             A build for where your business is now.
 
           </h2>
-
 
           <p class="section-copy">
 
@@ -3553,11 +3190,7 @@
 
           </p>
 
-
           <div class="price-grid">
-
-
-            <!-- LAUNCH -->
 
             <article class="price-card">
 
@@ -3620,9 +3253,6 @@
               </a>
 
             </article>
-
-
-            <!-- GROWTH -->
 
             <article class="price-card featured">
 
@@ -3691,9 +3321,6 @@
 
             </article>
 
-
-            <!-- ASCEND -->
-
             <article class="price-card">
 
               <div class="price-label">
@@ -3756,21 +3383,13 @@
 
             </article>
 
-
           </div>
 
-
         </div>
-
 
       </div>
 
     </section>
-
-
-    <!-- =====================================================
-         CTA
-    ====================================================== -->
 
     <section
       class="cta-section"
@@ -3779,16 +3398,13 @@
 
       <div class="container">
 
-
         <div class="cta-box reveal">
 
           <div class="cta-content">
 
-
             <div class="section-kicker">
               Build Higher
             </div>
-
 
             <h2>
 
@@ -3796,7 +3412,6 @@
               worth sending people to.
 
             </h2>
-
 
             <p>
 
@@ -3807,7 +3422,6 @@
               The digital side can be built from there.
 
             </p>
-
 
             <div class="cta-actions">
 
@@ -3827,34 +3441,23 @@
 
             </div>
 
-
           </div>
 
         </div>
-
 
       </div>
 
     </section>
 
-
   </main>
-
-
-  <!-- =======================================================
-       FOOTER
-  ======================================================== -->
 
   <footer>
 
     <div class="container">
 
-
       <div class="footer-grid">
 
-
         <div class="footer-brand">
-
 
           <a
             href="#top"
@@ -3864,12 +3467,11 @@
             <div class="brand-mark">
 
               <img
-                src="sursum-logo.jpg"
+                src="397D40D2-EA52-4B47-99D8-90CD02AD19E1.png"
                 alt="Sursum Digital logo"
               >
 
             </div>
-
 
             <div class="brand-copy">
 
@@ -3885,7 +3487,6 @@
 
           </a>
 
-
           <p>
 
             Custom websites
@@ -3897,9 +3498,7 @@
 
           </p>
 
-
         </div>
-
 
         <div class="footer-column">
 
@@ -3921,7 +3520,6 @@
 
         </div>
 
-
         <div class="footer-column">
 
           <strong>
@@ -3941,7 +3539,6 @@
           </a>
 
         </div>
-
 
         <div class="footer-column">
 
@@ -3963,12 +3560,9 @@
 
         </div>
 
-
       </div>
 
-
       <div class="footer-bottom">
-
 
         <div>
 
@@ -3977,31 +3571,19 @@
 
         </div>
 
-
         <div>
 
           Elevate your digital presence.
 
         </div>
 
-
       </div>
-
 
     </div>
 
   </footer>
 
-
-  <!-- =======================================================
-       JAVASCRIPT
-  ======================================================== -->
-
   <script>
-
-    /* =========================================================
-       MOBILE MENU
-    ========================================================= */
 
     const menuButton =
       document.getElementById(
@@ -4013,7 +3595,6 @@
         "mobileMenu"
       );
 
-
     menuButton.addEventListener(
       "click",
       () => {
@@ -4023,12 +3604,10 @@
             "open"
           );
 
-
         menuButton.classList.toggle(
           "open",
           isOpen
         );
-
 
         menuButton.setAttribute(
           "aria-expanded",
@@ -4039,7 +3618,6 @@
 
       }
     );
-
 
     mobileMenu
       .querySelectorAll("a")
@@ -4054,11 +3632,9 @@
                 "open"
               );
 
-
               menuButton.classList.remove(
                 "open"
               );
-
 
               menuButton.setAttribute(
                 "aria-expanded",
@@ -4071,16 +3647,10 @@
         }
       );
 
-
-    /* =========================================================
-       REVEAL ANIMATIONS
-    ========================================================= */
-
     const revealElements =
       document.querySelectorAll(
         ".reveal"
       );
-
 
     if (
       "IntersectionObserver"
@@ -4108,7 +3678,6 @@
                       "visible"
                     );
 
-
                   observer.unobserve(
                     entry.target
                   );
@@ -4128,7 +3697,6 @@
           }
 
         );
-
 
       revealElements.forEach(
         (element) => {
@@ -4154,20 +3722,13 @@
 
     }
 
-
-    /* =========================================================
-       SCROLL PROGRESS
-    ========================================================= */
-
     const scrollProgress =
       document.getElementById(
         "scrollProgress"
       );
 
-
     let scrollTicking =
       false;
-
 
     function updateScrollProgress() {
 
@@ -4175,11 +3736,9 @@
         window.scrollY ||
         document.documentElement.scrollTop;
 
-
       const scrollHeight =
         document.documentElement.scrollHeight -
         window.innerHeight;
-
 
       const ratio =
         scrollHeight > 0
@@ -4187,19 +3746,16 @@
             scrollHeight
           : 0;
 
-
       scrollProgress.style.width =
         Math.min(
           ratio * 100,
           100
         ) + "%";
 
-
       scrollTicking =
         false;
 
     }
-
 
     window.addEventListener(
 
@@ -4215,7 +3771,6 @@
             updateScrollProgress
           );
 
-
           scrollTicking =
             true;
 
@@ -4229,25 +3784,17 @@
 
     );
 
-
     updateScrollProgress();
-
-
-    /* =========================================================
-       HERO LOGO GLOW
-    ========================================================= */
 
     const heroVisual =
       document.getElementById(
         "heroVisual"
       );
 
-
     const logoAura =
       document.getElementById(
         "logoAura"
       );
-
 
     if (
       heroVisual &&
@@ -4267,7 +3814,6 @@
             heroVisual
               .getBoundingClientRect();
 
-
           const x =
             (
               (
@@ -4276,7 +3822,6 @@
               ) /
               rect.width
             ) * 100;
-
 
           const y =
             (
@@ -4287,12 +3832,10 @@
               rect.height
             ) * 100;
 
-
           logoAura.style.setProperty(
             "--mouse-x",
             x + "%"
           );
-
 
           logoAura.style.setProperty(
             "--mouse-y",
@@ -4302,7 +3845,6 @@
         }
 
       );
-
 
       heroVisual.addEventListener(
 
@@ -4314,7 +3856,6 @@
             "--mouse-x",
             "50%"
           );
-
 
           logoAura.style.setProperty(
             "--mouse-y",
@@ -4328,7 +3869,6 @@
     }
 
   </script>
-
 
 </body>
 
