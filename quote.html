@@ -26,68 +26,56 @@
 
   <style>
 
-    :root {
-      --bg: #050507;
-      --bg-soft: #09090e;
+    :root{
+      --bg:#050507;
+      --text:#f7f5f0;
+      --muted:#96959f;
 
-      --text: #f7f5f0;
-      --muted: #96959f;
+      --gold:#d3a64e;
+      --gold-soft:#f0ce86;
 
-      --gold: #d3a64e;
-      --gold-soft: #f0ce86;
-
-      --purple: #6f4cff;
-      --purple-bright: #9d75ff;
-      --purple-deep: #2f1b70;
-
-      --line:
-        rgba(255,255,255,.08);
+      --purple:#6f4cff;
+      --purple-bright:#9d75ff;
+      --purple-deep:#2f1b70;
 
       --shadow:
         0 30px 90px
-        rgba(0,0,0,.46);
+        rgba(0,0,0,.42);
     }
 
-    * {
-      box-sizing: border-box;
-      margin: 0;
-      padding: 0;
+    *{
+      box-sizing:border-box;
+      margin:0;
+      padding:0;
     }
 
-    html {
-      scroll-behavior: smooth;
+    html{
+      scroll-behavior:smooth;
     }
 
-    body {
-      min-height: 100vh;
-
-      overflow-x: hidden;
+    body{
+      min-height:100vh;
+      overflow-x:hidden;
 
       font-family:
         Arial,
         Helvetica,
         sans-serif;
 
-      line-height: 1.6;
+      line-height:1.6;
 
-      color:
-        var(--text);
+      color:var(--text);
 
       background:
         radial-gradient(
           circle at 12% 8%,
-          rgba(111,76,255,.17),
+          rgba(111,76,255,.15),
           transparent 30%
         ),
         radial-gradient(
           circle at 88% 18%,
           rgba(211,166,78,.07),
           transparent 27%
-        ),
-        radial-gradient(
-          circle at 65% 76%,
-          rgba(157,117,255,.07),
-          transparent 30%
         ),
         linear-gradient(
           180deg,
@@ -97,17 +85,16 @@
         );
     }
 
-    body::before {
-      content: "";
+    body::before{
+      content:"";
 
-      position: fixed;
-      inset: 0;
+      position:fixed;
+      inset:0;
 
-      z-index: -4;
+      z-index:-4;
+      pointer-events:none;
 
-      pointer-events: none;
-
-      opacity: .14;
+      opacity:.13;
 
       background-image:
         linear-gradient(
@@ -124,157 +111,150 @@
         62px 62px;
     }
 
-    body::after {
-      content: "";
+    body::after{
+      content:"";
 
-      position: fixed;
-      inset: 0;
+      position:fixed;
+      inset:0;
 
-      z-index: -3;
-
-      pointer-events: none;
+      z-index:-3;
+      pointer-events:none;
 
       background:
         radial-gradient(
           circle at center,
-          transparent 28%,
-          rgba(0,0,0,.36) 100%
+          transparent 30%,
+          rgba(0,0,0,.34)
         );
     }
 
-    a {
-      color: inherit;
-      text-decoration: none;
+    a{
+      color:inherit;
+      text-decoration:none;
     }
 
-    img {
-      display: block;
-      max-width: 100%;
+    img{
+      display:block;
+      max-width:100%;
     }
 
     button,
     input,
     textarea,
-    select {
-      font: inherit;
+    select{
+      font:inherit;
+    }
+
+    button{
+      cursor:pointer;
     }
 
     input,
     textarea,
-    select {
-      width: 100%;
+    select{
+      width:100%;
     }
 
-    button {
-      color: inherit;
-      cursor: pointer;
-    }
-
-    ::selection {
-      color: #fff;
+    ::selection{
+      color:#fff;
 
       background:
         rgba(111,76,255,.55);
     }
 
-    .container {
+    .container{
       width:
         min(
           1040px,
           calc(100% - 36px)
         );
 
-      margin:
-        0 auto;
+      margin:0 auto;
     }
 
     /* ========================================
        AMBIENT
     ======================================== */
 
-    .ambient {
-      position: fixed;
-      inset: 0;
+    .ambient{
+      position:fixed;
+      inset:0;
 
-      z-index: -2;
+      z-index:-2;
 
-      overflow: hidden;
-
-      pointer-events: none;
+      overflow:hidden;
+      pointer-events:none;
     }
 
-    .orb {
-      position: absolute;
+    .orb{
+      position:absolute;
 
-      border-radius: 50%;
+      border-radius:50%;
 
-      filter:
-        blur(110px);
+      filter:blur(80px);
 
-      opacity: .14;
+      opacity:.1;
 
       animation:
         orbFloat
-        16s
+        18s
         ease-in-out
         infinite;
     }
 
-    .orb-one {
-      width: 430px;
-      height: 430px;
+    .orb-one{
+      width:410px;
+      height:410px;
 
-      left: -190px;
-      top: -190px;
+      left:-190px;
+      top:-190px;
 
-      background:
-        var(--purple);
+      background:var(--purple);
     }
 
-    .orb-two {
-      width: 500px;
-      height: 500px;
+    .orb-two{
+      width:480px;
+      height:480px;
 
-      right: -240px;
-      top: 34%;
+      right:-250px;
+      top:34%;
 
-      background:
-        var(--purple-deep);
+      background:var(--purple-deep);
 
-      animation-delay: -5s;
+      animation-delay:-6s;
     }
 
-    .orb-three {
-      width: 350px;
-      height: 350px;
+    .orb-three{
+      width:340px;
+      height:340px;
 
-      left: 38%;
-      bottom: -230px;
+      left:38%;
+      bottom:-230px;
 
-      background: #8d6224;
+      background:#8d6224;
 
-      opacity: .07;
+      opacity:.055;
 
-      animation-delay: -9s;
+      animation-delay:-10s;
     }
 
-    @keyframes orbFloat {
+    @keyframes orbFloat{
 
       0%,
-      100% {
+      100%{
         transform:
           translate3d(0,0,0)
           scale(1);
       }
 
-      50% {
+      50%{
         transform:
           translate3d(
-            35px,
-            -28px,
+            30px,
+            -22px,
             0
           )
-          scale(1.06);
+          scale(1.04);
       }
 
     }
@@ -283,20 +263,19 @@
        HEADER
     ======================================== */
 
-    header {
-      position: fixed;
+    header{
+      position:fixed;
 
-      top: 0;
-      left: 0;
-      right: 0;
+      top:0;
+      left:0;
+      right:0;
 
-      z-index: 5000;
+      z-index:5000;
 
       background:
         rgba(5,5,7,.8);
 
-      backdrop-filter:
-        blur(18px);
+      backdrop-filter:blur(18px);
 
       -webkit-backdrop-filter:
         blur(18px);
@@ -306,34 +285,36 @@
         rgba(255,255,255,.065);
     }
 
-    .nav-wrap {
-      min-height: 76px;
+    .nav-wrap{
+      min-height:76px;
 
-      display: flex;
+      display:flex;
 
-      align-items: center;
-      justify-content: space-between;
+      align-items:center;
+      justify-content:space-between;
 
-      gap: 20px;
+      gap:20px;
     }
 
-    .brand {
-      display: flex;
+    .brand{
+      display:flex;
 
-      align-items: center;
+      align-items:center;
 
-      gap: 11px;
+      gap:11px;
+
+      flex-shrink:0;
     }
 
-    .brand-mark {
-      width: 46px;
-      height: 46px;
+    .brand-mark{
+      width:46px;
+      height:46px;
 
-      overflow: hidden;
+      overflow:hidden;
 
-      border-radius: 12px;
+      border-radius:12px;
 
-      background: #000;
+      background:#000;
 
       border:
         1px solid
@@ -341,121 +322,233 @@
 
       box-shadow:
         0 0 24px
-        rgba(111,76,255,.22),
-        0 0 14px
-        rgba(211,166,78,.1);
+        rgba(111,76,255,.22);
     }
 
-    .brand-mark img {
-      width: 100%;
-      height: 100%;
+    .brand-mark img{
+      width:100%;
+      height:100%;
 
-      object-fit: cover;
+      object-fit:cover;
+      object-position:center 39%;
 
-      object-position:
-        center 39%;
-
-      transform:
-        scale(1.23);
+      transform:scale(1.23);
     }
 
-    .brand-copy {
-      display: flex;
+    .brand-copy{
+      display:flex;
 
-      flex-direction: column;
+      flex-direction:column;
 
-      line-height: 1;
+      line-height:1;
     }
 
-    .brand-main {
-      color: #fff;
+    .brand-main{
+      color:#fff;
 
-      font-size: 14px;
-      font-weight: 900;
+      font-size:14px;
+      font-weight:900;
 
-      letter-spacing: 1.5px;
+      letter-spacing:1.5px;
     }
 
-    .brand-sub {
-      margin-top: 5px;
+    .brand-sub{
+      margin-top:5px;
 
-      color:
-        var(--gold);
+      color:var(--gold);
 
-      font-size: 8px;
-      font-weight: 900;
+      font-size:8px;
+      font-weight:900;
 
-      letter-spacing: 3.1px;
+      letter-spacing:3.1px;
     }
 
-    .back-link {
-      min-height: 42px;
+    .desktop-nav{
+      display:flex;
 
-      display: inline-flex;
+      align-items:center;
 
-      align-items: center;
+      gap:18px;
+    }
+
+    .desktop-nav a{
+      color:#aaa9b2;
+
+      font-size:11px;
+      font-weight:900;
+
+      transition:color .2s ease;
+    }
+
+    .desktop-nav a:hover{
+      color:#fff;
+    }
+
+    .desktop-nav .active{
+      color:#fff;
 
       padding:
-        0 15px;
+        9px 13px;
 
-      border-radius: 10px;
+      border-radius:9px;
 
-      color:
-        #d4d3db;
+      background:
+        linear-gradient(
+          100deg,
+          rgba(111,76,255,.62),
+          rgba(157,117,255,.68)
+        );
+
+      border:
+        1px solid
+        rgba(157,117,255,.25);
+    }
+
+    .menu-button{
+      display:none;
+
+      width:43px;
+      height:43px;
+
+      place-items:center;
+
+      border-radius:11px;
+
+      color:#fff;
 
       background:
         rgba(255,255,255,.035);
 
       border:
         1px solid
-        rgba(255,255,255,.09);
+        rgba(255,255,255,.1);
+    }
 
-      font-size: 11px;
-      font-weight: 900;
+    .menu-lines{
+      width:18px;
+
+      display:grid;
+
+      gap:4px;
+    }
+
+    .menu-lines span{
+      height:2px;
+
+      border-radius:10px;
+
+      background:#e1e1e5;
 
       transition:
         transform .2s ease,
-        border-color .2s ease;
+        opacity .2s ease;
     }
 
-    .back-link:hover {
+    .menu-button.open
+    .menu-lines span:nth-child(1){
       transform:
-        translateY(-2px);
+        translateY(6px)
+        rotate(45deg);
+    }
 
-      border-color:
-        rgba(157,117,255,.28);
+    .menu-button.open
+    .menu-lines span:nth-child(2){
+      opacity:0;
+    }
+
+    .menu-button.open
+    .menu-lines span:nth-child(3){
+      transform:
+        translateY(-6px)
+        rotate(-45deg);
+    }
+
+    .mobile-menu{
+      display:none;
+
+      padding-bottom:18px;
+    }
+
+    .mobile-menu.open{
+      display:grid;
+    }
+
+    .mobile-menu a{
+      padding:13px 2px;
+
+      color:#c8c7cf;
+
+      border-bottom:
+        1px solid
+        rgba(255,255,255,.055);
+
+      font-size:14px;
+      font-weight:800;
     }
 
     /* ========================================
        HERO
     ======================================== */
 
-    .quote-hero {
-      position: relative;
+    .quote-hero{
+      position:relative;
 
       padding:
         145px 0
         55px;
 
-      text-align: center;
+      text-align:center;
     }
 
-    .eyebrow {
-      display: inline-flex;
+    .quote-hero::before{
+      content:"PROJECT";
 
-      align-items: center;
+      position:absolute;
 
-      gap: 9px;
+      left:50%;
+      top:55%;
 
-      margin-bottom: 21px;
+      transform:
+        translate(-50%,-50%);
+
+      color:
+        rgba(255,255,255,.014);
+
+      font-size:
+        clamp(
+          130px,
+          22vw,
+          300px
+        );
+
+      font-weight:900;
+
+      letter-spacing:-13px;
+
+      pointer-events:none;
+    }
+
+    .quote-hero .container{
+      position:relative;
+
+      z-index:2;
+    }
+
+    .eyebrow{
+      display:inline-flex;
+
+      align-items:center;
+
+      gap:9px;
+
+      margin-bottom:21px;
 
       padding:
         8px 12px;
 
-      border-radius: 999px;
+      border-radius:999px;
 
-      color:
-        #d5ceff;
+      color:#d5ceff;
 
       background:
         rgba(111,76,255,.08);
@@ -464,33 +557,31 @@
         1px solid
         rgba(157,117,255,.24);
 
-      font-size: 10px;
-      font-weight: 900;
+      font-size:10px;
+      font-weight:900;
 
-      letter-spacing: 1.55px;
+      letter-spacing:1.55px;
 
-      text-transform: uppercase;
+      text-transform:uppercase;
     }
 
-    .eyebrow-dot {
-      width: 7px;
-      height: 7px;
+    .eyebrow-dot{
+      width:7px;
+      height:7px;
 
-      border-radius: 50%;
+      border-radius:50%;
 
-      background:
-        var(--gold);
+      background:var(--gold);
 
       box-shadow:
         0 0 14px
         rgba(211,166,78,.75);
     }
 
-    .quote-hero h1 {
-      max-width: 900px;
+    .quote-hero h1{
+      max-width:900px;
 
-      margin:
-        0 auto;
+      margin:0 auto;
 
       font-size:
         clamp(
@@ -499,13 +590,12 @@
           88px
         );
 
-      line-height: .91;
+      line-height:.91;
 
-      letter-spacing:
-        -4px;
+      letter-spacing:-4px;
     }
 
-    .gradient-text {
+    .gradient-text{
       background:
         linear-gradient(
           92deg,
@@ -515,48 +605,46 @@
           #7855ff
         );
 
-      -webkit-background-clip: text;
+      -webkit-background-clip:text;
+      background-clip:text;
 
-      background-clip: text;
-
-      color: transparent;
+      color:transparent;
     }
 
     .quote-hero h1
-    .gradient-text {
-      display: block;
+    .gradient-text{
+      display:block;
     }
 
-    .quote-hero > .container > p {
-      max-width: 650px;
+    .quote-hero p{
+      max-width:650px;
 
       margin:
         22px auto 0;
 
-      color:
-        #96959f;
+      color:#96959f;
 
-      font-size: 16px;
+      font-size:16px;
 
-      line-height: 1.75;
+      line-height:1.75;
     }
 
     /* ========================================
        IMPORTED PACKAGE
     ======================================== */
 
-    .imported-wrap {
-      padding-bottom: 20px;
+    .imported-wrap{
+      padding-bottom:20px;
     }
 
-    .imported-project {
-      display: none;
+    .imported-project{
+      display:none;
 
-      padding: 23px;
+      padding:23px;
 
-      overflow: hidden;
+      overflow:hidden;
 
-      border-radius: 18px;
+      border-radius:18px;
 
       background:
         radial-gradient(
@@ -571,56 +659,56 @@
         rgba(157,117,255,.18);
     }
 
-    .imported-project.show {
-      display: block;
+    .imported-project.show{
+      display:block;
     }
 
-    .imported-top {
-      display: flex;
+    .imported-top{
+      display:flex;
 
-      align-items: center;
-      justify-content: space-between;
+      align-items:center;
+      justify-content:space-between;
 
-      gap: 20px;
+      gap:20px;
     }
 
-    .imported-label {
-      color:
-        var(--gold);
+    .imported-label{
+      color:var(--gold);
 
-      font-size: 9px;
-      font-weight: 900;
+      font-size:9px;
+      font-weight:900;
 
-      letter-spacing: 1.4px;
+      letter-spacing:1.4px;
 
-      text-transform: uppercase;
+      text-transform:uppercase;
     }
 
-    .imported-project h3 {
-      margin-top: 4px;
+    .imported-project h3{
+      margin-top:4px;
 
-      font-size: 20px;
+      font-size:20px;
     }
 
-    .imported-price {
-      font-size: 36px;
-      font-weight: 900;
+    .imported-price{
+      flex-shrink:0;
+
+      font-size:36px;
+      font-weight:900;
     }
 
-    .imported-details {
-      margin-top: 13px;
+    .imported-details{
+      margin-top:13px;
 
-      color:
-        #898893;
+      color:#898893;
 
-      font-size: 12px;
+      font-size:12px;
     }
 
     /* ========================================
        PROGRESS
     ======================================== */
 
-    .progress-wrap {
+    .progress-wrap{
       margin:
         10px auto
         22px;
@@ -628,7 +716,7 @@
       padding:
         17px 19px;
 
-      border-radius: 15px;
+      border-radius:15px;
 
       background:
         rgba(255,255,255,.022);
@@ -638,41 +726,40 @@
         rgba(255,255,255,.07);
     }
 
-    .progress-meta {
-      display: flex;
+    .progress-meta{
+      display:flex;
 
-      align-items: center;
-      justify-content: space-between;
+      align-items:center;
+      justify-content:space-between;
 
-      margin-bottom: 10px;
+      margin-bottom:10px;
 
-      color:
-        #85848e;
+      color:#85848e;
 
-      font-size: 10px;
-      font-weight: 900;
+      font-size:10px;
+      font-weight:900;
 
-      letter-spacing: .7px;
+      letter-spacing:.7px;
 
-      text-transform: uppercase;
+      text-transform:uppercase;
     }
 
-    .progress-track {
-      height: 6px;
+    .progress-track{
+      height:6px;
 
-      overflow: hidden;
+      overflow:hidden;
 
-      border-radius: 999px;
+      border-radius:999px;
 
       background:
         rgba(255,255,255,.06);
     }
 
-    .progress-bar {
-      width: 20%;
-      height: 100%;
+    .progress-bar{
+      width:20%;
+      height:100%;
 
-      border-radius: inherit;
+      border-radius:inherit;
 
       background:
         linear-gradient(
@@ -686,24 +773,23 @@
         0 0 18px
         rgba(157,117,255,.35);
 
-      transition:
-        width .35s ease;
+      transition:width .28s ease;
     }
 
     /* ========================================
        FORM
     ======================================== */
 
-    .form-section {
+    .form-section{
       padding:
         0 0
         110px;
     }
 
-    .form-shell {
-      overflow: hidden;
+    .form-shell{
+      overflow:hidden;
 
-      border-radius: 28px;
+      border-radius:28px;
 
       background:
         radial-gradient(
@@ -726,54 +812,53 @@
         rgba(0,0,0,.25);
     }
 
-    .step {
-      display: none;
+    .step{
+      display:none;
 
-      padding: 40px;
+      padding:40px;
     }
 
-    .step.active {
-      display: block;
+    .step.active{
+      display:block;
 
       animation:
         stepIn
-        .35s ease;
+        .25s
+        ease;
     }
 
-    @keyframes stepIn {
+    @keyframes stepIn{
 
-      from {
-        opacity: 0;
+      from{
+        opacity:0;
 
         transform:
-          translateY(12px);
+          translateY(8px);
       }
 
-      to {
-        opacity: 1;
+      to{
+        opacity:1;
 
-        transform:
-          translateY(0);
+        transform:none;
       }
 
     }
 
-    .step-number {
-      margin-bottom: 7px;
+    .step-number{
+      margin-bottom:7px;
 
-      color:
-        var(--purple-bright);
+      color:var(--purple-bright);
 
-      font-size: 10px;
-      font-weight: 900;
+      font-size:10px;
+      font-weight:900;
 
-      letter-spacing: 1.4px;
+      letter-spacing:1.4px;
 
-      text-transform: uppercase;
+      text-transform:uppercase;
     }
 
-    .step h2 {
-      max-width: 700px;
+    .step h2{
+      max-width:700px;
 
       font-size:
         clamp(
@@ -782,91 +867,73 @@
           41px
         );
 
-      line-height: 1.04;
+      line-height:1.04;
 
-      letter-spacing:
-        -1.3px;
+      letter-spacing:-1.3px;
     }
 
-    .step-intro {
-      max-width: 650px;
+    .step-intro{
+      max-width:650px;
 
-      margin-top: 9px;
-      margin-bottom: 29px;
+      margin-top:9px;
+      margin-bottom:29px;
 
-      color:
-        #91909b;
+      color:#8c8b95;
+
+      font-size:13px;
     }
 
-    /* ========================================
-       FIELDS
-    ======================================== */
-
-    .field-grid {
-      display: grid;
+    .field-grid{
+      display:grid;
 
       grid-template-columns:
-        1fr 1fr;
+        repeat(2,1fr);
 
-      gap: 18px;
+      gap:17px;
     }
 
-    .field {
-      margin-bottom: 19px;
+    .field{
+      display:grid;
+
+      gap:8px;
     }
 
-    .field-grid
-    .field {
-      margin-bottom: 0;
-    }
-
-    .field-full {
+    .field-full{
       grid-column:
         1 / -1;
     }
 
-    .field-label {
-      display: block;
+    .field-label{
+      color:#c8c7cf;
 
-      margin-bottom: 8px;
+      font-size:10px;
+      font-weight:900;
 
-      color:
-        #d2d1d8;
-
-      font-size: 12px;
-      font-weight: 800;
+      letter-spacing:.45px;
     }
 
-    .optional {
-      color:
-        #6f6e79;
+    .optional{
+      color:#686772;
 
-      font-weight: 500;
+      font-size:9px;
+      font-weight:700;
     }
 
-    input[type="text"],
-    input[type="email"],
-    input[type="tel"],
-    input[type="url"],
+    input,
     textarea,
-    select {
-      min-height: 52px;
-
-      padding:
-        0 15px;
-
-      outline: none;
-
-      color: #fff;
-
-      border-radius: 12px;
+    select{
+      color:#f5f4f7;
 
       background:
-        rgba(255,255,255,.03);
+        rgba(5,5,8,.62);
 
       border:
         1px solid
-        rgba(255,255,255,.09);
+        rgba(255,255,255,.085);
+
+      border-radius:12px;
+
+      outline:none;
 
       transition:
         border-color .2s ease,
@@ -874,66 +941,48 @@
         background .2s ease;
     }
 
-    textarea {
-      min-height: 135px;
+    input,
+    select{
+      min-height:52px;
+
+      padding:
+        0 15px;
+    }
+
+    textarea{
+      min-height:155px;
 
       padding:
         14px 15px;
 
-      resize: vertical;
-    }
-
-    select {
-      appearance: none;
-
-      background-image:
-        linear-gradient(
-          45deg,
-          transparent 50%,
-          #7f7e88 50%
-        ),
-        linear-gradient(
-          135deg,
-          #7f7e88 50%,
-          transparent 50%
-        );
-
-      background-position:
-        calc(100% - 20px) 22px,
-        calc(100% - 15px) 22px;
-
-      background-size:
-        5px 5px,
-        5px 5px;
-
-      background-repeat: no-repeat;
-    }
-
-    option {
-      color: #111;
+      resize:vertical;
     }
 
     input::placeholder,
-    textarea::placeholder {
-      color:
-        #62616c;
+    textarea::placeholder{
+      color:#585762;
     }
 
     input:focus,
     textarea:focus,
-    select:focus {
+    select:focus{
       border-color:
         rgba(157,117,255,.48);
 
       background:
-        rgba(255,255,255,.045);
+        rgba(255,255,255,.04);
 
       box-shadow:
         0 0 0 4px
         rgba(111,76,255,.08);
     }
 
-    .field-error {
+    option{
+      color:#fff;
+      background:#0b0b10;
+    }
+
+    .field-error{
       border-color:
         rgba(255,102,125,.8)
         !important;
@@ -944,8 +993,8 @@
         !important;
     }
 
-    .validation-message {
-      display: none;
+    .validation-message{
+      display:none;
 
       margin:
         -8px 0
@@ -954,10 +1003,9 @@
       padding:
         11px 13px;
 
-      border-radius: 10px;
+      border-radius:10px;
 
-      color:
-        #ff9aac;
+      color:#ff9aac;
 
       background:
         rgba(255,71,105,.07);
@@ -966,41 +1014,41 @@
         1px solid
         rgba(255,90,120,.16);
 
-      font-size: 12px;
-      font-weight: 700;
+      font-size:12px;
+      font-weight:700;
     }
 
-    .validation-message.show {
-      display: block;
+    .validation-message.show{
+      display:block;
     }
 
     /* ========================================
        CHOICE CARDS
     ======================================== */
 
-    .choice-grid {
-      display: grid;
+    .choice-grid{
+      display:grid;
 
       grid-template-columns:
         repeat(2,1fr);
 
-      gap: 11px;
+      gap:11px;
     }
 
-    .choice-card {
-      position: relative;
+    .choice-card{
+      position:relative;
 
-      min-height: 84px;
+      min-height:84px;
 
-      display: flex;
+      display:flex;
 
-      align-items: center;
+      align-items:center;
 
-      padding: 17px;
+      padding:17px;
 
-      cursor: pointer;
+      cursor:pointer;
 
-      border-radius: 14px;
+      border-radius:14px;
 
       background:
         rgba(255,255,255,.025);
@@ -1010,12 +1058,12 @@
         rgba(255,255,255,.075);
 
       transition:
-        transform .2s ease,
-        border-color .2s ease,
-        background .2s ease;
+        transform .18s ease,
+        border-color .18s ease,
+        background .18s ease;
     }
 
-    .choice-card:hover {
+    .choice-card:hover{
       transform:
         translateY(-2px);
 
@@ -1023,7 +1071,7 @@
         rgba(157,117,255,.27);
     }
 
-    .choice-card.selected {
+    .choice-card.selected{
       background:
         rgba(111,76,255,.12);
 
@@ -1035,62 +1083,61 @@
         rgba(111,76,255,.055);
     }
 
-    .choice-card input {
-      position: absolute;
+    .choice-card input{
+      position:absolute;
 
-      opacity: 0;
+      opacity:0;
 
-      pointer-events: none;
+      pointer-events:none;
     }
 
-    .choice-card strong {
-      display: block;
+    .choice-card strong{
+      display:block;
 
-      font-size: 14px;
+      font-size:14px;
     }
 
-    .choice-card span {
-      display: block;
+    .choice-card span{
+      display:block;
 
-      margin-top: 2px;
+      margin-top:2px;
 
-      color:
-        #85848e;
+      color:#85848e;
 
-      font-size: 12px;
+      font-size:12px;
     }
 
     /* ========================================
        COLORS
     ======================================== */
 
-    .color-grid {
-      display: grid;
+    .color-grid{
+      display:grid;
 
       grid-template-columns:
         repeat(4,1fr);
 
-      gap: 10px;
+      gap:10px;
 
-      margin-top: 12px;
+      margin-top:12px;
     }
 
-    .color-choice {
-      position: relative;
+    .color-choice{
+      position:relative;
 
-      min-height: 88px;
+      min-height:88px;
 
-      display: grid;
+      display:grid;
 
-      place-items: center;
+      place-items:center;
 
-      padding: 13px;
+      padding:13px;
 
-      cursor: pointer;
+      cursor:pointer;
 
-      border-radius: 13px;
+      border-radius:13px;
 
-      text-align: center;
+      text-align:center;
 
       background:
         rgba(255,255,255,.025);
@@ -1100,17 +1147,17 @@
         rgba(255,255,255,.07);
 
       transition:
-        transform .2s ease,
-        border-color .2s ease,
-        background .2s ease;
+        transform .18s ease,
+        border-color .18s ease,
+        background .18s ease;
     }
 
-    .color-choice:hover {
+    .color-choice:hover{
       transform:
         translateY(-2px);
     }
 
-    .color-choice.selected {
+    .color-choice.selected{
       background:
         rgba(111,76,255,.1);
 
@@ -1118,29 +1165,28 @@
         rgba(157,117,255,.47);
     }
 
-    .color-choice input {
-      position: absolute;
+    .color-choice input{
+      position:absolute;
 
-      opacity: 0;
+      opacity:0;
 
-      pointer-events: none;
+      pointer-events:none;
     }
 
-    .color-choice span {
-      margin-top: 7px;
+    .color-choice span{
+      margin-top:7px;
 
-      color:
-        #a09fa9;
+      color:#a09fa9;
 
-      font-size: 10px;
-      font-weight: 800;
+      font-size:10px;
+      font-weight:800;
     }
 
-    .color-dot {
-      width: 29px;
-      height: 29px;
+    .color-dot{
+      width:29px;
+      height:29px;
 
-      border-radius: 50%;
+      border-radius:50%;
 
       border:
         1px solid
@@ -1151,7 +1197,7 @@
         rgba(0,0,0,.22);
     }
 
-    .color-blue {
+    .color-blue{
       background:
         linear-gradient(
           145deg,
@@ -1160,7 +1206,7 @@
         );
     }
 
-    .color-purple {
+    .color-purple{
       background:
         linear-gradient(
           145deg,
@@ -1169,7 +1215,7 @@
         );
     }
 
-    .color-red {
+    .color-red{
       background:
         linear-gradient(
           145deg,
@@ -1178,7 +1224,7 @@
         );
     }
 
-    .color-green {
+    .color-green{
       background:
         linear-gradient(
           145deg,
@@ -1187,7 +1233,7 @@
         );
     }
 
-    .color-black {
+    .color-black{
       background:
         linear-gradient(
           145deg,
@@ -1196,7 +1242,7 @@
         );
     }
 
-    .color-light {
+    .color-light{
       background:
         linear-gradient(
           145deg,
@@ -1205,7 +1251,7 @@
         );
     }
 
-    .color-earth {
+    .color-earth{
       background:
         linear-gradient(
           145deg,
@@ -1214,7 +1260,7 @@
         );
     }
 
-    .color-unsure {
+    .color-unsure{
       background:
         conic-gradient(
           #6f4cff,
@@ -1226,60 +1272,58 @@
     }
 
     /* ========================================
-       BUTTONS / NAV
+       FORM NAV
     ======================================== */
 
-    .form-nav {
-      display: flex;
+    .form-nav{
+      display:flex;
 
-      align-items: center;
+      align-items:center;
 
-      gap: 11px;
+      gap:11px;
 
-      margin-top: 34px;
-
-      padding-top: 24px;
+      margin-top:34px;
+      padding-top:24px;
 
       border-top:
         1px solid
         rgba(255,255,255,.06);
     }
 
-    .form-nav-right {
-      margin-left: auto;
+    .form-nav-right{
+      margin-left:auto;
     }
 
-    .btn {
-      min-height: 48px;
+    .btn{
+      min-height:48px;
 
-      display: inline-flex;
+      display:inline-flex;
 
-      align-items: center;
-      justify-content: center;
+      align-items:center;
+      justify-content:center;
 
       padding:
         0 19px;
 
-      border-radius: 11px;
+      border-radius:11px;
 
-      font-size: 11px;
-      font-weight: 900;
+      border:0;
 
-      border: 0;
+      font-size:11px;
+      font-weight:900;
 
       transition:
-        transform .2s ease,
-        border-color .2s ease,
-        opacity .2s ease;
+        transform .18s ease,
+        opacity .18s ease;
     }
 
-    .btn:hover {
+    .btn:hover{
       transform:
         translateY(-2px);
     }
 
-    .btn-primary {
-      color: #fff;
+    .btn-primary{
+      color:#fff;
 
       background:
         linear-gradient(
@@ -1297,9 +1341,8 @@
         rgba(93,60,232,.22);
     }
 
-    .btn-secondary {
-      color:
-        #d2d1d8;
+    .btn-secondary{
+      color:#d2d1d8;
 
       background:
         rgba(255,255,255,.035);
@@ -1309,31 +1352,31 @@
         rgba(255,255,255,.09);
     }
 
-    .btn:disabled {
-      opacity: .55;
+    .btn:disabled{
+      opacity:.55;
 
-      cursor: not-allowed;
+      cursor:not-allowed;
 
-      transform: none;
+      transform:none;
     }
 
     /* ========================================
        REVIEW
     ======================================== */
 
-    .review-grid {
-      display: grid;
+    .review-grid{
+      display:grid;
 
       grid-template-columns:
         repeat(2,1fr);
 
-      gap: 13px;
+      gap:13px;
     }
 
-    .review-card {
-      padding: 18px;
+    .review-card{
+      padding:18px;
 
-      border-radius: 14px;
+      border-radius:14px;
 
       background:
         rgba(255,255,255,.026);
@@ -1343,47 +1386,45 @@
         rgba(255,255,255,.07);
     }
 
-    .review-card.full {
+    .review-card.full{
       grid-column:
         1 / -1;
     }
 
-    .review-label {
-      margin-bottom: 5px;
+    .review-label{
+      margin-bottom:5px;
 
-      color:
-        #777681;
+      color:#777681;
 
-      font-size: 9px;
-      font-weight: 900;
+      font-size:9px;
+      font-weight:900;
 
-      letter-spacing: 1px;
+      letter-spacing:1px;
 
-      text-transform: uppercase;
+      text-transform:uppercase;
     }
 
-    .review-value {
-      color:
-        #d5d4dc;
+    .review-value{
+      color:#d5d4dc;
 
-      font-size: 13px;
+      font-size:13px;
 
-      white-space: pre-wrap;
+      white-space:pre-wrap;
     }
 
-    .final-estimate {
-      margin-top: 20px;
+    .final-estimate{
+      margin-top:20px;
 
-      padding: 22px;
+      padding:22px;
 
-      display: flex;
+      display:flex;
 
-      align-items: center;
-      justify-content: space-between;
+      align-items:center;
+      justify-content:space-between;
 
-      gap: 20px;
+      gap:20px;
 
-      border-radius: 17px;
+      border-radius:17px;
 
       background:
         linear-gradient(
@@ -1397,83 +1438,78 @@
         rgba(157,117,255,.26);
     }
 
-    .final-estimate span {
-      color:
-        #92919b;
+    .final-estimate span{
+      color:#92919b;
 
-      font-size: 11px;
-      font-weight: 800;
+      font-size:11px;
+      font-weight:800;
 
-      letter-spacing: 1px;
+      letter-spacing:1px;
 
-      text-transform: uppercase;
+      text-transform:uppercase;
     }
 
-    .final-estimate strong {
-      font-size: 34px;
+    .final-estimate strong{
+      font-size:34px;
     }
 
-    .muted {
-      margin-top: 3px;
+    .muted{
+      margin-top:3px;
 
-      color:
-        #686772;
+      color:#686772;
 
-      font-size: 10px;
+      font-size:10px;
     }
 
     /* ========================================
        SUBMISSION
     ======================================== */
 
-    .submit-status {
-      min-height: 24px;
+    .submit-status{
+      min-height:24px;
 
-      margin-top: 15px;
+      margin-top:15px;
 
-      color:
-        #beb2ff;
+      color:#beb2ff;
 
-      text-align: right;
+      text-align:right;
 
-      font-size: 12px;
-      font-weight: 700;
+      font-size:12px;
+      font-weight:700;
     }
 
-    .submit-status.error {
-      color:
-        #ff8fa3;
+    .submit-status.error{
+      color:#ff8fa3;
     }
 
-    .success-screen {
-      display: none;
+    .success-screen{
+      display:none;
 
       padding:
         62px 38px;
 
-      text-align: center;
+      text-align:center;
     }
 
-    .success-screen.active {
-      display: block;
+    .success-screen.active{
+      display:block;
     }
 
-    .success-icon {
-      width: 72px;
-      height: 72px;
+    .success-icon{
+      width:72px;
+      height:72px;
 
-      display: grid;
+      display:grid;
 
-      place-items: center;
+      place-items:center;
 
       margin:
         0 auto
         22px;
 
-      border-radius: 20px;
+      border-radius:20px;
 
-      color:
-        #f5ddae;
+      color:#f5ddae;
 
       background:
         linear-gradient(
@@ -1486,15 +1522,11 @@
         1px solid
         rgba(211,166,78,.23);
 
-      font-size: 30px;
-
-      box-shadow:
-        0 0 35px
-        rgba(111,76,255,.16);
+      font-size:30px;
     }
 
-    .success-screen h2 {
-      margin-bottom: 12px;
+    .success-screen h2{
+      margin-bottom:12px;
 
       font-size:
         clamp(
@@ -1503,377 +1535,333 @@
           47px
         );
 
-      letter-spacing:
-        -1.5px;
+      letter-spacing:-1.5px;
     }
 
-    .success-screen > p {
-      max-width: 620px;
+    .success-screen > p{
+      max-width:620px;
 
       margin:
         0 auto
         28px;
 
-      color:
-        #92919b;
+      color:#92919b;
     }
 
-    .success-actions {
-      display: flex;
+    .success-actions{
+      display:flex;
 
-      justify-content: center;
+      justify-content:center;
 
-      flex-wrap: wrap;
+      flex-wrap:wrap;
 
-      gap: 11px;
+      gap:11px;
     }
 
-    .copied-message {
-      min-height: 24px;
+    .copied-message{
+      min-height:24px;
 
-      margin-top: 16px;
+      margin-top:16px;
 
-      color:
-        #bdb1ff;
+      color:#bdb1ff;
 
-      font-size: 13px;
+      font-size:13px;
     }
 
-    .submission-note {
-      margin-top: 17px;
+    .submission-note{
+      margin-top:17px;
 
-      color:
-        #65646f;
+      color:#65646f;
 
-      text-align: center;
+      text-align:center;
 
-      font-size: 10px;
-    }
-
-    /* ========================================
-       GLASS RETURN
-    ======================================== */
-
-    .glass-return {
-      position: fixed;
-      inset: 0;
-
-      z-index: 30000;
-
-      visibility: hidden;
-
-      pointer-events: none;
-
-      overflow: hidden;
-
-      background:
-        rgba(5,5,7,0);
-    }
-
-    .glass-return.active {
-      visibility: visible;
-
-      pointer-events: all;
-
-      animation:
-        glassReturnBackground
-        .88s ease
-        forwards;
-    }
-
-    @keyframes glassReturnBackground {
-
-      to {
-        background:
-          #050507;
-      }
-
-    }
-
-    .glass-return::before {
-      content: "";
-
-      position: absolute;
-
-      left: 50%;
-      top: 50%;
-
-      width: 145vmax;
-      height: 145vmax;
-
-      transform:
-        translate(-50%,-50%)
-        scale(1);
-
-      border-radius: 50%;
-
-      background:
-        radial-gradient(
-          circle,
-          rgba(157,117,255,.36),
-          rgba(47,27,112,.23) 20%,
-          #050507 62%
-        );
-
-      opacity: 0;
-    }
-
-    .glass-return.active::before {
-      animation:
-        collapseReturn
-        .78s
-        cubic-bezier(.75,0,.2,1)
-        forwards;
-    }
-
-    @keyframes collapseReturn {
-
-      0% {
-        opacity: 0;
-
-        transform:
-          translate(-50%,-50%)
-          scale(1.2);
-      }
-
-      15% {
-        opacity: 1;
-      }
-
-      100% {
-        opacity: 1;
-
-        transform:
-          translate(-50%,-50%)
-          scale(.01);
-      }
-
-    }
-
-    .return-logo {
-      position: absolute;
-
-      left: 50%;
-      top: 50%;
-
-      width: 100px;
-
-      transform:
-        translate(-50%,-50%)
-        scale(.65);
-
-      opacity: 0;
-
-      filter:
-        drop-shadow(
-          0 0 32px
-          rgba(111,76,255,.52)
-        );
-    }
-
-    .glass-return.active
-    .return-logo {
-      animation:
-        returnLogoPulse
-        .45s
-        ease
-        .2s
-        forwards;
-    }
-
-    @keyframes returnLogoPulse {
-
-      0% {
-        opacity: 0;
-
-        transform:
-          translate(-50%,-50%)
-          scale(.65);
-      }
-
-      50% {
-        opacity: .95;
-
-        transform:
-          translate(-50%,-50%)
-          scale(1.08);
-      }
-
-      100% {
-        opacity: 0;
-
-        transform:
-          translate(-50%,-50%)
-          scale(.8);
-      }
-
+      font-size:10px;
     }
 
     /* ========================================
        FOOTER
     ======================================== */
 
-    footer {
+    footer{
       padding:
-        36px 0;
+        32px 0
+        34px;
 
       border-top:
         1px solid
         rgba(255,255,255,.06);
     }
 
-    .footer-row {
-      display: flex;
+    .footer-row{
+      display:flex;
 
-      align-items: center;
-      justify-content: space-between;
+      justify-content:space-between;
 
-      flex-wrap: wrap;
+      gap:20px;
 
-      gap: 15px;
+      color:#64636d;
 
-      color:
-        #6f6e78;
+      font-size:10px;
+    }
 
-      font-size: 10px;
+    /* ========================================
+       FAST PAGE TRANSITION
+    ======================================== */
+
+    .page-transition{
+      position:fixed;
+      inset:0;
+
+      z-index:30000;
+
+      visibility:hidden;
+      pointer-events:none;
+
+      overflow:hidden;
+
+      background:
+        rgba(5,5,7,0);
+    }
+
+    .page-transition.active{
+      visibility:visible;
+      pointer-events:all;
+
+      animation:
+        transitionBackground
+        .44s
+        ease
+        forwards;
+    }
+
+    @keyframes transitionBackground{
+
+      from{
+        background:
+          rgba(5,5,7,0);
+      }
+
+      55%{
+        background:
+          rgba(5,5,7,.86);
+      }
+
+      to{
+        background:#050507;
+      }
+
+    }
+
+    .transition-line{
+      position:absolute;
+
+      left:-5%;
+      right:-5%;
+      bottom:-20px;
+
+      height:7px;
+
+      opacity:0;
+
+      background:
+        linear-gradient(
+          90deg,
+          transparent,
+          var(--purple),
+          #fff,
+          var(--gold-soft),
+          transparent
+        );
+
+      box-shadow:
+        0 0 24px
+        rgba(157,117,255,.9),
+        0 0 70px
+        rgba(211,166,78,.45);
+    }
+
+    .page-transition.active
+    .transition-line{
+      animation:
+        transitionRise
+        .43s
+        cubic-bezier(.7,0,.3,1)
+        forwards;
+    }
+
+    @keyframes transitionRise{
+
+      from{
+        opacity:0;
+
+        transform:
+          translateY(5vh);
+      }
+
+      10%{
+        opacity:1;
+      }
+
+      to{
+        opacity:1;
+
+        transform:
+          translateY(-112vh);
+      }
+
     }
 
     /* ========================================
        RESPONSIVE
     ======================================== */
 
-    @media (max-width: 700px) {
+    @media(max-width:900px){
 
-      .quote-hero {
-        padding-top: 125px;
+      .desktop-nav{
+        display:none;
       }
 
-      .quote-hero h1 {
-        letter-spacing: -2.8px;
-      }
-
-      .field-grid,
-      .choice-grid,
-      .review-grid {
-        grid-template-columns:
-          1fr;
-      }
-
-      .field-full,
-      .review-card.full {
-        grid-column: auto;
-      }
-
-      .color-grid {
-        grid-template-columns:
-          repeat(2,1fr);
-      }
-
-      .step {
-        padding:
-          28px 21px;
-      }
-
-      .imported-top,
-      .final-estimate {
-        align-items: flex-start;
-
-        flex-direction: column;
-      }
-
-      .submit-status {
-        text-align: center;
+      .menu-button{
+        display:grid;
       }
 
     }
 
-    @media (max-width: 480px) {
+    @media(max-width:700px){
 
-      .container {
+      .container{
         width:
           calc(100% - 24px);
       }
 
-      .nav-wrap {
-        min-height: 70px;
+      .orb{
+        animation:none;
+
+        filter:blur(68px);
       }
 
-      .brand-mark {
-        width: 39px;
-        height: 39px;
+      .nav-wrap{
+        min-height:70px;
       }
 
-      .brand-main {
-        font-size: 12px;
+      .brand-mark{
+        width:40px;
+        height:40px;
       }
 
-      .brand-sub {
-        font-size: 7px;
+      .brand-main{
+        font-size:12px;
       }
 
-      .back-link {
-        min-height: 40px;
+      .brand-sub{
+        font-size:7px;
+      }
 
+      .quote-hero{
         padding:
-          0 11px;
-
-        font-size: 10px;
+          120px 0
+          42px;
       }
 
-      .quote-hero {
+      .quote-hero::before{
+        font-size:110px;
+
+        letter-spacing:-7px;
+      }
+
+      .quote-hero h1{
+        font-size:
+          clamp(
+            48px,
+            15vw,
+            66px
+          );
+
+        letter-spacing:-3px;
+      }
+
+      .imported-top{
+        display:block;
+      }
+
+      .imported-price{
+        margin-top:11px;
+      }
+
+      .step{
         padding:
-          115px 0
-          40px;
+          30px 20px;
       }
 
-      .form-nav {
-        display: grid;
+      .field-grid,
+      .choice-grid,
+      .review-grid{
+        grid-template-columns:1fr;
+      }
+
+      .field-full,
+      .review-card.full{
+        grid-column:auto;
+      }
+
+      .color-grid{
+        grid-template-columns:
+          repeat(2,1fr);
+      }
+
+      .final-estimate{
+        align-items:flex-start;
+
+        flex-direction:column;
+      }
+
+      .form-nav{
+        display:grid;
 
         grid-template-columns:
           1fr 1fr;
 
-        gap: 10px;
+        gap:10px;
       }
 
-      .form-nav .btn {
-        width: 100%;
+      .form-nav .btn{
+        width:100%;
       }
 
-      .form-nav > div:empty {
-        display: none;
-      }
-
-      .form-nav-right {
-        margin-left: 0;
+      .form-nav-right{
+        margin-left:0;
 
         grid-column:
           1 / -1;
       }
 
       .step[data-step="1"]
-      .form-nav {
-        grid-template-columns:
-          1fr;
+      .form-nav{
+        grid-template-columns:1fr;
       }
 
-      .success-actions {
-        flex-direction: column;
+      .success-actions{
+        flex-direction:column;
       }
 
-      .success-actions .btn {
-        width: 100%;
+      .success-actions .btn{
+        width:100%;
+      }
+
+      .footer-row{
+        flex-direction:column;
       }
 
     }
 
-    @media (
+    @media(
       prefers-reduced-motion:
       reduce
-    ) {
+    ){
 
       *,
       *::before,
-      *::after {
+      *::after{
         animation-duration:
           .01ms !important;
 
@@ -1895,20 +1883,14 @@
 
 <body>
 
-  <!-- RETURN TRANSITION -->
+  <!-- FAST TRANSITION -->
 
   <div
-    class="glass-return"
-    id="glassReturn"
+    class="page-transition"
+    id="pageTransition"
     aria-hidden="true"
   >
-
-    <img
-      class="return-logo"
-      src="397D40D2-EA52-4B47-99D8-90CD02AD19E1.png"
-      alt=""
-    >
-
+    <div class="transition-line"></div>
   </div>
 
   <!-- AMBIENT -->
@@ -1917,11 +1899,9 @@
     class="ambient"
     aria-hidden="true"
   >
-
     <div class="orb orb-one"></div>
     <div class="orb orb-two"></div>
     <div class="orb orb-three"></div>
-
   </div>
 
   <!-- HEADER -->
@@ -1934,21 +1914,18 @@
 
         <a
           href="index.html"
-          class="brand home-glass-link"
+          class="brand site-link"
           aria-label="Sursum Digital home"
         >
 
           <div class="brand-mark">
-
             <img
               src="397D40D2-EA52-4B47-99D8-90CD02AD19E1.png"
               alt="Sursum Digital logo"
             >
-
           </div>
 
           <div class="brand-copy">
-
             <span class="brand-main">
               SURSUM
             </span>
@@ -1956,19 +1933,128 @@
             <span class="brand-sub">
               DIGITAL
             </span>
-
           </div>
 
         </a>
 
-        <a
-          href="index.html"
-          class="back-link home-glass-link"
+        <nav
+          class="desktop-nav"
+          aria-label="Primary navigation"
         >
-          ← Back to Site
-        </a>
+
+          <a
+            href="services.html"
+            class="site-link"
+          >
+            Services
+          </a>
+
+          <a
+            href="portfolio.html"
+            class="site-link"
+          >
+            Portfolio
+          </a>
+
+          <a
+            href="maintenance.html"
+            class="site-link"
+          >
+            Maintenance
+          </a>
+
+          <a
+            href="about.html"
+            class="site-link"
+          >
+            About
+          </a>
+
+          <a
+            href="contact.html"
+            class="site-link"
+          >
+            Contact
+          </a>
+
+          <a
+            href="quote.html"
+            class="active"
+          >
+            Start a Project
+          </a>
+
+        </nav>
+
+        <button
+          class="menu-button"
+          id="menuButton"
+          type="button"
+          aria-label="Open navigation menu"
+          aria-expanded="false"
+        >
+          <span class="menu-lines">
+            <span></span>
+            <span></span>
+            <span></span>
+          </span>
+        </button>
 
       </div>
+
+      <nav
+        class="mobile-menu"
+        id="mobileMenu"
+        aria-label="Mobile navigation"
+      >
+
+        <a
+          href="index.html"
+          class="site-link"
+        >
+          Home
+        </a>
+
+        <a
+          href="services.html"
+          class="site-link"
+        >
+          Services
+        </a>
+
+        <a
+          href="portfolio.html"
+          class="site-link"
+        >
+          Portfolio
+        </a>
+
+        <a
+          href="maintenance.html"
+          class="site-link"
+        >
+          Maintenance
+        </a>
+
+        <a
+          href="about.html"
+          class="site-link"
+        >
+          About
+        </a>
+
+        <a
+          href="contact.html"
+          class="site-link"
+        >
+          Contact
+        </a>
+
+        <a href="quote.html">
+          Start a Project
+        </a>
+
+      </nav>
 
     </div>
 
@@ -1983,25 +2069,19 @@
       <div class="container">
 
         <div class="eyebrow">
-
           <span class="eyebrow-dot"></span>
-
           Project Intake
-
         </div>
 
         <h1>
-
           Let's build something
 
           <span class="gradient-text">
             worth remembering.
           </span>
-
         </h1>
 
         <p>
-
           Tell Sursum about your business,
           what the website needs to accomplish,
           the direction you want,
@@ -2009,7 +2089,6 @@
 
           Your answers are sent directly
           as one organized project request.
-
         </p>
 
       </div>
@@ -2109,6 +2188,12 @@
               value="New Sursum Digital Project Request"
             >
 
+            <input
+              type="hidden"
+              name="formType"
+              value="Project Intake"
+            >
+
             <!-- STEP 1 -->
 
             <section
@@ -2125,12 +2210,11 @@
               </h2>
 
               <p class="step-intro">
-
                 Start with the basics.
 
                 This gives Sursum
-                the business context behind the project.
-
+                the business context
+                behind the project.
               </p>
 
               <div
@@ -2291,13 +2375,10 @@
               </h2>
 
               <p class="step-intro">
-
                 Select everything that matters.
 
-                A website can have more than one job,
-                despite what minimalists on the internet
-                may insist.
-
+                A website can support
+                more than one business goal.
               </p>
 
               <div class="choice-grid">
@@ -2311,7 +2392,6 @@
                   >
 
                   <div>
-
                     <strong>
                       Generate Leads
                     </strong>
@@ -2319,7 +2399,6 @@
                     <span>
                       Get customers to call or message
                     </span>
-
                   </div>
 
                 </label>
@@ -2333,7 +2412,6 @@
                   >
 
                   <div>
-
                     <strong>
                       Request Quotes
                     </strong>
@@ -2341,7 +2419,6 @@
                     <span>
                       Let customers submit project details
                     </span>
-
                   </div>
 
                 </label>
@@ -2355,7 +2432,6 @@
                   >
 
                   <div>
-
                     <strong>
                       Book Appointments
                     </strong>
@@ -2363,7 +2439,6 @@
                     <span>
                       Make scheduling easier
                     </span>
-
                   </div>
 
                 </label>
@@ -2377,7 +2452,6 @@
                   >
 
                   <div>
-
                     <strong>
                       Showcase Work
                     </strong>
@@ -2385,7 +2459,6 @@
                     <span>
                       Projects, galleries, before and afters
                     </span>
-
                   </div>
 
                 </label>
@@ -2399,7 +2472,6 @@
                   >
 
                   <div>
-
                     <strong>
                       Explain Services
                     </strong>
@@ -2407,7 +2479,6 @@
                     <span>
                       Make the offer easy to understand
                     </span>
-
                   </div>
 
                 </label>
@@ -2421,7 +2492,6 @@
                   >
 
                   <div>
-
                     <strong>
                       Build Trust
                     </strong>
@@ -2429,7 +2499,6 @@
                     <span>
                       Look professional and established
                     </span>
-
                   </div>
 
                 </label>
@@ -2443,7 +2512,6 @@
                   >
 
                   <div>
-
                     <strong>
                       Improve Google Presence
                     </strong>
@@ -2451,7 +2519,6 @@
                     <span>
                       Stronger search foundations
                     </span>
-
                   </div>
 
                 </label>
@@ -2465,7 +2532,6 @@
                   >
 
                   <div>
-
                     <strong>
                       Something Else
                     </strong>
@@ -2473,7 +2539,6 @@
                     <span>
                       Explain it below
                     </span>
-
                   </div>
 
                 </label>
@@ -2538,19 +2603,20 @@
               </h2>
 
               <p class="step-intro">
-
                 You do not need design vocabulary.
 
                 Choose what feels closest
                 and Sursum can build from there.
-
               </p>
 
               <label class="field-label">
                 Overall Style
               </label>
 
-              <div class="choice-grid">
+              <div
+                class="choice-grid"
+                style="margin-top:10px;"
+              >
 
                 <label class="choice-card">
 
@@ -2561,7 +2627,6 @@
                   >
 
                   <div>
-
                     <strong>
                       Modern & Clean
                     </strong>
@@ -2569,7 +2634,6 @@
                     <span>
                       Minimal and polished
                     </span>
-
                   </div>
 
                 </label>
@@ -2583,7 +2647,6 @@
                   >
 
                   <div>
-
                     <strong>
                       Bold & High Impact
                     </strong>
@@ -2591,7 +2654,6 @@
                     <span>
                       Strong visuals and personality
                     </span>
-
                   </div>
 
                 </label>
@@ -2605,7 +2667,6 @@
                   >
 
                   <div>
-
                     <strong>
                       Premium / Luxury
                     </strong>
@@ -2613,7 +2674,6 @@
                     <span>
                       Refined and elevated
                     </span>
-
                   </div>
 
                 </label>
@@ -2627,7 +2687,6 @@
                   >
 
                   <div>
-
                     <strong>
                       Friendly
                     </strong>
@@ -2635,7 +2694,6 @@
                     <span>
                       Welcoming and approachable
                     </span>
-
                   </div>
 
                 </label>
@@ -2649,7 +2707,6 @@
                   >
 
                   <div>
-
                     <strong>
                       Rugged / Industrial
                     </strong>
@@ -2657,7 +2714,6 @@
                     <span>
                       Strong and practical
                     </span>
-
                   </div>
 
                 </label>
@@ -2671,7 +2727,6 @@
                   >
 
                   <div>
-
                     <strong>
                       You Decide
                     </strong>
@@ -2679,7 +2734,6 @@
                     <span>
                       Recommend what fits the business
                     </span>
-
                   </div>
 
                 </label>
@@ -2689,7 +2743,7 @@
               <div style="margin-top:28px;">
 
                 <label class="field-label">
-                  Preferred Color Direction
+                  Color Direction
                 </label>
 
                 <div class="color-grid">
@@ -2769,7 +2823,7 @@
                     <div class="color-dot color-black"></div>
 
                     <span>
-                      Dark
+                      Black / Dark
                     </span>
 
                   </label>
@@ -2785,7 +2839,7 @@
                     <div class="color-dot color-light"></div>
 
                     <span>
-                      Light
+                      White / Light
                     </span>
 
                   </label>
@@ -2849,15 +2903,15 @@
                       Select one
                     </option>
 
-                    <option>
+                    <option value="Yes">
                       Yes
                     </option>
 
-                    <option>
+                    <option value="No">
                       No
                     </option>
 
-                    <option>
+                    <option value="Yes, but I want it improved">
                       Yes, but I want it improved
                     </option>
 
@@ -2876,7 +2930,6 @@
                     <span class="optional">
                       Optional
                     </span>
-
                   </label>
 
                   <input
@@ -2928,12 +2981,10 @@
               </h2>
 
               <p class="step-intro">
-
                 These details help determine
                 what already exists,
                 what needs to be built,
                 and how large the project may become.
-
               </p>
 
               <div class="field-grid">
@@ -2956,15 +3007,15 @@
                       Select one
                     </option>
 
-                    <option>
+                    <option value="No website yet">
                       No website yet
                     </option>
 
-                    <option>
+                    <option value="Yes, redesign it">
                       Yes, redesign it
                     </option>
 
-                    <option>
+                    <option value="Yes, keep most of it">
                       Yes, keep most of it
                     </option>
 
@@ -2983,7 +3034,6 @@
                     <span class="optional">
                       Optional
                     </span>
-
                   </label>
 
                   <input
@@ -3013,19 +3063,19 @@
                       Select one
                     </option>
 
-                    <option>
+                    <option value="I already own one">
                       I already own one
                     </option>
 
-                    <option>
+                    <option value="I need to buy one">
                       I need to buy one
                     </option>
 
-                    <option>
+                    <option value="I need help choosing one">
                       I need help choosing one
                     </option>
 
-                    <option>
+                    <option value="I'm not sure">
                       I'm not sure
                     </option>
 
@@ -3051,23 +3101,23 @@
                       Select one
                     </option>
 
-                    <option>
+                    <option value="One-page site">
                       One-page site
                     </option>
 
-                    <option>
+                    <option value="2-4 pages">
                       2-4 pages
                     </option>
 
-                    <option>
+                    <option value="5-7 pages">
                       5-7 pages
                     </option>
 
-                    <option>
+                    <option value="8+ pages">
                       8+ pages
                     </option>
 
-                    <option>
+                    <option value="Not sure">
                       Not sure
                     </option>
 
@@ -3083,7 +3133,10 @@
                   Extra Services
                 </label>
 
-                <div class="choice-grid">
+                <div
+                  class="choice-grid"
+                  style="margin-top:10px;"
+                >
 
                   <label class="choice-card">
 
@@ -3094,7 +3147,6 @@
                     >
 
                     <div>
-
                       <strong>
                         Google Business Support
                       </strong>
@@ -3102,7 +3154,6 @@
                       <span>
                         Help connecting your online presence
                       </span>
-
                     </div>
 
                   </label>
@@ -3116,7 +3167,6 @@
                     >
 
                     <div>
-
                       <strong>
                         Domain Setup
                       </strong>
@@ -3124,7 +3174,6 @@
                       <span>
                         Domain connection and launch help
                       </span>
-
                     </div>
 
                   </label>
@@ -3138,7 +3187,6 @@
                     >
 
                     <div>
-
                       <strong>
                         Maintenance
                       </strong>
@@ -3146,7 +3194,6 @@
                       <span>
                         Continued website updates
                       </span>
-
                     </div>
 
                   </label>
@@ -3160,7 +3207,6 @@
                     >
 
                     <div>
-
                       <strong>
                         Quote / Booking System
                       </strong>
@@ -3168,7 +3214,6 @@
                       <span>
                         Interactive customer tools
                       </span>
-
                     </div>
 
                   </label>
@@ -3182,7 +3227,6 @@
                     >
 
                     <div>
-
                       <strong>
                         Photo Gallery
                       </strong>
@@ -3190,7 +3234,6 @@
                       <span>
                         Portfolio or before / after work
                       </span>
-
                     </div>
 
                   </label>
@@ -3204,7 +3247,6 @@
                     >
 
                     <div>
-
                       <strong>
                         SEO Foundations
                       </strong>
@@ -3212,7 +3254,6 @@
                       <span>
                         Search-friendly site structure
                       </span>
-
                     </div>
 
                   </label>
@@ -3244,23 +3285,23 @@
                       Select one
                     </option>
 
-                    <option>
+                    <option value="$399-$699">
                       $399-$699
                     </option>
 
-                    <option>
+                    <option value="$699-$999">
                       $699-$999
                     </option>
 
-                    <option>
+                    <option value="$1,000-$1,500">
                       $1,000-$1,500
                     </option>
 
-                    <option>
+                    <option value="$1,500+">
                       $1,500+
                     </option>
 
-                    <option>
+                    <option value="Not sure yet">
                       Not sure yet
                     </option>
 
@@ -3286,23 +3327,23 @@
                       Select one
                     </option>
 
-                    <option>
+                    <option value="As soon as possible">
                       As soon as possible
                     </option>
 
-                    <option>
+                    <option value="Within 1-2 weeks">
                       Within 1-2 weeks
                     </option>
 
-                    <option>
+                    <option value="Within a month">
                       Within a month
                     </option>
 
-                    <option>
+                    <option value="1-3 months">
                       1-3 months
                     </option>
 
-                    <option>
+                    <option value="No rush">
                       No rush
                     </option>
 
@@ -3367,12 +3408,10 @@
               </h2>
 
               <p class="step-intro">
-
                 Make sure everything looks right.
 
                 You can go back and change anything
                 before sending the request.
-
               </p>
 
               <div
@@ -3451,14 +3490,12 @@
             </h2>
 
             <p>
-
               Your project details were sent
               through Sursum Digital's project intake.
 
               The information can now be reviewed
               and used to determine
               the right direction for the build.
-
             </p>
 
             <div class="success-actions">
@@ -3473,7 +3510,7 @@
 
               <a
                 href="index.html"
-                class="btn btn-secondary home-glass-link"
+                class="btn btn-secondary site-link"
               >
                 Back to Homepage
               </a>
@@ -3490,10 +3527,10 @@
         </div>
 
         <p class="submission-note">
-
-          Your progress is saved in this browser
-          while you complete the project intake.
-
+          Your progress is saved
+          in this browser
+          while you complete
+          the project intake.
         </p>
 
       </div>
@@ -3501,6 +3538,8 @@
     </section>
 
   </main>
+
+  <!-- FOOTER -->
 
   <footer>
 
@@ -3524,6 +3563,87 @@
   </footer>
 
   <script>
+
+    const reduceMotion =
+      window.matchMedia(
+        "(prefers-reduced-motion: reduce)"
+      ).matches;
+
+    /* ========================================
+       MOBILE MENU
+    ======================================== */
+
+    const menuButton =
+      document.getElementById(
+        "menuButton"
+      );
+
+    const mobileMenu =
+      document.getElementById(
+        "mobileMenu"
+      );
+
+    menuButton.addEventListener(
+      "click",
+      () => {
+
+        const open =
+          mobileMenu
+            .classList
+            .toggle(
+              "open"
+            );
+
+        menuButton
+          .classList
+          .toggle(
+            "open",
+            open
+          );
+
+        menuButton.setAttribute(
+          "aria-expanded",
+          open
+            ? "true"
+            : "false"
+        );
+
+      }
+    );
+
+    mobileMenu
+      .querySelectorAll(
+        "a"
+      )
+      .forEach(
+        link => {
+
+          link.addEventListener(
+            "click",
+            () => {
+
+              mobileMenu
+                .classList
+                .remove(
+                  "open"
+                );
+
+              menuButton
+                .classList
+                .remove(
+                  "open"
+                );
+
+              menuButton.setAttribute(
+                "aria-expanded",
+                "false"
+              );
+
+            }
+          );
+
+        }
+      );
 
     /* ========================================
        FORM SETUP
@@ -3574,15 +3694,16 @@
     let currentStep = 1;
 
     let importedEstimate = "";
-
     let importedProjectText = "";
-
     let importedPackage = "";
 
     let finalBrief = "";
 
+    const storageKey =
+      "sursumProjectForm_v1";
+
     /* ========================================
-       PACKAGE / URL PARAMETERS
+       PACKAGE PARAMETERS
     ======================================== */
 
     const urlParams =
@@ -3631,12 +3752,9 @@
 
     const packageInfo = {
 
-      launch: {
+      launch:{
         title:
           "Launch / Essential Presence",
-
-        price:
-          "399",
 
         displayPrice:
           "$399+",
@@ -3645,12 +3763,9 @@
           "A focused custom website for businesses that need a professional online presence."
       },
 
-      growth: {
+      growth:{
         title:
           "Growth / Business Website",
-
-        price:
-          "699",
 
         displayPrice:
           "$699+",
@@ -3659,12 +3774,9 @@
           "A larger custom website with more room for services, content, forms, and customer conversion."
       },
 
-      ascend: {
+      ascend:{
         title:
           "Ascend / Advanced Build",
-
-        price:
-          "999",
 
         displayPrice:
           "$999+",
@@ -3673,14 +3785,9 @@
           "A larger custom build with additional pages, deeper customization, and advanced functionality."
       },
 
-      /* support old package URLs too */
-
-      ignite: {
+      ignite:{
         title:
           "Launch / Essential Presence",
-
-        price:
-          "399",
 
         displayPrice:
           "$399+",
@@ -3689,12 +3796,9 @@
           "A focused custom website for businesses that need a professional online presence."
       },
 
-      forge: {
+      forge:{
         title:
           "Growth / Business Website",
-
-        price:
-          "699",
 
         displayPrice:
           "$699+",
@@ -3703,12 +3807,9 @@
           "A larger custom website with more room for services, content, forms, and customer conversion."
       },
 
-      foundry: {
+      foundry:{
         title:
           "Ascend / Advanced Build",
-
-        price:
-          "999",
 
         displayPrice:
           "$999+",
@@ -3719,14 +3820,38 @@
 
     };
 
-    if (
+    function formatEstimate(
+      value
+    ){
+
+      const number =
+        Number(
+          String(
+            value
+          )
+            .replace(
+              /[^0-9.]/g,
+              ""
+            )
+        );
+
+      return number
+        ?
+          "$" +
+          number.toLocaleString() +
+          "+"
+        :
+          value;
+    }
+
+    if(
       importedPackage &&
       packageInfo[
         importedPackage
       ]
-    ) {
+    ){
 
-      const data =
+      const info =
         packageInfo[
           importedPackage
         ];
@@ -3738,23 +3863,18 @@
         );
 
       importedTitle.textContent =
-        data.title;
+        info.title;
 
       importedPrice.textContent =
-        data.displayPrice;
+        info.displayPrice;
 
       importedDetails.textContent =
-        data.details;
+        info.details;
 
-      importedEstimate =
-        data.price;
-
-      importedProjectText =
-        data.details;
-
-    } else if (
-      importedEstimate
-    ) {
+    }else if(
+      importedEstimate ||
+      importedProjectText
+    ){
 
       importedProject
         .classList
@@ -3763,41 +3883,30 @@
         );
 
       importedTitle.textContent =
-        "Configured Website Project";
-
-      const numericEstimate =
-        Number(
-          String(
-            importedEstimate
-          )
-            .replace(
-              /[^0-9.]/g,
-              ""
-            )
-        );
+        importedProjectText ||
+        "Custom Website Project";
 
       importedPrice.textContent =
-        numericEstimate
+        importedEstimate
           ?
-            "$" +
-            numericEstimate
-              .toLocaleString()
+            formatEstimate(
+              importedEstimate
+            )
           :
-            importedEstimate;
+            "Custom";
 
       importedDetails.textContent =
-        importedProjectText ||
-        "Custom website configuration";
+        "Imported website project configuration.";
 
     }
 
     /* ========================================
-       STEP MANAGEMENT
+       STEP NAVIGATION
     ======================================== */
 
     function showStep(
       stepNumber
-    ) {
+    ){
 
       currentStep =
         Math.max(
@@ -3811,25 +3920,22 @@
       steps.forEach(
         step => {
 
-          const active =
+          step.classList.toggle(
+            "active",
             Number(
               step.dataset.step
             ) ===
-            currentStep;
-
-          step.classList.toggle(
-            "active",
-            active
+            currentStep
           );
 
         }
       );
 
-      const percent =
+      const percentage =
         currentStep * 20;
 
       progressBar.style.width =
-        percent + "%";
+        percentage + "%";
 
       progressText.textContent =
         "Step " +
@@ -3837,11 +3943,31 @@
         " of 5";
 
       progressPercent.textContent =
-        percent + "%";
+        percentage + "%";
+
+      const progressTop =
+        document
+          .querySelector(
+            ".progress-wrap"
+          )
+          .getBoundingClientRect()
+          .top +
+        window.scrollY -
+        95;
 
       window.scrollTo({
-        top: 90,
-        behavior: "smooth"
+        top:
+          Math.max(
+            0,
+            progressTop
+          ),
+
+        behavior:
+          reduceMotion
+            ?
+              "auto"
+            :
+              "smooth"
       });
 
     }
@@ -3850,26 +3976,32 @@
        VALIDATION
     ======================================== */
 
-    function validateCurrentStep() {
+    function validateCurrentStep(){
 
       const activeStep =
-        document.querySelector(
-          '.step[data-step="' +
-          currentStep +
-          '"]'
+        steps.find(
+          step =>
+            Number(
+              step.dataset.step
+            ) ===
+            currentStep
         );
+
+      if(
+        !activeStep
+      ){
+        return true;
+      }
 
       const requiredFields =
-        activeStep.querySelectorAll(
-          "[required]"
+        Array.from(
+          activeStep.querySelectorAll(
+            "[required]"
+          )
         );
 
-      const message =
-        activeStep.querySelector(
-          "[data-validation-message]"
-        );
-
-      let valid = true;
+      let valid =
+        true;
 
       requiredFields.forEach(
         field => {
@@ -3878,39 +4010,30 @@
             "field-error"
           );
 
-          if (
-            !field.value.trim()
-          ) {
-
-            field.classList.add(
-              "field-error"
-            );
-
-            valid = false;
-
-          }
-
-          if (
-            field.type ===
-              "email" &&
-            field.value.trim() &&
+          if(
             !field.checkValidity()
-          ) {
+          ){
 
             field.classList.add(
               "field-error"
             );
 
-            valid = false;
+            valid =
+              false;
 
           }
 
         }
       );
 
-      if (
+      const message =
+        activeStep.querySelector(
+          "[data-validation-message]"
+        );
+
+      if(
         message
-      ) {
+      ){
 
         message.classList.toggle(
           "show",
@@ -3919,20 +4042,21 @@
 
       }
 
-      if (
+      if(
         !valid
-      ) {
+      ){
 
-        const firstError =
-          activeStep.querySelector(
-            ".field-error"
+        const firstInvalid =
+          requiredFields.find(
+            field =>
+              !field.checkValidity()
           );
 
-        if (
-          firstError
-        ) {
+        if(
+          firstInvalid
+        ){
 
-          firstError.focus();
+          firstInvalid.focus();
 
         }
 
@@ -3946,28 +4070,14 @@
       "input",
       event => {
 
-        if (
-          event.target
-            .classList
-            .contains(
-              "field-error"
-            )
-        ) {
-
-          event.target
-            .classList
-            .remove(
-              "field-error"
-            );
-
-        }
+        event.target
+          .classList
+          .remove(
+            "field-error"
+          );
 
       }
     );
-
-    /* ========================================
-       NEXT / BACK
-    ======================================== */
 
     document
       .querySelectorAll(
@@ -3980,17 +4090,17 @@
             "click",
             () => {
 
-              if (
-                validateCurrentStep()
-              ) {
-
-                saveForm();
-
-                showStep(
-                  currentStep + 1
-                );
-
+              if(
+                !validateCurrentStep()
+              ){
+                return;
               }
+
+              saveForm();
+
+              showStep(
+                currentStep + 1
+              );
 
             }
           );
@@ -4025,11 +4135,11 @@
        CHOICE VISUALS
     ======================================== */
 
-    function updateChoiceVisuals() {
+    function updateChoiceVisuals(){
 
       document
         .querySelectorAll(
-          ".choice-card, .color-choice"
+          ".choice-card"
         )
         .forEach(
           card => {
@@ -4039,15 +4149,35 @@
                 "input"
               );
 
-            if (
-              !input
-            ) {
-              return;
-            }
+            card.classList.toggle(
+              "selected",
+              Boolean(
+                input &&
+                input.checked
+              )
+            );
+
+          }
+        );
+
+      document
+        .querySelectorAll(
+          ".color-choice"
+        )
+        .forEach(
+          card => {
+
+            const input =
+              card.querySelector(
+                "input"
+              );
 
             card.classList.toggle(
               "selected",
-              input.checked
+              Boolean(
+                input &&
+                input.checked
+              )
             );
 
           }
@@ -4055,35 +4185,30 @@
 
     }
 
-    document
-      .querySelectorAll(
-        ".choice-card input, .color-choice input"
-      )
-      .forEach(
-        input => {
+    form.addEventListener(
+      "change",
+      event => {
 
-          input.addEventListener(
-            "change",
-            () => {
+        if(
+          event.target.matches(
+            "input[type='checkbox'], input[type='radio']"
+          )
+        ){
 
-              updateChoiceVisuals();
-
-              saveForm();
-
-            }
-          );
+          updateChoiceVisuals();
 
         }
-      );
+
+        saveForm();
+
+      }
+    );
 
     /* ========================================
-       SAVE FORM LOCALLY
+       LOCAL STORAGE
     ======================================== */
 
-    const storageKey =
-      "sursumProjectForm_v1";
-
-    function saveForm() {
+    function collectFormData(){
 
       const data = {};
 
@@ -4092,31 +4217,39 @@
           form
         );
 
-      for (
+      for(
         const [
           key,
           value
         ]
-        of formData.entries()
-      ) {
+        of
+        formData.entries()
+      ){
 
-        if (
+        if(
           key.startsWith(
             "_"
-          )
-        ) {
+          ) ||
+          key ===
+            "formType"
+        ){
           continue;
         }
 
-        if (
-          data[key]
-        ) {
+        if(
+          Object.prototype
+            .hasOwnProperty
+            .call(
+              data,
+              key
+            )
+        ){
 
-          if (
+          if(
             !Array.isArray(
               data[key]
             )
-          ) {
+          ){
 
             data[key] =
               [
@@ -4129,7 +4262,7 @@
             value
           );
 
-        } else {
+        }else{
 
           data[key] =
             value;
@@ -4138,18 +4271,22 @@
 
       }
 
-      try {
+      return data;
+
+    }
+
+    function saveForm(){
+
+      try{
 
         localStorage.setItem(
           storageKey,
           JSON.stringify(
-            data
+            collectFormData()
           )
         );
 
-      } catch (
-        error
-      ) {
+      }catch(error){
 
         console.log(
           "Form progress could not be saved."
@@ -4159,44 +4296,32 @@
 
     }
 
-    form.addEventListener(
-      "input",
-      saveForm
-    );
-
-    form.addEventListener(
-      "change",
-      saveForm
-    );
-
-    /* ========================================
-       RESTORE FORM
-    ======================================== */
-
-    function restoreForm() {
+    function restoreForm(){
 
       let saved;
 
-      try {
+      try{
 
         saved =
           JSON.parse(
             localStorage.getItem(
               storageKey
-            )
+            ) ||
+            "null"
           );
 
-      } catch (
-        error
-      ) {
+      }catch(error){
 
-        return;
+        saved =
+          null;
 
       }
 
-      if (
-        !saved
-      ) {
+      if(
+        !saved ||
+        typeof saved !==
+          "object"
+      ){
         return;
       }
 
@@ -4226,19 +4351,19 @@
           fields.forEach(
             field => {
 
-              if (
+              if(
                 field.type ===
                   "checkbox" ||
                 field.type ===
                   "radio"
-              ) {
+              ){
 
                 field.checked =
                   values.includes(
                     field.value
                   );
 
-              } else {
+              }else{
 
                 field.value =
                   saved[key];
@@ -4258,7 +4383,7 @@
     restoreForm();
 
     /* ========================================
-       REVIEW
+       REVIEW HELPERS
     ======================================== */
 
     const reviewButton =
@@ -4278,7 +4403,7 @@
 
     function getCheckedValues(
       name
-    ) {
+    ){
 
       return Array.from(
         form.querySelectorAll(
@@ -4299,7 +4424,7 @@
 
     function fieldValue(
       id
-    ) {
+    ){
 
       const element =
         document.getElementById(
@@ -4319,7 +4444,7 @@
 
     function selectedRadio(
       name
-    ) {
+    ){
 
       const input =
         form.querySelector(
@@ -4340,7 +4465,7 @@
       label,
       value,
       full = false
-    ) {
+    ){
 
       const card =
         document.createElement(
@@ -4394,7 +4519,7 @@
 
     }
 
-    function buildReview() {
+    function buildReview(){
 
       reviewGrid.innerHTML =
         "";
@@ -4545,45 +4670,28 @@
         true
       );
 
-      if (
+      if(
         importedPackage &&
         packageInfo[
           importedPackage
         ]
-      ) {
+      ){
 
         finalEstimate.textContent =
           packageInfo[
             importedPackage
-          ]
-            .displayPrice;
+          ].displayPrice;
 
-      } else if (
+      }else if(
         importedEstimate
-      ) {
-
-        const numericEstimate =
-          Number(
-            String(
-              importedEstimate
-            )
-              .replace(
-                /[^0-9.]/g,
-                ""
-              )
-          );
+      ){
 
         finalEstimate.textContent =
-          numericEstimate
-            ?
-              "$" +
-              numericEstimate
-                .toLocaleString() +
-              "+"
-            :
-              importedEstimate;
+          formatEstimate(
+            importedEstimate
+          );
 
-      } else {
+      }else{
 
         finalEstimate.textContent =
           "Custom";
@@ -4611,7 +4719,7 @@
        PROJECT BRIEF
     ======================================== */
 
-    function createProjectBrief() {
+    function createProjectBrief(){
 
       const lines = [
 
@@ -4748,12 +4856,12 @@
 
       ];
 
-      if (
+      if(
         importedPackage &&
         packageInfo[
           importedPackage
         ]
-      ) {
+      ){
 
         lines.push(
           "",
@@ -4765,38 +4873,23 @@
 
       }
 
-      if (
+      if(
         importedEstimate
-      ) {
-
-        const numericEstimate =
-          Number(
-            String(
-              importedEstimate
-            )
-              .replace(
-                /[^0-9.]/g,
-                ""
-              )
-          );
+      ){
 
         lines.push(
           "",
           "WEBSITE ESTIMATE",
-          numericEstimate
-            ?
-              "$" +
-              numericEstimate
-                .toLocaleString()
-            :
-              importedEstimate
+          formatEstimate(
+            importedEstimate
+          )
         );
 
       }
 
-      if (
+      if(
         importedProjectText
-      ) {
+      ){
 
         lines.push(
           "",
@@ -4822,9 +4915,9 @@
 
         event.preventDefault();
 
-        if (
+        if(
           !validateCurrentStep()
-        ) {
+        ){
           return;
         }
 
@@ -4860,12 +4953,12 @@
           finalBrief
         );
 
-        if (
+        if(
           importedPackage &&
           packageInfo[
             importedPackage
           ]
-        ) {
+        ){
 
           formData.append(
             "Selected Package",
@@ -4876,9 +4969,9 @@
 
         }
 
-        if (
+        if(
           importedEstimate
-        ) {
+        ){
 
           formData.append(
             "Website Estimate",
@@ -4887,9 +4980,9 @@
 
         }
 
-        if (
+        if(
           importedProjectText
-        ) {
+        ){
 
           formData.append(
             "Project Configuration",
@@ -4898,27 +4991,27 @@
 
         }
 
-        try {
+        try{
 
           const response =
             await fetch(
               form.action,
               {
-                method: "POST",
+                method:"POST",
 
                 body:
                   formData,
 
-                headers: {
+                headers:{
                   Accept:
                     "application/json"
                 }
               }
             );
 
-          if (
+          if(
             !response.ok
-          ) {
+          ){
 
             throw new Error(
               "Form submission failed."
@@ -4926,15 +5019,13 @@
 
           }
 
-          try {
+          try{
 
             localStorage.removeItem(
               storageKey
             );
 
-          } catch (
-            error
-          ) {
+          }catch(error){
 
             console.log(
               "Saved form could not be cleared."
@@ -4961,13 +5052,17 @@
             "100%";
 
           window.scrollTo({
-            top: 100,
-            behavior: "smooth"
+            top:100,
+
+            behavior:
+              reduceMotion
+                ?
+                  "auto"
+                :
+                  "smooth"
           });
 
-        } catch (
-          error
-        ) {
+        }catch(error){
 
           submitProject.disabled =
             false;
@@ -5007,16 +5102,16 @@
       "click",
       async () => {
 
-        if (
+        if(
           !finalBrief
-        ) {
+        ){
 
           finalBrief =
             createProjectBrief();
 
         }
 
-        try {
+        try{
 
           await navigator
             .clipboard
@@ -5027,9 +5122,7 @@
           copiedMessage.textContent =
             "Project brief copied ✓";
 
-        } catch (
-          error
-        ) {
+        }catch(error){
 
           copiedMessage.textContent =
             "Your browser couldn't copy it automatically.";
@@ -5040,25 +5133,20 @@
     );
 
     /* ========================================
-       RETURN HOME TRANSITION
+       FAST INTERNAL PAGE TRANSITIONS
     ======================================== */
 
-    const glassReturn =
+    const pageTransition =
       document.getElementById(
-        "glassReturn"
+        "pageTransition"
       );
-
-    const reduceMotion =
-      window.matchMedia(
-        "(prefers-reduced-motion: reduce)"
-      ).matches;
 
     let navigating =
       false;
 
     document
       .querySelectorAll(
-        ".home-glass-link"
+        ".site-link"
       )
       .forEach(
         link => {
@@ -5072,25 +5160,34 @@
                   "href"
                 );
 
-              if (
+              if(
                 !destination ||
-                reduceMotion
-              ) {
+                destination.startsWith(
+                  "#"
+                ) ||
+                link.target ===
+                  "_blank" ||
+                reduceMotion ||
+                event.metaKey ||
+                event.ctrlKey ||
+                event.shiftKey ||
+                event.altKey
+              ){
                 return;
               }
 
               event.preventDefault();
 
-              if (
+              if(
                 navigating
-              ) {
+              ){
                 return;
               }
 
               navigating =
                 true;
 
-              glassReturn
+              pageTransition
                 .classList
                 .add(
                   "active"
@@ -5103,7 +5200,7 @@
                     destination;
 
                 },
-                760
+                440
               );
 
             }
@@ -5119,7 +5216,7 @@
         navigating =
           false;
 
-        glassReturn
+        pageTransition
           .classList
           .remove(
             "active"
