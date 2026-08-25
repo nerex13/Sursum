@@ -1637,3 +1637,1657 @@
       flex-shrink: 0;
 
       border-radius: 
+50%;
+
+      background:
+        var(--purple-bright);
+
+      box-shadow:
+        0 0 10px
+        rgba(157,117,255,.5);
+    }
+
+    .project-freshline
+    .feature::before {
+      background: #72cb48;
+
+      box-shadow:
+        0 0 10px
+        rgba(114,203,72,.45);
+    }
+
+    .project-twin
+    .feature::before {
+      background: #4aa7f7;
+
+      box-shadow:
+        0 0 10px
+        rgba(74,167,247,.45);
+    }
+
+    .project-lund
+    .feature::before {
+      background: #df4545;
+
+      box-shadow:
+        0 0 10px
+        rgba(223,69,69,.45);
+    }
+
+    .project-link {
+      min-height: 50px;
+
+      margin-top: 32px;
+
+      display: inline-flex;
+
+      align-items: center;
+      justify-content: center;
+
+      border-radius: 11px;
+
+      color: #fff;
+
+      background:
+        rgba(255,255,255,.045);
+
+      border:
+        1px solid
+        rgba(255,255,255,.1);
+
+      font-size: 11px;
+      font-weight: 900;
+
+      transition:
+        transform .2s ease,
+        border-color .2s ease,
+        background .2s ease;
+    }
+
+    .project-link:hover {
+      transform:
+        translateY(-2px);
+
+      border-color:
+        rgba(157,117,255,.3);
+
+      background:
+        rgba(111,76,255,.09);
+    }
+
+    /* ========================================
+       PHILOSOPHY
+    ======================================== */
+
+    .philosophy {
+      padding:
+        30px 0
+        120px;
+    }
+
+    .philosophy-box {
+      position: relative;
+
+      overflow: hidden;
+
+      display: grid;
+
+      grid-template-columns:
+        1fr 1fr;
+
+      gap: 50px;
+
+      padding:
+        65px;
+
+      border-radius: 30px;
+
+      background:
+        radial-gradient(
+          circle at 88% 15%,
+          rgba(157,117,255,.15),
+          transparent 30%
+        ),
+        linear-gradient(
+          145deg,
+          rgba(255,255,255,.045),
+          rgba(111,76,255,.035)
+        );
+
+      border:
+        1px solid
+        rgba(157,117,255,.2);
+    }
+
+    .philosophy-box::after {
+      content: "";
+
+      position: absolute;
+
+      left: 8%;
+      right: 8%;
+      bottom: 0;
+
+      height: 1px;
+
+      background:
+        linear-gradient(
+          90deg,
+          transparent,
+          var(--gold),
+          var(--purple-bright),
+          transparent
+        );
+
+      box-shadow:
+        0 0 18px
+        rgba(157,117,255,.28);
+    }
+
+    .philosophy h2 {
+      font-size:
+        clamp(
+          40px,
+          6vw,
+          66px
+        );
+
+      line-height: .95;
+
+      letter-spacing: -3px;
+    }
+
+    .philosophy-copy {
+      display: flex;
+
+      flex-direction: column;
+
+      justify-content: center;
+    }
+
+    .philosophy-copy p {
+      color: #8e8d97;
+
+      font-size: 14px;
+    }
+
+    .philosophy-copy p + p {
+      margin-top: 14px;
+    }
+
+    /* ========================================
+       CTA
+    ======================================== */
+
+    .cta {
+      padding:
+        25px 0
+        115px;
+    }
+
+    .cta-box {
+      position: relative;
+
+      overflow: hidden;
+
+      padding:
+        80px 40px;
+
+      text-align: center;
+
+      border-radius: 31px;
+
+      background:
+        radial-gradient(
+          circle at 50% 0%,
+          rgba(157,117,255,.2),
+          transparent 43%
+        ),
+        rgba(255,255,255,.025);
+
+      border:
+        1px solid
+        rgba(157,117,255,.2);
+    }
+
+    .cta-box h2 {
+      max-width: 850px;
+
+      margin: 9px auto 0;
+
+      font-size:
+        clamp(
+          44px,
+          7vw,
+          75px
+        );
+
+      line-height: .94;
+
+      letter-spacing: -3px;
+    }
+
+    .cta-box p {
+      max-width: 610px;
+
+      margin:
+        18px auto 0;
+
+      color: #8d8c96;
+
+      font-size: 14px;
+    }
+
+    .cta-actions {
+      display: flex;
+
+      justify-content: center;
+
+      flex-wrap: wrap;
+
+      gap: 11px;
+
+      margin-top: 28px;
+    }
+
+    .button {
+      min-height: 53px;
+
+      display: inline-flex;
+
+      align-items: center;
+      justify-content: center;
+
+      padding:
+        0 23px;
+
+      border-radius: 12px;
+
+      font-size: 11px;
+      font-weight: 900;
+
+      transition:
+        transform .2s ease,
+        box-shadow .2s ease;
+    }
+
+    .button:hover {
+      transform:
+        translateY(-2px);
+    }
+
+    .button-primary {
+      color: #fff;
+
+      background:
+        linear-gradient(
+          100deg,
+          #5f43e8,
+          var(--purple-bright)
+        );
+
+      box-shadow:
+        0 15px 44px
+        rgba(93,60,232,.27);
+    }
+
+    .button-secondary {
+      color: #cbc9d2;
+
+      background:
+        rgba(255,255,255,.035);
+
+      border:
+        1px solid
+        rgba(255,255,255,.09);
+    }
+
+    /* ========================================
+       FOOTER
+    ======================================== */
+
+    footer {
+      padding:
+        38px 0
+        34px;
+
+      border-top:
+        1px solid
+        rgba(255,255,255,.06);
+    }
+
+    .footer-grid {
+      display: flex;
+
+      justify-content: space-between;
+
+      gap: 30px;
+
+      color: #66656f;
+
+      font-size: 10px;
+    }
+
+    .footer-links {
+      display: flex;
+
+      flex-wrap: wrap;
+
+      gap: 16px;
+    }
+
+    .footer-links a:hover {
+      color: #c9bdff;
+    }
+
+    /* ========================================
+       SCROLL REVEALS
+    ======================================== */
+
+    .reveal {
+      opacity: 0;
+
+      transform:
+        translateY(30px);
+
+      transition:
+        opacity .8s ease,
+        transform .8s
+        cubic-bezier(.2,.8,.2,1);
+    }
+
+    .reveal.visible {
+      opacity: 1;
+
+      transform:
+        translateY(0);
+    }
+
+    .project.reveal {
+      transform:
+        translateY(45px)
+        scale(.985);
+    }
+
+    .project.reveal.visible {
+      transform:
+        translateY(0)
+        scale(1);
+    }
+
+    /* ========================================
+       RESPONSIVE
+    ======================================== */
+
+    @media (max-width: 980px) {
+
+      .project {
+        grid-template-columns: 1fr;
+      }
+
+      .project-info {
+        border-left: 0;
+
+        border-top:
+          1px solid
+          rgba(255,255,255,.065);
+      }
+
+      .philosophy-box {
+        grid-template-columns: 1fr;
+      }
+
+    }
+
+    @media (max-width: 720px) {
+
+      .container {
+        width:
+          calc(100% - 24px);
+      }
+
+      .nav-wrap {
+        min-height: 70px;
+      }
+
+      .brand-mark {
+        width: 40px;
+        height: 40px;
+      }
+
+      .brand-main {
+        font-size: 12px;
+      }
+
+      .brand-sub {
+        font-size: 7px;
+      }
+
+      .desktop-nav a:not(.nav-cta) {
+        display: none;
+      }
+
+      .hero {
+        min-height: 680px;
+
+        padding:
+          120px 0
+          70px;
+      }
+
+      h1 {
+        font-size:
+          clamp(
+            57px,
+            18vw,
+            82px
+          );
+
+        letter-spacing: -4px;
+      }
+
+      .hero-word {
+        font-size: 180px;
+
+        letter-spacing: -12px;
+      }
+
+      .scroll-cue {
+        display: none;
+      }
+
+      .projects {
+        padding-top: 30px;
+      }
+
+      .project {
+        min-height: auto;
+
+        border-radius: 22px;
+      }
+
+      .project-visual {
+        min-height: 455px;
+      }
+
+      .project-browser {
+        width: 88%;
+
+        min-height: 335px;
+      }
+
+      .mock-page {
+        min-height: 298px;
+
+        padding: 24px;
+      }
+
+      .mock-nav {
+        margin-bottom: 42px;
+      }
+
+      .mock-title {
+        font-size: 34px;
+      }
+
+      .mock-copy {
+        width: 85%;
+      }
+
+      .project-info {
+        padding:
+          37px 24px;
+      }
+
+      .philosophy-box {
+        padding:
+          42px 24px;
+
+        border-radius: 23px;
+      }
+
+      .cta-box {
+        padding:
+          58px 22px;
+      }
+
+      .cta-actions {
+        flex-direction: column;
+      }
+
+      .button {
+        width: 100%;
+      }
+
+      .footer-grid {
+        flex-direction: column;
+      }
+
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+
+      *,
+      *::before,
+      *::after {
+        animation-duration:
+          .01ms !important;
+
+        animation-iteration-count:
+          1 !important;
+
+        transition-duration:
+          .01ms !important;
+
+        scroll-behavior:
+          auto !important;
+      }
+
+      .reveal {
+        opacity: 1;
+        transform: none !important;
+      }
+
+    }
+
+  </style>
+
+</head>
+
+<body>
+
+  <div
+    class="fire-transition"
+    id="fireTransition"
+    aria-hidden="true"
+  >
+
+    <div class="burn-sheet">
+
+      <div class="fire-edge"></div>
+
+    </div>
+
+    <div
+      class="ember-field"
+      id="emberField"
+    ></div>
+
+    <img
+      class="transition-logo"
+      src="397D40D2-EA52-4B47-99D8-90CD02AD19E1.png"
+      alt=""
+    >
+
+  </div>
+
+  <div
+    class="ambient"
+    aria-hidden="true"
+  >
+
+    <div class="orb orb-one"></div>
+    <div class="orb orb-two"></div>
+    <div class="orb orb-three"></div>
+
+  </div>
+
+  <header>
+
+    <div class="container">
+
+      <div class="nav-wrap">
+
+        <a
+          href="index.html"
+          class="brand fire-nav"
+          aria-label="Sursum Digital home"
+        >
+
+          <div class="brand-mark">
+
+            <img
+              src="397D40D2-EA52-4B47-99D8-90CD02AD19E1.png"
+              alt="Sursum Digital logo"
+            >
+
+          </div>
+
+          <div class="brand-copy">
+
+            <span class="brand-main">
+              SURSUM
+            </span>
+
+            <span class="brand-sub">
+              DIGITAL
+            </span>
+
+          </div>
+
+        </a>
+
+        <nav class="desktop-nav">
+
+          <a
+            href="index.html"
+            class="fire-nav"
+          >
+            Home
+          </a>
+
+          <a href="contact.html">
+            Contact
+          </a>
+
+          <a
+            href="quote.html"
+            class="nav-cta"
+          >
+            Start a Project
+          </a>
+
+        </nav>
+
+      </div>
+
+    </div>
+
+  </header>
+
+  <main>
+
+    <section class="hero">
+
+      <div
+        class="hero-word"
+        aria-hidden="true"
+      >
+        WORK
+      </div>
+
+      <div class="container">
+
+        <div class="hero-content">
+
+          <div class="eyebrow">
+            Selected Work
+          </div>
+
+          <h1>
+
+            Built different
+
+            <span class="hero-accent">
+              on purpose.
+            </span>
+
+          </h1>
+
+          <p class="hero-copy">
+
+            Different businesses should not look
+            like the same website with a new logo.
+
+            Each Sursum project is designed around
+            the business,
+            its customers,
+            its personality,
+            and what the website actually needs to do.
+
+          </p>
+
+          <div class="hero-meta">
+
+            <span class="meta-pill">
+              Custom Design
+            </span>
+
+            <span class="meta-pill">
+              Mobile First
+            </span>
+
+            <span class="meta-pill">
+              Conversion Focused
+            </span>
+
+            <span class="meta-pill">
+              Built to Grow
+            </span>
+
+          </div>
+
+        </div>
+
+      </div>
+
+      <div class="scroll-cue">
+
+        Explore Projects
+
+        <span class="scroll-line"></span>
+
+      </div>
+
+    </section>
+
+    <section class="projects">
+
+      <div class="container">
+
+        <div class="section-head reveal">
+
+          <div class="section-kicker">
+            Featured Builds
+          </div>
+
+          <h2>
+            Three businesses.
+            Three completely different directions.
+          </h2>
+
+          <p>
+
+            The goal isn't to make every Sursum site
+            look like Sursum.
+
+            The goal is to make every client
+            look unmistakably like themselves.
+
+          </p>
+
+        </div>
+
+        <div class="project-list">
+
+          <article
+            class="project project-freshline reveal tilt-project"
+          >
+
+            <div class="project-visual">
+
+              <div
+                class="project-glow"
+              ></div>
+
+              <div class="project-number">
+                01 / EXTERIOR CLEANING
+              </div>
+
+              <div
+                class="project-browser fresh-browser"
+              >
+
+                <div class="browser-top">
+
+                  <span class="browser-dot"></span>
+                  <span class="browser-dot"></span>
+                  <span class="browser-dot"></span>
+
+                  <span class="browser-address"></span>
+
+                </div>
+
+                <div class="mock-page">
+
+                  <div class="mock-nav">
+
+                    <div class="mock-brand">
+                      FRESHLINE
+                    </div>
+
+                    <div class="mock-links">
+
+                      <span class="mock-link"></span>
+                      <span class="mock-link"></span>
+                      <span class="mock-link"></span>
+
+                    </div>
+
+                  </div>
+
+                  <div class="mock-kicker">
+                    Exterior Cleaning
+                  </div>
+
+                  <div class="mock-title">
+                    A cleaner property starts here.
+                  </div>
+
+                  <div class="mock-copy">
+
+                    Pressure washing,
+                    exterior cleaning,
+                    and local service
+                    presented through a clear,
+                    high-contrast customer path.
+
+                  </div>
+
+                  <div class="mock-button">
+                    GET A QUOTE
+                  </div>
+
+                  <div
+                    class="mock-decoration fresh-blob"
+                  ></div>
+
+                </div>
+
+              </div>
+
+            </div>
+
+            <div class="project-info">
+
+              <div class="project-type">
+                Local Service Website
+              </div>
+
+              <h3>
+                Freshline Exterior Cleaning
+              </h3>
+
+              <p>
+
+                A bold,
+                green-driven service website
+                built to explain the offer quickly
+                and move local customers toward
+                requesting a quote.
+
+              </p>
+
+              <div class="project-features">
+
+                <div class="feature">
+                  Custom visual identity
+                </div>
+
+                <div class="feature">
+                  Service-focused structure
+                </div>
+
+                <div class="feature">
+                  Quote conversion path
+                </div>
+
+                <div class="feature">
+                  Responsive mobile design
+                </div>
+
+              </div>
+
+              <a
+                href="https://nerex13.github.io/Freshline/"
+                target="_blank"
+                rel="noopener"
+                class="project-link"
+              >
+                View Live Website ↗
+              </a>
+
+            </div>
+
+          </article>
+
+          <article
+            class="project project-twin reveal tilt-project"
+          >
+
+            <div class="project-visual">
+
+              <div
+                class="project-glow"
+              ></div>
+
+              <div class="project-number">
+                02 / AUTO DETAILING
+              </div>
+
+              <div
+                class="project-browser twin-browser"
+              >
+
+                <div class="browser-top">
+
+                  <span class="browser-dot"></span>
+                  <span class="browser-dot"></span>
+                  <span class="browser-dot"></span>
+
+                  <span class="browser-address"></span>
+
+                </div>
+
+                <div class="mock-page">
+
+                  <div class="mock-nav">
+
+                    <div class="mock-brand">
+                      TWIN TURBO DETAILERS
+                    </div>
+
+                    <div class="mock-links">
+
+                      <span class="mock-link"></span>
+                      <span class="mock-link"></span>
+                      <span class="mock-link"></span>
+
+                    </div>
+
+                  </div>
+
+                  <div class="mock-kicker">
+                    Mobile Auto Detailing
+                  </div>
+
+                  <div class="mock-title">
+                    Precision shine.
+                    Every time.
+                  </div>
+
+                  <div class="mock-copy">
+
+                    Premium automotive presentation
+                    built around detailing packages,
+                    service credibility,
+                    and availability requests.
+
+                  </div>
+
+                  <div class="mock-button">
+                    CHECK AVAILABILITY
+                  </div>
+
+                  <div
+                    class="mock-decoration twin-ring"
+                  ></div>
+
+                </div>
+
+              </div>
+
+            </div>
+
+            <div class="project-info">
+
+              <div class="project-type">
+                Automotive Service Website
+              </div>
+
+              <h3>
+                Twin Turbo Detailers
+              </h3>
+
+              <p>
+
+                A darker,
+                more premium automotive direction
+                with blue highlights,
+                detailed service presentation,
+                and a streamlined path
+                toward booking availability.
+
+              </p>
+
+              <div class="project-features">
+
+                <div class="feature">
+                  Automotive visual system
+                </div>
+
+                <div class="feature">
+                  Service package presentation
+                </div>
+
+                <div class="feature">
+                  Availability request flow
+                </div>
+
+                <div class="feature">
+                  Mobile-first layout
+                </div>
+
+              </div>
+
+              <a
+                href="https://nerex13.github.io/Twin-turbo-datailing./index.html"
+                target="_blank"
+                rel="noopener"
+                class="project-link"
+              >
+                View Live Website ↗
+              </a>
+
+            </div>
+
+          </article>
+
+          <article
+            class="project project-lund reveal tilt-project"
+          >
+
+            <div class="project-visual">
+
+              <div
+                class="project-glow"
+              ></div>
+
+              <div class="project-number">
+                03 / AUTO REPAIR
+              </div>
+
+              <div
+                class="project-browser lund-browser"
+              >
+
+                <div class="browser-top">
+
+                  <span class="browser-dot"></span>
+                  <span class="browser-dot"></span>
+                  <span class="browser-dot"></span>
+
+                  <span class="browser-address"></span>
+
+                </div>
+
+                <div class="mock-page">
+
+                  <div class="lund-stripe"></div>
+
+                  <div class="mock-nav">
+
+                    <div class="mock-brand">
+                      LUND SERVICE
+                    </div>
+
+                    <div class="mock-links">
+
+                      <span class="mock-link"></span>
+                      <span class="mock-link"></span>
+                      <span class="mock-link"></span>
+
+                    </div>
+
+                  </div>
+
+                  <div class="mock-kicker">
+                    Trusted Local Mechanics
+                  </div>
+
+                  <div class="mock-title">
+                    Straight answers.
+                    Dependable repairs.
+                  </div>
+
+                  <div class="mock-copy">
+
+                    Local auto-repair credibility
+                    presented through strong hierarchy,
+                    service information,
+                    and customer trust.
+
+                  </div>
+
+                  <div class="mock-button">
+                    VIEW SERVICES
+                  </div>
+
+                </div>
+
+              </div>
+
+            </div>
+
+            <div class="project-info">
+
+              <div class="project-type">
+                Local Auto Repair Website
+              </div>
+
+              <h3>
+                Lund Service
+              </h3>
+
+              <p>
+
+                A red-and-black mechanic website
+                built around trust,
+                straightforward service,
+                customer reviews,
+                and a stronger local first impression.
+
+              </p>
+
+              <div class="project-features">
+
+                <div class="feature">
+                  Local trust positioning
+                </div>
+
+                <div class="feature">
+                  Service hierarchy
+                </div>
+
+                <div class="feature">
+                  Review-focused credibility
+                </div>
+
+                <div class="feature">
+                  Responsive layout
+                </div>
+
+              </div>
+
+              <a
+                href="https://nerex13.github.io/Lund/"
+                target="_blank"
+                rel="noopener"
+                class="project-link"
+              >
+                View Live Website ↗
+              </a>
+
+            </div>
+
+          </article>
+
+        </div>
+
+      </div>
+
+    </section>
+
+    <section class="philosophy">
+
+      <div class="container">
+
+        <div class="philosophy-box reveal">
+
+          <div>
+
+            <div class="section-kicker">
+              The Difference
+            </div>
+
+            <h2>
+              Design around the business.
+              Not around a template.
+            </h2>
+
+          </div>
+
+          <div class="philosophy-copy">
+
+            <p>
+
+              Freshline needed to feel
+              energetic,
+              clean,
+              and direct.
+
+              Twin Turbo needed to feel
+              premium,
+              automotive,
+              and precise.
+
+            </p>
+
+            <p>
+
+              Lund needed local trust,
+              mechanical confidence,
+              and a stronger sense
+              of reliability.
+
+              One visual system could never
+              serve all three properly.
+
+            </p>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </section>
+
+    <section class="cta">
+
+      <div class="container">
+
+        <div class="cta-box reveal">
+
+          <div class="section-kicker">
+            Your Turn
+          </div>
+
+          <h2>
+            Build something people remember.
+          </h2>
+
+          <p>
+
+            Your business doesn't need
+            someone else's website
+            with your logo dropped into it.
+
+            Build a digital presence
+            designed around what makes
+            your business worth choosing.
+
+          </p>
+
+          <div class="cta-actions">
+
+            <a
+              href="quote.html"
+              class="button button-primary"
+            >
+              Start Your Project →
+            </a>
+
+            <a
+              href="contact.html"
+              class="button button-secondary"
+            >
+              Contact Sursum
+            </a>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </section>
+
+  </main>
+
+  <footer>
+
+    <div class="container">
+
+      <div class="footer-grid">
+
+        <div>
+          © 2026 Sursum Digital.
+          All rights reserved.
+        </div>
+
+        <div class="footer-links">
+
+          <a
+            href="index.html"
+            class="fire-nav"
+          >
+            Home
+          </a>
+
+          <a href="contact.html">
+            Contact
+          </a>
+
+          <a href="quote.html">
+            Start a Project
+          </a>
+
+          <a href="mailto:sursumdigitaldesign@gmail.com">
+            Email
+          </a>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </footer>
+
+  <script>
+
+    const reveals =
+      document.querySelectorAll(
+        ".reveal"
+      );
+
+    if (
+      "IntersectionObserver"
+      in window
+    ) {
+
+      const observer =
+        new IntersectionObserver(
+
+          (
+            entries,
+            revealObserver
+          ) => {
+
+            entries.forEach(
+              entry => {
+
+                if (
+                  entry.isIntersecting
+                ) {
+
+                  entry.target
+                    .classList
+                    .add(
+                      "visible"
+                    );
+
+                  revealObserver.unobserve(
+                    entry.target
+                  );
+
+                }
+
+              }
+            );
+
+          },
+
+          {
+            threshold: .12,
+
+            rootMargin:
+              "0px 0px -50px 0px"
+          }
+
+        );
+
+      reveals.forEach(
+        element => {
+
+          observer.observe(
+            element
+          );
+
+        }
+      );
+
+    } else {
+
+      reveals.forEach(
+        element => {
+
+          element.classList.add(
+            "visible"
+          );
+
+        }
+      );
+
+    }
+
+    const finePointer =
+      window.matchMedia(
+        "(pointer: fine)"
+      ).matches;
+
+    const reduceMotion =
+      window.matchMedia(
+        "(prefers-reduced-motion: reduce)"
+      ).matches;
+
+    if (
+      finePointer &&
+      !reduceMotion
+    ) {
+
+      document
+        .querySelectorAll(
+          ".tilt-project"
+        )
+        .forEach(
+          project => {
+
+            const visual =
+              project.querySelector(
+                ".project-visual"
+              );
+
+            const browser =
+              project.querySelector(
+                ".project-browser"
+              );
+
+            visual.addEventListener(
+              "mousemove",
+              event => {
+
+                const rect =
+                  visual
+                    .getBoundingClientRect();
+
+                const x =
+                  (
+                    event.clientX -
+                    rect.left
+                  ) /
+                  rect.width;
+
+                const y =
+                  (
+                    event.clientY -
+                    rect.top
+                  ) /
+                  rect.height;
+
+                visual.style
+                  .setProperty(
+                    "--pointer-x",
+                    x * 100 + "%"
+                  );
+
+                visual.style
+                  .setProperty(
+                    "--pointer-y",
+                    y * 100 + "%"
+                  );
+
+                const tiltY =
+                  (
+                    x - .5
+                  ) * 8;
+
+                const tiltX =
+                  (
+                    .5 - y
+                  ) * 7;
+
+                browser.style
+                  .setProperty(
+                    "--tilt-x",
+                    tiltX + "deg"
+                  );
+
+                browser.style
+                  .setProperty(
+                    "--tilt-y",
+                    tiltY + "deg"
+                  );
+
+              }
+            );
+
+            visual.addEventListener(
+              "mouseleave",
+              () => {
+
+                visual.style
+                  .setProperty(
+                    "--pointer-x",
+                    "50%"
+                  );
+
+                visual.style
+                  .setProperty(
+                    "--pointer-y",
+                    "50%"
+                  );
+
+                browser.style
+                  .setProperty(
+                    "--tilt-x",
+                    "0deg"
+                  );
+
+                browser.style
+                  .setProperty(
+                    "--tilt-y",
+                    "0deg"
+                  );
+
+              }
+            );
+
+          }
+        );
+
+    }
+
+    const emberField =
+      document.getElementById(
+        "emberField"
+      );
+
+    function createEmbers() {
+
+      emberField.innerHTML = "";
+
+      const total =
+        window.innerWidth < 700
+          ? 30
+          : 65;
+
+      for (
+        let i = 0;
+        i < total;
+        i++
+      ) {
+
+        const ember =
+          document.createElement(
+            "span"
+          );
+
+        ember.className =
+          "ember";
+
+        ember.style.left =
+          Math.random() * 100 +
+          "%";
+
+        ember.style.top =
+          55 +
+          Math.random() * 50 +
+          "%";
+
+        ember.style.setProperty(
+          "--duration",
+          (
+            .55 +
+            Math.random() * .7
+          ) +
+          "s"
+        );
+
+        ember.style.setProperty(
+          "--delay",
+          (
+            Math.random() * .45
+          ) +
+          "s"
+        );
+
+        ember.style.setProperty(
+          "--drift-x",
+          (
+            -60 +
+            Math.random() * 120
+          ) +
+          "px"
+        );
+
+        const size =
+          1 +
+          Math.random() * 3;
+
+        ember.style.width =
+          size + "px";
+
+        ember.style.height =
+          size + "px";
+
+        emberField.appendChild(
+          ember
+        );
+
+      }
+
+    }
+
+    const fireTransition =
+      document.getElementById(
+        "fireTransition"
+      );
+
+    document
+      .querySelectorAll(
+        ".fire-nav"
+      )
+      .forEach(
+        link => {
+
+          link.addEventListener(
+            "click",
+            event => {
+
+              const destination =
+                link.getAttribute(
+                  "href"
+                );
+
+              if (
+                reduceMotion ||
+                !destination
+              ) {
+
+                return;
+
+              }
+
+              event.preventDefault();
+
+              createEmbers();
+
+              fireTransition
+                .classList
+                .add(
+                  "active"
+                );
+
+              setTimeout(
+                () => {
+
+                  window.location.href =
+                    destination;
+
+                },
+                920
+              );
+
+            }
+          );
+
+        }
+      );
+
+  </script>
+
+</body>
+
+</html>
