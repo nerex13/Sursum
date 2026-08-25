@@ -1,1 +1,3653 @@
+<!doctype html>
+<html lang="en">
 
+<head>
+
+  <meta charset="utf-8">
+
+  <meta
+    name="viewport"
+    content="width=device-width, initial-scale=1"
+  >
+
+  <title>
+    Contact | Sursum Digital
+  </title>
+
+  <meta
+    name="description"
+    content="Contact Sursum Digital about websites, redesigns, digital projects, and business website support."
+  >
+
+  <meta
+    name="theme-color"
+    content="#050507"
+  >
+
+  <style>
+
+    :root {
+
+      --bg: #050507;
+      --bg-soft: #09090e;
+
+      --panel:
+        rgba(255,255,255,.035);
+
+      --panel-strong:
+        rgba(255,255,255,.055);
+
+      --line:
+        rgba(255,255,255,.08);
+
+      --line-strong:
+        rgba(255,255,255,.14);
+
+      --text:
+        #f7f5f0;
+
+      --muted:
+        #96959f;
+
+      --silver:
+        #d8d8de;
+
+      --gold:
+        #d3a64e;
+
+      --gold-soft:
+        #f0ce86;
+
+      --gold-deep:
+        #8d6224;
+
+      --purple:
+        #6f4cff;
+
+      --purple-bright:
+        #9d75ff;
+
+      --purple-deep:
+        #2f1b70;
+
+      --radius:
+        22px;
+
+      --shadow:
+        0 30px 90px
+        rgba(0,0,0,.48);
+
+    }
+
+    * {
+
+      box-sizing:
+        border-box;
+
+      margin: 0;
+      padding: 0;
+
+    }
+
+    html {
+
+      scroll-behavior:
+        smooth;
+
+    }
+
+    body {
+
+      min-height:
+        100vh;
+
+      overflow-x:
+        hidden;
+
+      font-family:
+        Arial,
+        Helvetica,
+        sans-serif;
+
+      line-height:
+        1.6;
+
+      color:
+        var(--text);
+
+      background:
+
+        radial-gradient(
+          circle at 13% 8%,
+          rgba(111,76,255,.17),
+          transparent 28%
+        ),
+
+        radial-gradient(
+          circle at 91% 18%,
+          rgba(211,166,78,.07),
+          transparent 26%
+        ),
+
+        radial-gradient(
+          circle at 68% 76%,
+          rgba(157,117,255,.075),
+          transparent 30%
+        ),
+
+        linear-gradient(
+          180deg,
+          #050507 0%,
+          #08080d 47%,
+          #050507 100%
+        );
+
+    }
+
+    body::before {
+
+      content: "";
+
+      position:
+        fixed;
+
+      inset: 0;
+
+      z-index: -5;
+
+      pointer-events:
+        none;
+
+      opacity: .14;
+
+      background-image:
+
+        linear-gradient(
+          rgba(255,255,255,.022) 1px,
+          transparent 1px
+        ),
+
+        linear-gradient(
+          90deg,
+          rgba(255,255,255,.022) 1px,
+          transparent 1px
+        );
+
+      background-size:
+        62px 62px;
+
+    }
+
+    body::after {
+
+      content: "";
+
+      position:
+        fixed;
+
+      inset: 0;
+
+      z-index: -4;
+
+      pointer-events:
+        none;
+
+      background:
+
+        radial-gradient(
+          circle at center,
+          transparent 28%,
+          rgba(0,0,0,.34) 100%
+        );
+
+    }
+
+    a {
+
+      color:
+        inherit;
+
+      text-decoration:
+        none;
+
+    }
+
+    button,
+    input,
+    textarea,
+    select {
+
+      font:
+        inherit;
+
+    }
+
+    button {
+
+      cursor:
+        pointer;
+
+    }
+
+    img {
+
+      display:
+        block;
+
+      max-width:
+        100%;
+
+    }
+
+    ::selection {
+
+      color:
+        #fff;
+
+      background:
+        rgba(111,76,255,.55);
+
+    }
+
+    .container {
+
+      width:
+        min(
+          1180px,
+          calc(100% - 36px)
+        );
+
+      margin:
+        0 auto;
+
+    }
+
+    /* ==========================================
+       AMBIENT BACKGROUND
+    ========================================== */
+
+    .ambient {
+
+      position:
+        fixed;
+
+      inset: 0;
+
+      z-index: -3;
+
+      overflow:
+        hidden;
+
+      pointer-events:
+        none;
+
+    }
+
+    .orb {
+
+      position:
+        absolute;
+
+      border-radius:
+        50%;
+
+      filter:
+        blur(115px);
+
+      opacity:
+        .16;
+
+      animation:
+        orbFloat
+        17s
+        ease-in-out
+        infinite;
+
+    }
+
+    .orb-one {
+
+      width:
+        430px;
+
+      height:
+        430px;
+
+      top:
+        -180px;
+
+      left:
+        -170px;
+
+      background:
+        var(--purple);
+
+    }
+
+    .orb-two {
+
+      width:
+        500px;
+
+      height:
+        500px;
+
+      right:
+        -260px;
+
+      top:
+        30%;
+
+      background:
+        var(--purple-deep);
+
+      animation-delay:
+        -6s;
+
+    }
+
+    .orb-three {
+
+      width:
+        380px;
+
+      height:
+        380px;
+
+      left:
+        34%;
+
+      bottom:
+        -260px;
+
+      background:
+        var(--gold-deep);
+
+      opacity:
+        .075;
+
+      animation-delay:
+        -10s;
+
+    }
+
+    @keyframes orbFloat {
+
+      0%,
+      100% {
+
+        transform:
+          translate3d(
+            0,
+            0,
+            0
+          )
+          scale(1);
+
+      }
+
+      50% {
+
+        transform:
+          translate3d(
+            38px,
+            -25px,
+            0
+          )
+          scale(1.06);
+
+      }
+
+    }
+
+    /* ==========================================
+       PAGE TRANSITION
+    ========================================== */
+
+    .transition-layer {
+
+      position:
+        fixed;
+
+      inset: 0;
+
+      z-index:
+        99999;
+
+      display:
+        grid;
+
+      place-items:
+        center;
+
+      pointer-events:
+        none;
+
+      opacity:
+        0;
+
+      overflow:
+        hidden;
+
+      background:
+        rgba(5,5,8,0);
+
+    }
+
+    .transition-layer::before {
+
+      content: "";
+
+      position:
+        absolute;
+
+      width:
+        130vmax;
+
+      height:
+        130vmax;
+
+      border-radius:
+        50%;
+
+      transform:
+        scale(1);
+
+      opacity:
+        0;
+
+      background:
+
+        radial-gradient(
+          circle,
+          rgba(255,255,255,.93) 0%,
+          rgba(201,181,255,.78) 3%,
+          rgba(157,117,255,.46) 10%,
+          rgba(111,76,255,.23) 22%,
+          rgba(47,27,112,.14) 38%,
+          rgba(5,5,8,.98) 64%
+        );
+
+      filter:
+        blur(10px);
+
+    }
+
+    .transition-layer.active {
+
+      opacity:
+        1;
+
+      pointer-events:
+        all;
+
+      animation:
+        transitionBackdrop
+        .72s
+        cubic-bezier(.8,0,.2,1)
+        forwards;
+
+    }
+
+    .transition-layer.active::before {
+
+      animation:
+        lightCollapse
+        .72s
+        cubic-bezier(.75,0,.2,1)
+        forwards;
+
+    }
+
+    .transition-mark {
+
+      position:
+        relative;
+
+      z-index:
+        2;
+
+      width:
+        92px;
+
+      height:
+        92px;
+
+      opacity:
+        0;
+
+      transform:
+        scale(1.5);
+
+      filter:
+        blur(8px)
+        drop-shadow(
+          0 0 35px
+          rgba(157,117,255,.8)
+        );
+
+    }
+
+    .transition-layer.active
+    .transition-mark {
+
+      animation:
+        transitionMark
+        .7s
+        ease
+        forwards;
+
+    }
+
+    @keyframes transitionBackdrop {
+
+      0% {
+
+        background:
+          rgba(5,5,8,0);
+
+      }
+
+      65% {
+
+        background:
+          rgba(5,5,8,.64);
+
+      }
+
+      100% {
+
+        background:
+          #050507;
+
+      }
+
+    }
+
+    @keyframes lightCollapse {
+
+      0% {
+
+        transform:
+          scale(1);
+
+        opacity:
+          0;
+
+      }
+
+      15% {
+
+        opacity:
+          1;
+
+      }
+
+      100% {
+
+        transform:
+          scale(.015);
+
+        opacity:
+          1;
+
+      }
+
+    }
+
+    @keyframes transitionMark {
+
+      0% {
+
+        opacity:
+          0;
+
+        transform:
+          scale(1.65);
+
+        filter:
+          blur(10px)
+          drop-shadow(
+            0 0 50px
+            rgba(157,117,255,.9)
+          );
+
+      }
+
+      55% {
+
+        opacity:
+          .9;
+
+      }
+
+      100% {
+
+        opacity:
+          1;
+
+        transform:
+          scale(.72);
+
+        filter:
+          blur(0)
+          drop-shadow(
+            0 0 18px
+            rgba(157,117,255,.38)
+          );
+
+      }
+
+    }
+
+    /* ==========================================
+       HEADER
+    ========================================== */
+
+    header {
+
+      position:
+        fixed;
+
+      top: 0;
+      left: 0;
+      right: 0;
+
+      z-index:
+        1000;
+
+      background:
+        rgba(5,5,7,.78);
+
+      backdrop-filter:
+        blur(18px);
+
+      -webkit-backdrop-filter:
+        blur(18px);
+
+      border-bottom:
+        1px solid
+        rgba(255,255,255,.065);
+
+    }
+
+    .nav-wrap {
+
+      min-height:
+        76px;
+
+      display:
+        flex;
+
+      align-items:
+        center;
+
+      justify-content:
+        space-between;
+
+      gap:
+        22px;
+
+    }
+
+    .brand {
+
+      display:
+        flex;
+
+      align-items:
+        center;
+
+      gap:
+        11px;
+
+      flex-shrink:
+        0;
+
+    }
+
+    .brand-mark {
+
+      position:
+        relative;
+
+      width:
+        46px;
+
+      height:
+        46px;
+
+      overflow:
+        hidden;
+
+      border-radius:
+        12px;
+
+      background:
+        #000;
+
+      border:
+        1px solid
+        rgba(211,166,78,.32);
+
+      box-shadow:
+
+        0 0 24px
+        rgba(111,76,255,.22),
+
+        0 0 14px
+        rgba(211,166,78,.1);
+
+    }
+
+    .brand-mark img {
+
+      width:
+        100%;
+
+      height:
+        100%;
+
+      object-fit:
+        cover;
+
+      object-position:
+        center 39%;
+
+      transform:
+        scale(1.23);
+
+    }
+
+    .brand-copy {
+
+      display:
+        flex;
+
+      flex-direction:
+        column;
+
+      line-height:
+        1;
+
+    }
+
+    .brand-main {
+
+      color:
+        #fff;
+
+      font-size:
+        14px;
+
+      font-weight:
+        900;
+
+      letter-spacing:
+        1.5px;
+
+    }
+
+    .brand-sub {
+
+      margin-top:
+        5px;
+
+      color:
+        var(--gold);
+
+      font-size:
+        8px;
+
+      font-weight:
+        900;
+
+      letter-spacing:
+        3.1px;
+
+    }
+
+    .nav-actions {
+
+      display:
+        flex;
+
+      align-items:
+        center;
+
+      gap:
+        10px;
+
+    }
+
+    .nav-link {
+
+      min-height:
+        42px;
+
+      display:
+        inline-flex;
+
+      align-items:
+        center;
+
+      justify-content:
+        center;
+
+      padding:
+        0 15px;
+
+      border-radius:
+        10px;
+
+      color:
+        #c5c4cc;
+
+      border:
+        1px solid
+        rgba(255,255,255,.08);
+
+      background:
+        rgba(255,255,255,.03);
+
+      font-size:
+        11px;
+
+      font-weight:
+        900;
+
+      transition:
+        transform .2s ease,
+        border-color .2s ease,
+        background .2s ease,
+        color .2s ease;
+
+    }
+
+    .nav-link:hover {
+
+      transform:
+        translateY(-2px);
+
+      color:
+        #fff;
+
+      background:
+        rgba(111,76,255,.08);
+
+      border-color:
+        rgba(157,117,255,.3);
+
+    }
+
+    .nav-link.primary {
+
+      color:
+        #fff;
+
+      background:
+
+        linear-gradient(
+          100deg,
+          rgba(111,76,255,.8),
+          rgba(157,117,255,.83)
+        );
+
+      border-color:
+        rgba(157,117,255,.28);
+
+      box-shadow:
+        0 10px 30px
+        rgba(83,52,200,.15);
+
+    }
+
+    /* ==========================================
+       HERO
+    ========================================== */
+
+    .hero {
+
+      position:
+        relative;
+
+      padding:
+        155px 0
+        75px;
+
+      overflow:
+        hidden;
+
+    }
+
+    .hero-grid {
+
+      display:
+        grid;
+
+      grid-template-columns:
+        1.08fr
+        .92fr;
+
+      gap:
+        60px;
+
+      align-items:
+        center;
+
+    }
+
+    .eyebrow {
+
+      display:
+        inline-flex;
+
+      align-items:
+        center;
+
+      gap:
+        9px;
+
+      margin-bottom:
+        22px;
+
+      padding:
+        8px 12px;
+
+      border-radius:
+        999px;
+
+      color:
+        #d5ceff;
+
+      background:
+        rgba(111,76,255,.08);
+
+      border:
+        1px solid
+        rgba(157,117,255,.24);
+
+      font-size:
+        10px;
+
+      font-weight:
+        900;
+
+      letter-spacing:
+        1.55px;
+
+      text-transform:
+        uppercase;
+
+    }
+
+    .eyebrow::before {
+
+      content: "";
+
+      width:
+        7px;
+
+      height:
+        7px;
+
+      border-radius:
+        50%;
+
+      background:
+        var(--gold);
+
+      box-shadow:
+        0 0 14px
+        rgba(211,166,78,.75);
+
+    }
+
+    h1 {
+
+      max-width:
+        760px;
+
+      font-size:
+        clamp(
+          55px,
+          8vw,
+          94px
+        );
+
+      line-height:
+        .9;
+
+      letter-spacing:
+        -4.5px;
+
+      text-shadow:
+        0 24px 60px
+        rgba(0,0,0,.42);
+
+    }
+
+    .hero-accent {
+
+      display:
+        block;
+
+      background:
+
+        linear-gradient(
+          92deg,
+          #fff 0%,
+          #d9d9df 23%,
+          #b99cff 61%,
+          #7855ff 100%
+        );
+
+      -webkit-background-clip:
+        text;
+
+      background-clip:
+        text;
+
+      color:
+        transparent;
+
+    }
+
+    .hero-copy {
+
+      max-width:
+        620px;
+
+      margin-top:
+        25px;
+
+      color:
+        #9c9ba5;
+
+      font-size:
+        clamp(
+          15px,
+          2vw,
+          18px
+        );
+
+      line-height:
+        1.75;
+
+    }
+
+    .hero-actions {
+
+      display:
+        flex;
+
+      flex-wrap:
+        wrap;
+
+      gap:
+        11px;
+
+      margin-top:
+        30px;
+
+    }
+
+    .button {
+
+      min-height:
+        52px;
+
+      display:
+        inline-flex;
+
+      align-items:
+        center;
+
+      justify-content:
+        center;
+
+      gap:
+        8px;
+
+      padding:
+        0 22px;
+
+      border-radius:
+        13px;
+
+      border:
+        1px solid
+        transparent;
+
+      font-size:
+        12px;
+
+      font-weight:
+        900;
+
+      transition:
+        transform .2s ease,
+        box-shadow .2s ease,
+        border-color .2s ease,
+        background .2s ease;
+
+    }
+
+    .button:hover {
+
+      transform:
+        translateY(-2px);
+
+    }
+
+    .button-primary {
+
+      color:
+        #fff;
+
+      background:
+
+        linear-gradient(
+          100deg,
+          #5f43e8,
+          var(--purple-bright)
+        );
+
+      border-color:
+        rgba(215,205,255,.18);
+
+      box-shadow:
+        0 15px 44px
+        rgba(93,60,232,.28);
+
+    }
+
+    .button-primary:hover {
+
+      box-shadow:
+        0 20px 58px
+        rgba(93,60,232,.4);
+
+    }
+
+    .button-secondary {
+
+      color:
+        var(--silver);
+
+      background:
+        rgba(255,255,255,.035);
+
+      border-color:
+        rgba(255,255,255,.11);
+
+    }
+
+    .button-secondary:hover {
+
+      background:
+        rgba(255,255,255,.055);
+
+      border-color:
+        rgba(157,117,255,.32);
+
+    }
+
+    /* ==========================================
+       HERO LOGO VISUAL
+    ========================================== */
+
+    .hero-visual {
+
+      position:
+        relative;
+
+      min-height:
+        510px;
+
+      display:
+        grid;
+
+      place-items:
+        center;
+
+      perspective:
+        1000px;
+
+    }
+
+    .logo-aura {
+
+      position:
+        absolute;
+
+      width:
+        520px;
+
+      height:
+        520px;
+
+      border-radius:
+        50%;
+
+      background:
+
+        radial-gradient(
+          circle at
+          var(--mouse-x, 50%)
+          var(--mouse-y, 50%),
+
+          rgba(201,181,255,.34),
+
+          rgba(157,117,255,.22) 15%,
+
+          rgba(111,76,255,.11) 32%,
+
+          rgba(211,166,78,.04) 46%,
+
+          transparent 70%
+        );
+
+      filter:
+        blur(40px);
+
+      transition:
+        background .15s linear;
+
+    }
+
+    .logo-ring {
+
+      position:
+        absolute;
+
+      width:
+        min(
+          440px,
+          90%
+        );
+
+      aspect-ratio:
+        1 / 1;
+
+      border-radius:
+        50%;
+
+      border:
+        1px solid
+        rgba(157,117,255,.15);
+
+      box-shadow:
+
+        0 0 80px
+        rgba(111,76,255,.08),
+
+        inset 0 0 60px
+        rgba(111,76,255,.025);
+
+      animation:
+        ringRotate
+        22s
+        linear
+        infinite;
+
+    }
+
+    .logo-ring::before {
+
+      content: "";
+
+      position:
+        absolute;
+
+      top:
+        -4px;
+
+      left:
+        50%;
+
+      width:
+        8px;
+
+      height:
+        8px;
+
+      transform:
+        translateX(-50%);
+
+      border-radius:
+        50%;
+
+      background:
+        var(--gold);
+
+      box-shadow:
+        0 0 18px
+        rgba(211,166,78,.8);
+
+    }
+
+    @keyframes ringRotate {
+
+      to {
+
+        transform:
+          rotate(360deg);
+
+      }
+
+    }
+
+    .logo-stage {
+
+      position:
+        relative;
+
+      width:
+        min(
+          360px,
+          78%
+        );
+
+      aspect-ratio:
+        1 / 1;
+
+      display:
+        grid;
+
+      place-items:
+        center;
+
+      border-radius:
+        50%;
+
+      transform:
+        rotateX(
+          var(--rotate-x, 0deg)
+        )
+        rotateY(
+          var(--rotate-y, 0deg)
+        );
+
+      transition:
+        transform .18s ease-out;
+
+    }
+
+    .logo-stage::before {
+
+      content: "";
+
+      position:
+        absolute;
+
+      inset:
+        7%;
+
+      border-radius:
+        50%;
+
+      background:
+
+        radial-gradient(
+          circle,
+          rgba(255,255,255,.035),
+          rgba(111,76,255,.02) 55%,
+          transparent 70%
+        );
+
+      border:
+        1px solid
+        rgba(255,255,255,.055);
+
+      backdrop-filter:
+        blur(4px);
+
+    }
+
+    .hero-logo {
+
+      position:
+        relative;
+
+      z-index:
+        2;
+
+      width:
+        94%;
+
+      height:
+        94%;
+
+      object-fit:
+        contain;
+
+      filter:
+
+        drop-shadow(
+          0 0 32px
+          rgba(111,76,255,.24)
+        )
+
+        drop-shadow(
+          0 0 14px
+          rgba(211,166,78,.1)
+        );
+
+    }
+
+    .signal {
+
+      position:
+        absolute;
+
+      z-index:
+        4;
+
+      padding:
+        10px 13px;
+
+      border-radius:
+        11px;
+
+      color:
+        #d7d6dd;
+
+      background:
+        rgba(8,8,13,.88);
+
+      border:
+        1px solid
+        rgba(255,255,255,.09);
+
+      backdrop-filter:
+        blur(14px);
+
+      box-shadow:
+        0 18px 40px
+        rgba(0,0,0,.32);
+
+      font-size:
+        10px;
+
+      font-weight:
+        900;
+
+      animation:
+        signalFloat
+        6s
+        ease-in-out
+        infinite;
+
+    }
+
+    .signal span {
+
+      display:
+        block;
+
+      margin-top:
+        3px;
+
+      color:
+        #74737d;
+
+      font-size:
+        8px;
+
+      letter-spacing:
+        1px;
+
+      text-transform:
+        uppercase;
+
+    }
+
+    .signal-one {
+
+      left:
+        1%;
+
+      bottom:
+        17%;
+
+    }
+
+    .signal-two {
+
+      right:
+        0;
+
+      top:
+        15%;
+
+      animation-delay:
+        -3s;
+
+    }
+
+    @keyframes signalFloat {
+
+      0%,
+      100% {
+
+        transform:
+          translateY(0);
+
+      }
+
+      50% {
+
+        transform:
+          translateY(-7px);
+
+      }
+
+    }
+
+    /* ==========================================
+       CONTACT SECTION
+    ========================================== */
+
+    .contact-section {
+
+      position:
+        relative;
+
+      padding:
+        45px 0
+        110px;
+
+    }
+
+    .contact-grid {
+
+      display:
+        grid;
+
+      grid-template-columns:
+        .76fr
+        1.24fr;
+
+      gap:
+        25px;
+
+      align-items:
+        start;
+
+    }
+
+    .contact-info {
+
+      position:
+        sticky;
+
+      top:
+        105px;
+
+      display:
+        grid;
+
+      gap:
+        14px;
+
+    }
+
+    .info-card {
+
+      position:
+        relative;
+
+      overflow:
+        hidden;
+
+      padding:
+        25px;
+
+      border-radius:
+        19px;
+
+      background:
+
+        linear-gradient(
+          145deg,
+          rgba(255,255,255,.044),
+          rgba(255,255,255,.015)
+        );
+
+      border:
+        1px solid
+        rgba(255,255,255,.075);
+
+      transition:
+        transform .22s ease,
+        border-color .22s ease,
+        background .22s ease;
+
+    }
+
+    .info-card:hover {
+
+      transform:
+        translateY(-3px);
+
+      border-color:
+        rgba(157,117,255,.25);
+
+      background:
+
+        linear-gradient(
+          145deg,
+          rgba(111,76,255,.07),
+          rgba(255,255,255,.015)
+        );
+
+    }
+
+    .info-card::after {
+
+      content: "";
+
+      position:
+        absolute;
+
+      width:
+        160px;
+
+      height:
+        160px;
+
+      right:
+        -85px;
+
+      bottom:
+        -90px;
+
+      border-radius:
+        50%;
+
+      background:
+
+        radial-gradient(
+          circle,
+          rgba(111,76,255,.12),
+          transparent 70%
+        );
+
+    }
+
+    .info-label {
+
+      position:
+        relative;
+
+      z-index:
+        2;
+
+      color:
+        var(--gold);
+
+      font-size:
+        9px;
+
+      font-weight:
+        900;
+
+      letter-spacing:
+        1.4px;
+
+      text-transform:
+        uppercase;
+
+    }
+
+    .info-card h3 {
+
+      position:
+        relative;
+
+      z-index:
+        2;
+
+      margin-top:
+        9px;
+
+      font-size:
+        20px;
+
+    }
+
+    .info-card p {
+
+      position:
+        relative;
+
+      z-index:
+        2;
+
+      margin-top:
+        7px;
+
+      color:
+        #85848e;
+
+      font-size:
+        12px;
+
+    }
+
+    .info-link {
+
+      position:
+        relative;
+
+      z-index:
+        2;
+
+      display:
+        inline-block;
+
+      margin-top:
+        14px;
+
+      color:
+        #c9bdff;
+
+      font-size:
+        11px;
+
+      font-weight:
+        900;
+
+    }
+
+    .quick-project {
+
+      padding:
+        28px;
+
+      border-radius:
+        21px;
+
+      background:
+
+        linear-gradient(
+          145deg,
+          rgba(111,76,255,.12),
+          rgba(255,255,255,.025)
+        );
+
+      border:
+        1px solid
+        rgba(157,117,255,.22);
+
+    }
+
+    .quick-project small {
+
+      color:
+        var(--gold);
+
+      font-size:
+        9px;
+
+      font-weight:
+        900;
+
+      letter-spacing:
+        1.5px;
+
+      text-transform:
+        uppercase;
+
+    }
+
+    .quick-project h3 {
+
+      margin-top:
+        8px;
+
+      font-size:
+        25px;
+
+      line-height:
+        1.05;
+
+    }
+
+    .quick-project p {
+
+      margin-top:
+        10px;
+
+      color:
+        #8f8e98;
+
+      font-size:
+        12px;
+
+    }
+
+    .quick-project .button {
+
+      width:
+        100%;
+
+      margin-top:
+        20px;
+
+    }
+
+    /* ==========================================
+       FORM
+    ========================================== */
+
+    .form-card {
+
+      position:
+        relative;
+
+      overflow:
+        hidden;
+
+      padding:
+        36px;
+
+      border-radius:
+        26px;
+
+      background:
+
+        linear-gradient(
+          145deg,
+          rgba(255,255,255,.048),
+          rgba(255,255,255,.014)
+        );
+
+      border:
+        1px solid
+        rgba(255,255,255,.09);
+
+      box-shadow:
+        var(--shadow);
+
+    }
+
+    .form-card::before {
+
+      content: "";
+
+      position:
+        absolute;
+
+      width:
+        380px;
+
+      height:
+        380px;
+
+      top:
+        -240px;
+
+      right:
+        -180px;
+
+      border-radius:
+        50%;
+
+      background:
+
+        radial-gradient(
+          circle,
+          rgba(157,117,255,.15),
+          transparent 70%
+        );
+
+      pointer-events:
+        none;
+
+    }
+
+    .form-heading {
+
+      position:
+        relative;
+
+      z-index:
+        2;
+
+      margin-bottom:
+        28px;
+
+    }
+
+    .form-kicker {
+
+      color:
+        var(--purple-bright);
+
+      font-size:
+        9px;
+
+      font-weight:
+        900;
+
+      letter-spacing:
+        1.5px;
+
+      text-transform:
+        uppercase;
+
+    }
+
+    .form-heading h2 {
+
+      margin-top:
+        8px;
+
+      font-size:
+        clamp(
+          30px,
+          5vw,
+          45px
+        );
+
+      line-height:
+        1;
+
+      letter-spacing:
+        -1.7px;
+
+    }
+
+    .form-heading p {
+
+      max-width:
+        580px;
+
+      margin-top:
+        12px;
+
+      color:
+        #85848e;
+
+      font-size:
+        12px;
+
+    }
+
+    .field-grid {
+
+      position:
+        relative;
+
+      z-index:
+        2;
+
+      display:
+        grid;
+
+      grid-template-columns:
+        1fr 1fr;
+
+      gap:
+        17px;
+
+    }
+
+    .field {
+
+      display:
+        grid;
+
+      gap:
+        8px;
+
+    }
+
+    .field.full {
+
+      grid-column:
+        1 / -1;
+
+    }
+
+    label {
+
+      color:
+        #c2c1c9;
+
+      font-size:
+        10px;
+
+      font-weight:
+        900;
+
+      letter-spacing:
+        .5px;
+
+    }
+
+    .required {
+
+      color:
+        var(--gold);
+
+    }
+
+    input,
+    textarea,
+    select {
+
+      width:
+        100%;
+
+      color:
+        #f5f4f7;
+
+      background:
+        rgba(5,5,8,.62);
+
+      border:
+        1px solid
+        rgba(255,255,255,.085);
+
+      border-radius:
+        12px;
+
+      outline:
+        none;
+
+      transition:
+        border-color .2s ease,
+        box-shadow .2s ease,
+        background .2s ease;
+
+    }
+
+    input,
+    select {
+
+      min-height:
+        52px;
+
+      padding:
+        0 15px;
+
+    }
+
+    textarea {
+
+      min-height:
+        175px;
+
+      padding:
+        14px 15px;
+
+      resize:
+        vertical;
+
+    }
+
+    input::placeholder,
+    textarea::placeholder {
+
+      color:
+        #55545e;
+
+    }
+
+    input:focus,
+    textarea:focus,
+    select:focus {
+
+      background:
+        rgba(9,8,15,.82);
+
+      border-color:
+        rgba(157,117,255,.5);
+
+      box-shadow:
+        0 0 0 4px
+        rgba(111,76,255,.08);
+
+    }
+
+    select {
+
+      appearance:
+        none;
+
+      background-image:
+
+        linear-gradient(
+          45deg,
+          transparent 50%,
+          #8d8c96 50%
+        ),
+
+        linear-gradient(
+          135deg,
+          #8d8c96 50%,
+          transparent 50%
+        );
+
+      background-position:
+
+        calc(100% - 18px)
+        22px,
+
+        calc(100% - 13px)
+        22px;
+
+      background-size:
+        5px 5px,
+        5px 5px;
+
+      background-repeat:
+        no-repeat;
+
+    }
+
+    option {
+
+      color:
+        #fff;
+
+      background:
+        #0b0b10;
+
+    }
+
+    .form-bottom {
+
+      position:
+        relative;
+
+      z-index:
+        2;
+
+      margin-top:
+        25px;
+
+      padding-top:
+        24px;
+
+      display:
+        flex;
+
+      align-items:
+        center;
+
+      justify-content:
+        space-between;
+
+      gap:
+        22px;
+
+      border-top:
+        1px solid
+        rgba(255,255,255,.065);
+
+    }
+
+    .form-bottom p {
+
+      max-width:
+        420px;
+
+      color:
+        #6f6e78;
+
+      font-size:
+        10px;
+
+    }
+
+    .submit-button {
+
+      min-height:
+        53px;
+
+      display:
+        inline-flex;
+
+      align-items:
+        center;
+
+      justify-content:
+        center;
+
+      padding:
+        0 23px;
+
+      border:
+        0;
+
+      border-radius:
+        13px;
+
+      color:
+        #fff;
+
+      background:
+
+        linear-gradient(
+          100deg,
+          #5f43e8,
+          var(--purple-bright)
+        );
+
+      box-shadow:
+        0 15px 44px
+        rgba(93,60,232,.28);
+
+      font-size:
+        12px;
+
+      font-weight:
+        900;
+
+      transition:
+        transform .2s ease,
+        box-shadow .2s ease;
+
+    }
+
+    .submit-button:hover {
+
+      transform:
+        translateY(-2px);
+
+      box-shadow:
+        0 20px 58px
+        rgba(93,60,232,.4);
+
+    }
+
+    .success-box {
+
+      display:
+        none;
+
+      position:
+        relative;
+
+      z-index:
+        2;
+
+      margin-top:
+        18px;
+
+      padding:
+        14px 16px;
+
+      border-radius:
+        11px;
+
+      color:
+        #d6d1ed;
+
+      background:
+        rgba(111,76,255,.08);
+
+      border:
+        1px solid
+        rgba(157,117,255,.22);
+
+      font-size:
+        11px;
+
+    }
+
+    /* ==========================================
+       FOOTER
+    ========================================== */
+
+    footer {
+
+      padding:
+        40px 0
+        34px;
+
+      border-top:
+        1px solid
+        rgba(255,255,255,.06);
+
+    }
+
+    .footer-grid {
+
+      display:
+        flex;
+
+      align-items:
+        center;
+
+      justify-content:
+        space-between;
+
+      gap:
+        30px;
+
+    }
+
+    .footer-left {
+
+      color:
+        #66656f;
+
+      font-size:
+        10px;
+
+    }
+
+    .footer-links {
+
+      display:
+        flex;
+
+      flex-wrap:
+        wrap;
+
+      gap:
+        16px;
+
+      color:
+        #777681;
+
+      font-size:
+        10px;
+
+    }
+
+    .footer-links a:hover {
+
+      color:
+        #c9bdff;
+
+    }
+
+    /* ==========================================
+       REVEAL
+    ========================================== */
+
+    .reveal {
+
+      opacity:
+        0;
+
+      transform:
+        translateY(22px);
+
+      transition:
+        opacity .7s ease,
+        transform .7s ease;
+
+    }
+
+    .reveal.visible {
+
+      opacity:
+        1;
+
+      transform:
+        translateY(0);
+
+    }
+
+    /* ==========================================
+       RESPONSIVE
+    ========================================== */
+
+    @media (max-width: 960px) {
+
+      .hero-grid {
+
+        grid-template-columns:
+          1fr;
+
+      }
+
+      .hero-copy-side {
+
+        text-align:
+          center;
+
+      }
+
+      .hero-copy {
+
+        margin-left:
+          auto;
+
+        margin-right:
+          auto;
+
+      }
+
+      .hero-actions {
+
+        justify-content:
+          center;
+
+      }
+
+      .hero-visual {
+
+        min-height:
+          470px;
+
+      }
+
+      .contact-grid {
+
+        grid-template-columns:
+          1fr;
+
+      }
+
+      .contact-info {
+
+        position:
+          relative;
+
+        top:
+          auto;
+
+        grid-template-columns:
+          1fr 1fr;
+
+      }
+
+      .quick-project {
+
+        grid-column:
+          1 / -1;
+
+      }
+
+    }
+
+    @media (max-width: 680px) {
+
+      .container {
+
+        width:
+          calc(100% - 24px);
+
+      }
+
+      .nav-wrap {
+
+        min-height:
+          70px;
+
+      }
+
+      .brand-mark {
+
+        width:
+          40px;
+
+        height:
+          40px;
+
+      }
+
+      .brand-main {
+
+        font-size:
+          12px;
+
+      }
+
+      .brand-sub {
+
+        font-size:
+          7px;
+
+      }
+
+      .nav-actions
+      .nav-link:not(.primary) {
+
+        display:
+          none;
+
+      }
+
+      .nav-link {
+
+        min-height:
+          40px;
+
+        padding:
+          0 12px;
+
+        font-size:
+          10px;
+
+      }
+
+      .hero {
+
+        padding:
+          120px 0
+          45px;
+
+      }
+
+      h1 {
+
+        font-size:
+          clamp(
+            49px,
+            15vw,
+            67px
+          );
+
+        line-height:
+          .9;
+
+        letter-spacing:
+          -3.2px;
+
+      }
+
+      .hero-copy {
+
+        font-size:
+          15px;
+
+      }
+
+      .hero-actions {
+
+        flex-direction:
+          column;
+
+      }
+
+      .hero-actions
+      .button {
+
+        width:
+          100%;
+
+      }
+
+      .hero-visual {
+
+        min-height:
+          390px;
+
+      }
+
+      .logo-ring {
+
+        width:
+          340px;
+
+        max-width:
+          92%;
+
+      }
+
+      .logo-stage {
+
+        width:
+          280px;
+
+        max-width:
+          75%;
+
+      }
+
+      .signal {
+
+        padding:
+          9px 11px;
+
+        font-size:
+          9px;
+
+      }
+
+      .signal-one {
+
+        left:
+          0;
+
+        bottom:
+          8%;
+
+      }
+
+      .signal-two {
+
+        right:
+          0;
+
+        top:
+          12%;
+
+      }
+
+      .contact-section {
+
+        padding:
+          30px 0
+          80px;
+
+      }
+
+      .contact-info {
+
+        grid-template-columns:
+          1fr;
+
+      }
+
+      .quick-project {
+
+        grid-column:
+          auto;
+
+      }
+
+      .form-card {
+
+        padding:
+          24px 20px;
+
+      }
+
+      .field-grid {
+
+        grid-template-columns:
+          1fr;
+
+      }
+
+      .field.full {
+
+        grid-column:
+          auto;
+
+      }
+
+      .form-bottom {
+
+        flex-direction:
+          column;
+
+        align-items:
+          stretch;
+
+      }
+
+      .submit-button {
+
+        width:
+          100%;
+
+      }
+
+      .footer-grid {
+
+        flex-direction:
+          column;
+
+        align-items:
+          flex-start;
+
+      }
+
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+
+      *,
+      *::before,
+      *::after {
+
+        animation-duration:
+          .01ms !important;
+
+        animation-iteration-count:
+          1 !important;
+
+        transition-duration:
+          .01ms !important;
+
+        scroll-behavior:
+          auto !important;
+
+      }
+
+      .reveal {
+
+        opacity:
+          1;
+
+        transform:
+          none;
+
+      }
+
+    }
+
+  </style>
+
+</head>
+
+<body>
+
+  <div
+    class="transition-layer"
+    id="transitionLayer"
+    aria-hidden="true"
+  >
+
+    <img
+      class="transition-mark"
+      src="397D40D2-EA52-4B47-99D8-90CD02AD19E1.png"
+      alt=""
+    >
+
+  </div>
+
+  <div
+    class="ambient"
+    aria-hidden="true"
+  >
+
+    <div class="orb orb-one"></div>
+    <div class="orb orb-two"></div>
+    <div class="orb orb-three"></div>
+
+  </div>
+
+  <header>
+
+    <div class="container">
+
+      <div class="nav-wrap">
+
+        <a
+          href="index.html"
+          class="brand transition-home"
+          aria-label="Sursum Digital home"
+        >
+
+          <div class="brand-mark">
+
+            <img
+              src="397D40D2-EA52-4B47-99D8-90CD02AD19E1.png"
+              alt="Sursum Digital logo"
+            >
+
+          </div>
+
+          <div class="brand-copy">
+
+            <span class="brand-main">
+              SURSUM
+            </span>
+
+            <span class="brand-sub">
+              DIGITAL
+            </span>
+
+          </div>
+
+        </a>
+
+        <div class="nav-actions">
+
+          <a
+            href="index.html"
+            class="nav-link transition-home"
+          >
+            Home
+          </a>
+
+          <a
+            href="quote.html"
+            class="nav-link primary"
+          >
+            Start a Project
+          </a>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </header>
+
+  <main>
+
+    <section class="hero">
+
+      <div class="container hero-grid">
+
+        <div class="hero-copy-side">
+
+          <div class="eyebrow">
+            Contact Sursum
+          </div>
+
+          <h1>
+
+            Start the
+            conversation.
+
+            <span class="hero-accent">
+              Build from there.
+            </span>
+
+          </h1>
+
+          <p class="hero-copy">
+
+            Have a question,
+            an idea,
+            a website that needs work,
+            or something you aren't sure how to approach?
+
+            Send Sursum a message.
+
+            If you're ready for a full website project,
+            the project intake page goes deeper.
+
+          </p>
+
+          <div class="hero-actions">
+
+            <a
+              href="#message"
+              class="button button-primary"
+            >
+              Send a Message ↓
+            </a>
+
+            <a
+              href="quote.html"
+              class="button button-secondary"
+            >
+              Start a Full Project →
+            </a>
+
+          </div>
+
+        </div>
+
+        <div
+          class="hero-visual"
+          id="heroVisual"
+        >
+
+          <div
+            class="logo-aura"
+            id="logoAura"
+          ></div>
+
+          <div class="logo-ring"></div>
+
+          <div
+            class="logo-stage"
+            id="logoStage"
+          >
+
+            <img
+              class="hero-logo"
+              src="397D40D2-EA52-4B47-99D8-90CD02AD19E1.png"
+              alt="Sursum Digital"
+            >
+
+          </div>
+
+          <div class="signal signal-one">
+
+            Direct Contact
+
+            <span>
+              No call center nonsense
+            </span>
+
+          </div>
+
+          <div class="signal signal-two">
+
+            Real Projects
+
+            <span>
+              Built around your business
+            </span>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </section>
+
+    <section
+      class="contact-section"
+      id="message"
+    >
+
+      <div class="container">
+
+        <div class="contact-grid">
+
+          <aside class="contact-info">
+
+            <article class="info-card reveal">
+
+              <div class="info-label">
+                Email
+              </div>
+
+              <h3>
+                Reach Sursum directly.
+              </h3>
+
+              <p>
+
+                For questions,
+                ideas,
+                updates,
+                or anything that doesn't require
+                the full project intake.
+
+              </p>
+
+              <a
+                class="info-link"
+                href="mailto:sursumdigitaldesign@gmail.com"
+              >
+                sursumdigitaldesign@gmail.com →
+              </a>
+
+            </article>
+
+            <article class="info-card reveal">
+
+              <div class="info-label">
+                Existing Website
+              </div>
+
+              <h3>
+                Need a redesign?
+              </h3>
+
+              <p>
+
+                Send the website link
+                and explain what isn't working.
+
+                Sursum can review the direction
+                and rebuild around the business.
+
+              </p>
+
+              <a
+                href="#contactForm"
+                class="info-link"
+              >
+                Send the Link ↓
+              </a>
+
+            </article>
+
+            <article class="quick-project reveal">
+
+              <small>
+                Ready to Build?
+              </small>
+
+              <h3>
+                Use the full project intake.
+              </h3>
+
+              <p>
+
+                If you're serious about starting
+                a website,
+                the project form collects the information
+                needed to scope it properly.
+
+              </p>
+
+              <a
+                href="quote.html"
+                class="button button-primary"
+              >
+                Start Your Project →
+              </a>
+
+            </article>
+
+          </aside>
+
+          <form
+            class="form-card reveal"
+            id="contactForm"
+          >
+
+            <div class="form-heading">
+
+              <div class="form-kicker">
+                Send a Message
+              </div>
+
+              <h2>
+                What's on your mind?
+              </h2>
+
+              <p>
+
+                Keep it simple or give us the whole story.
+                The message will be prepared for
+                Sursum Digital at
+                sursumdigitaldesign@gmail.com.
+
+              </p>
+
+            </div>
+
+            <div class="field-grid">
+
+              <div class="field">
+
+                <label for="name">
+
+                  YOUR NAME
+
+                  <span class="required">
+                    *
+                  </span>
+
+                </label>
+
+                <input
+                  id="name"
+                  name="name"
+                  type="text"
+                  placeholder="Your name"
+                  required
+                >
+
+              </div>
+
+              <div class="field">
+
+                <label for="email">
+
+                  EMAIL
+
+                  <span class="required">
+                    *
+                  </span>
+
+                </label>
+
+                <input
+                  id="email"
+                  name="email"
+                  type="email"
+                  placeholder="you@example.com"
+                  required
+                >
+
+              </div>
+
+              <div class="field">
+
+                <label for="business">
+                  BUSINESS
+                </label>
+
+                <input
+                  id="business"
+                  name="business"
+                  type="text"
+                  placeholder="Business name"
+                >
+
+              </div>
+
+              <div class="field">
+
+                <label for="topic">
+                  WHAT'S THIS ABOUT?
+                </label>
+
+                <select
+                  id="topic"
+                  name="topic"
+                >
+
+                  <option value="General Question">
+                    General Question
+                  </option>
+
+                  <option value="New Website">
+                    New Website
+                  </option>
+
+                  <option value="Website Redesign">
+                    Website Redesign
+                  </option>
+
+                  <option value="Website Maintenance">
+                    Website Maintenance
+                  </option>
+
+                  <option value="Domain / Launch">
+                    Domain / Launch
+                  </option>
+
+                  <option value="Google Business Support">
+                    Google Business Support
+                  </option>
+
+                  <option value="Other">
+                    Other
+                  </option>
+
+                </select>
+
+              </div>
+
+              <div class="field full">
+
+                <label for="website">
+                  CURRENT WEBSITE
+                </label>
+
+                <input
+                  id="website"
+                  name="website"
+                  type="text"
+                  placeholder="Paste the link if you have one"
+                >
+
+              </div>
+
+              <div class="field full">
+
+                <label for="message">
+
+                  MESSAGE
+
+                  <span class="required">
+                    *
+                  </span>
+
+                </label>
+
+                <textarea
+                  id="message"
+                  name="message"
+                  placeholder="Tell Sursum what you need, what you're trying to build, or what you'd like help with."
+                  required
+                ></textarea>
+
+              </div>
+
+            </div>
+
+            <div class="form-bottom">
+
+              <p>
+
+                Submitting prepares an email
+                in your device's email app.
+                Review it,
+                hit send,
+                and it goes directly to Sursum.
+
+              </p>
+
+              <button
+                type="submit"
+                class="submit-button"
+              >
+                Prepare Message →
+              </button>
+
+            </div>
+
+            <div
+              class="success-box"
+              id="successBox"
+            >
+
+              Your message has been prepared.
+              Finish sending it from your email app.
+
+            </div>
+
+          </form>
+
+        </div>
+
+      </div>
+
+    </section>
+
+  </main>
+
+  <footer>
+
+    <div class="container">
+
+      <div class="footer-grid">
+
+        <div class="footer-left">
+
+          © 2026 Sursum Digital.
+          All rights reserved.
+
+        </div>
+
+        <div class="footer-links">
+
+          <a
+            href="index.html"
+            class="transition-home"
+          >
+            Home
+          </a>
+
+          <a href="portfolio.html">
+            Portfolio
+          </a>
+
+          <a href="quote.html">
+            Start a Project
+          </a>
+
+          <a href="mailto:sursumdigitaldesign@gmail.com">
+            Email
+          </a>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </footer>
+
+  <script>
+
+    /* ==========================================
+       CONTACT FORM
+    ========================================== */
+
+    const contactForm =
+      document.getElementById(
+        "contactForm"
+      );
+
+    const successBox =
+      document.getElementById(
+        "successBox"
+      );
+
+    contactForm.addEventListener(
+      "submit",
+      function(event) {
+
+        event.preventDefault();
+
+        const formData =
+          new FormData(
+            contactForm
+          );
+
+        const name =
+          formData.get("name") || "";
+
+        const email =
+          formData.get("email") || "";
+
+        const business =
+          formData.get("business") ||
+          "Not provided";
+
+        const topic =
+          formData.get("topic") ||
+          "General Question";
+
+        const website =
+          formData.get("website") ||
+          "None provided";
+
+        const message =
+          formData.get("message") || "";
+
+        const subject =
+          "Sursum Digital - " +
+          topic +
+          " - " +
+          name;
+
+        const body =
+`SURSUM DIGITAL CONTACT
+
+Name: ${name}
+Email: ${email}
+Business: ${business}
+Topic: ${topic}
+Current Website: ${website}
+
+MESSAGE
+${message}
+
+---
+Sent through the Sursum Digital contact page.`;
+
+        const mailto =
+          "mailto:sursumdigitaldesign@gmail.com" +
+          "?subject=" +
+          encodeURIComponent(
+            subject
+          ) +
+          "&body=" +
+          encodeURIComponent(
+            body
+          );
+
+        successBox.style.display =
+          "block";
+
+        window.location.href =
+          mailto;
+
+      }
+    );
+
+    /* ==========================================
+       REVEAL EFFECTS
+    ========================================== */
+
+    const revealElements =
+      document.querySelectorAll(
+        ".reveal"
+      );
+
+    if (
+      "IntersectionObserver"
+      in window
+    ) {
+
+      const revealObserver =
+        new IntersectionObserver(
+
+          (
+            entries,
+            observer
+          ) => {
+
+            entries.forEach(
+              (entry) => {
+
+                if (
+                  entry.isIntersecting
+                ) {
+
+                  entry.target
+                    .classList
+                    .add(
+                      "visible"
+                    );
+
+                  observer.unobserve(
+                    entry.target
+                  );
+
+                }
+
+              }
+            );
+
+          },
+
+          {
+
+            threshold:
+              .1,
+
+            rootMargin:
+              "0px 0px -40px 0px"
+
+          }
+
+        );
+
+      revealElements.forEach(
+        (element) => {
+
+          revealObserver.observe(
+            element
+          );
+
+        }
+      );
+
+    } else {
+
+      revealElements.forEach(
+        (element) => {
+
+          element.classList.add(
+            "visible"
+          );
+
+        }
+      );
+
+    }
+
+    /* ==========================================
+       LOGO MOUSE REACTION
+    ========================================== */
+
+    const heroVisual =
+      document.getElementById(
+        "heroVisual"
+      );
+
+    const logoAura =
+      document.getElementById(
+        "logoAura"
+      );
+
+    const logoStage =
+      document.getElementById(
+        "logoStage"
+      );
+
+    if (
+      heroVisual &&
+      logoAura &&
+      logoStage &&
+      window.matchMedia(
+        "(pointer: fine)"
+      ).matches
+    ) {
+
+      heroVisual.addEventListener(
+        "mousemove",
+        function(event) {
+
+          const rect =
+            heroVisual
+              .getBoundingClientRect();
+
+          const relativeX =
+            (
+              event.clientX -
+              rect.left
+            ) /
+            rect.width;
+
+          const relativeY =
+            (
+              event.clientY -
+              rect.top
+            ) /
+            rect.height;
+
+          const x =
+            relativeX * 100;
+
+          const y =
+            relativeY * 100;
+
+          logoAura.style
+            .setProperty(
+              "--mouse-x",
+              x + "%"
+            );
+
+          logoAura.style
+            .setProperty(
+              "--mouse-y",
+              y + "%"
+            );
+
+          const rotateY =
+            (
+              relativeX - .5
+            ) * 10;
+
+          const rotateX =
+            (
+              .5 - relativeY
+            ) * 10;
+
+          logoStage.style
+            .setProperty(
+              "--rotate-x",
+              rotateX + "deg"
+            );
+
+          logoStage.style
+            .setProperty(
+              "--rotate-y",
+              rotateY + "deg"
+            );
+
+        }
+      );
+
+      heroVisual.addEventListener(
+        "mouseleave",
+        function() {
+
+          logoAura.style
+            .setProperty(
+              "--mouse-x",
+              "50%"
+            );
+
+          logoAura.style
+            .setProperty(
+              "--mouse-y",
+              "50%"
+            );
+
+          logoStage.style
+            .setProperty(
+              "--rotate-x",
+              "0deg"
+            );
+
+          logoStage.style
+            .setProperty(
+              "--rotate-y",
+              "0deg"
+            );
+
+        }
+      );
+
+    }
+
+    /* ==========================================
+       LIGHT COLLAPSE PAGE TRANSITION
+    ========================================== */
+
+    const transitionLayer =
+      document.getElementById(
+        "transitionLayer"
+      );
+
+    const reduceMotion =
+      window.matchMedia(
+        "(prefers-reduced-motion: reduce)"
+      ).matches;
+
+    document
+      .querySelectorAll(
+        ".transition-home"
+      )
+      .forEach(
+        function(link) {
+
+          link.addEventListener(
+            "click",
+            function(event) {
+
+              const destination =
+                link.getAttribute(
+                  "href"
+                );
+
+              if (
+                reduceMotion ||
+                !destination
+              ) {
+
+                return;
+
+              }
+
+              event.preventDefault();
+
+              transitionLayer
+                .classList
+                .add(
+                  "active"
+                );
+
+              setTimeout(
+                function() {
+
+                  window.location.href =
+                    destination;
+
+                },
+                680
+              );
+
+            }
+          );
+
+        }
+      );
+
+  </script>
+
+</body>
+
+</html>
