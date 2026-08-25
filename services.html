@@ -2,6 +2,7 @@
 <html lang="en">
 
 <head>
+
   <meta charset="utf-8">
 
   <meta
@@ -25,68 +26,58 @@
 
   <style>
 
-    :root {
-      --bg: #050507;
-      --bg-soft: #09090e;
+    :root{
+      --bg:#050507;
+      --text:#f7f5f0;
+      --muted:#96959f;
+      --silver:#d8d8de;
 
-      --text: #f7f5f0;
-      --muted: #96959f;
+      --gold:#d3a64e;
+      --gold-soft:#f0ce86;
 
-      --gold: #d3a64e;
-      --gold-soft: #f0ce86;
-
-      --purple: #6f4cff;
-      --purple-bright: #9d75ff;
-      --purple-deep: #2f1b70;
-
-      --line:
-        rgba(255,255,255,.08);
+      --purple:#6f4cff;
+      --purple-bright:#9d75ff;
+      --purple-deep:#2f1b70;
 
       --shadow:
         0 30px 90px
-        rgba(0,0,0,.45);
+        rgba(0,0,0,.42);
     }
 
-    * {
-      box-sizing: border-box;
-      margin: 0;
-      padding: 0;
+    *{
+      box-sizing:border-box;
+      margin:0;
+      padding:0;
     }
 
-    html {
-      scroll-behavior: smooth;
+    html{
+      scroll-behavior:smooth;
     }
 
-    body {
-      min-height: 100vh;
+    body{
+      min-height:100vh;
 
-      overflow-x: hidden;
+      overflow-x:hidden;
 
       font-family:
         Arial,
         Helvetica,
         sans-serif;
 
-      line-height: 1.6;
+      line-height:1.6;
 
-      color:
-        var(--text);
+      color:var(--text);
 
       background:
         radial-gradient(
           circle at 12% 5%,
-          rgba(111,76,255,.16),
+          rgba(111,76,255,.15),
           transparent 29%
         ),
         radial-gradient(
           circle at 90% 18%,
-          rgba(211,166,78,.075),
+          rgba(211,166,78,.07),
           transparent 27%
-        ),
-        radial-gradient(
-          circle at 65% 75%,
-          rgba(157,117,255,.07),
-          transparent 30%
         ),
         linear-gradient(
           180deg,
@@ -96,17 +87,17 @@
         );
     }
 
-    body::before {
-      content: "";
+    body::before{
+      content:"";
 
-      position: fixed;
-      inset: 0;
+      position:fixed;
+      inset:0;
 
-      z-index: -4;
+      z-index:-4;
 
-      pointer-events: none;
+      pointer-events:none;
 
-      opacity: .14;
+      opacity:.13;
 
       background-image:
         linear-gradient(
@@ -123,147 +114,140 @@
         62px 62px;
     }
 
-    body::after {
-      content: "";
+    body::after{
+      content:"";
 
-      position: fixed;
-      inset: 0;
+      position:fixed;
+      inset:0;
 
-      z-index: -3;
+      z-index:-3;
 
-      pointer-events: none;
+      pointer-events:none;
 
       background:
         radial-gradient(
           circle at center,
-          transparent 28%,
-          rgba(0,0,0,.34) 100%
+          transparent 30%,
+          rgba(0,0,0,.34)
         );
     }
 
-    a {
-      color: inherit;
-      text-decoration: none;
+    a{
+      color:inherit;
+      text-decoration:none;
     }
 
-    img {
-      display: block;
-      max-width: 100%;
+    img{
+      display:block;
+      max-width:100%;
     }
 
-    button {
-      font: inherit;
-      cursor: pointer;
+    button{
+      font:inherit;
+      cursor:pointer;
     }
 
-    ::selection {
-      color: #fff;
+    ::selection{
+      color:#fff;
 
       background:
         rgba(111,76,255,.55);
     }
 
-    .container {
+    .container{
       width:
         min(
           1180px,
           calc(100% - 36px)
         );
 
-      margin:
-        0 auto;
+      margin:0 auto;
     }
 
     /* ========================================
-       AMBIENT BACKGROUND
+       AMBIENT
     ======================================== */
 
-    .ambient {
-      position: fixed;
-      inset: 0;
+    .ambient{
+      position:fixed;
+      inset:0;
 
-      z-index: -2;
+      z-index:-2;
 
-      pointer-events: none;
-
-      overflow: hidden;
+      pointer-events:none;
+      overflow:hidden;
     }
 
-    .orb {
-      position: absolute;
+    .orb{
+      position:absolute;
 
-      border-radius: 50%;
+      border-radius:50%;
 
       filter:
-        blur(110px);
+        blur(85px);
 
-      opacity: .15;
+      opacity:.11;
 
       animation:
         orbFloat
-        16s
+        18s
         ease-in-out
         infinite;
     }
 
-    .orb-one {
-      width: 430px;
-      height: 430px;
+    .orb-one{
+      width:420px;
+      height:420px;
 
-      left: -190px;
-      top: -190px;
+      left:-190px;
+      top:-190px;
 
-      background:
-        var(--purple);
+      background:var(--purple);
     }
 
-    .orb-two {
-      width: 520px;
-      height: 520px;
+    .orb-two{
+      width:500px;
+      height:500px;
 
-      right: -260px;
-      top: 36%;
+      right:-260px;
+      top:36%;
 
-      background:
-        var(--purple-deep);
+      background:var(--purple-deep);
 
-      animation-delay:
-        -5s;
+      animation-delay:-6s;
     }
 
-    .orb-three {
-      width: 390px;
-      height: 390px;
+    .orb-three{
+      width:360px;
+      height:360px;
 
-      left: 33%;
-      bottom: -260px;
+      left:34%;
+      bottom:-250px;
 
-      background:
-        #8d6224;
+      background:#8d6224;
 
-      opacity: .08;
+      opacity:.06;
 
-      animation-delay:
-        -9s;
+      animation-delay:-10s;
     }
 
-    @keyframes orbFloat {
+    @keyframes orbFloat{
 
       0%,
-      100% {
+      100%{
         transform:
           translate3d(0,0,0)
           scale(1);
       }
 
-      50% {
+      50%{
         transform:
           translate3d(
-            38px,
-            -28px,
+            34px,
+            -23px,
             0
           )
-          scale(1.06);
+          scale(1.05);
       }
 
     }
@@ -272,17 +256,17 @@
        HEADER
     ======================================== */
 
-    header {
-      position: fixed;
+    header{
+      position:fixed;
 
-      top: 0;
-      left: 0;
-      right: 0;
+      top:0;
+      left:0;
+      right:0;
 
-      z-index: 5000;
+      z-index:5000;
 
       background:
-        rgba(5,5,7,.8);
+        rgba(5,5,7,.78);
 
       backdrop-filter:
         blur(18px);
@@ -295,36 +279,36 @@
         rgba(255,255,255,.065);
     }
 
-    .nav-wrap {
-      min-height: 76px;
+    .nav-wrap{
+      min-height:76px;
 
-      display: flex;
+      display:flex;
 
-      align-items: center;
-      justify-content: space-between;
+      align-items:center;
+      justify-content:space-between;
 
-      gap: 22px;
+      gap:22px;
     }
 
-    .brand {
-      display: flex;
+    .brand{
+      display:flex;
 
-      align-items: center;
+      align-items:center;
 
-      gap: 11px;
+      gap:11px;
 
-      flex-shrink: 0;
+      flex-shrink:0;
     }
 
-    .brand-mark {
-      width: 46px;
-      height: 46px;
+    .brand-mark{
+      width:46px;
+      height:46px;
 
-      overflow: hidden;
+      overflow:hidden;
 
-      border-radius: 12px;
+      border-radius:12px;
 
-      background: #000;
+      background:#000;
 
       border:
         1px solid
@@ -332,121 +316,113 @@
 
       box-shadow:
         0 0 24px
-        rgba(111,76,255,.22),
-        0 0 14px
-        rgba(211,166,78,.1);
+        rgba(111,76,255,.22);
     }
 
-    .brand-mark img {
-      width: 100%;
-      height: 100%;
+    .brand-mark img{
+      width:100%;
+      height:100%;
 
-      object-fit: cover;
+      object-fit:cover;
 
-      object-position:
-        center 39%;
+      object-position:center 39%;
 
       transform:
         scale(1.23);
     }
 
-    .brand-copy {
-      display: flex;
+    .brand-copy{
+      display:flex;
 
-      flex-direction: column;
+      flex-direction:column;
 
-      line-height: 1;
+      line-height:1;
     }
 
-    .brand-main {
-      color: #fff;
+    .brand-main{
+      color:#fff;
 
-      font-size: 14px;
-      font-weight: 900;
+      font-size:14px;
+      font-weight:900;
 
-      letter-spacing:
-        1.5px;
+      letter-spacing:1.5px;
     }
 
-    .brand-sub {
-      margin-top: 5px;
+    .brand-sub{
+      margin-top:5px;
 
-      color:
-        var(--gold);
+      color:var(--gold);
 
-      font-size: 8px;
-      font-weight: 900;
+      font-size:8px;
+      font-weight:900;
 
-      letter-spacing:
-        3.1px;
+      letter-spacing:3.1px;
     }
 
-    .desktop-nav {
-      display: flex;
+    .desktop-nav{
+      display:flex;
 
-      align-items: center;
+      align-items:center;
 
-      gap: 20px;
+      gap:20px;
     }
 
-    .desktop-nav a {
-      color:
-        #b7b6bf;
+    .desktop-nav a{
+      color:#aaa9b2;
 
-      font-size: 12px;
-      font-weight: 800;
+      font-size:11px;
+      font-weight:900;
 
       transition:
         color .2s ease;
     }
 
-    .desktop-nav a:hover {
-      color: #fff;
+    .desktop-nav a:hover{
+      color:#fff;
     }
 
-    .desktop-nav a.active {
-      color:
-        var(--gold-soft);
+    .desktop-nav a.active{
+      color:var(--gold-soft);
     }
 
-    .nav-cta {
-      min-height: 42px;
+    .nav-cta{
+      min-height:42px;
 
-      display: inline-flex;
+      display:inline-flex;
 
-      align-items: center;
+      align-items:center;
+      justify-content:center;
 
       padding:
         0 16px;
 
-      border-radius: 10px;
+      border-radius:10px;
 
-      color:
-        #fff !important;
+      color:#fff !important;
 
       background:
         linear-gradient(
           100deg,
-          rgba(111,76,255,.22),
-          rgba(157,117,255,.12)
+          rgba(111,76,255,.68),
+          rgba(157,117,255,.74)
         );
 
       border:
         1px solid
-        rgba(157,117,255,.3);
+        rgba(157,117,255,.26);
     }
 
-    .menu-button {
-      display: none;
+    .menu-button{
+      display:none;
 
-      width: 43px;
-      height: 43px;
+      width:43px;
+      height:43px;
 
-      place-items: center;
+      place-items:center;
 
-      color: #fff;
+      border-radius:11px;
 
-      border-radius: 11px;
+      color:#fff;
 
       background:
         rgba(255,255,255,.035);
@@ -456,276 +432,102 @@
         rgba(255,255,255,.1);
     }
 
-    .menu-lines {
-      width: 18px;
+    .menu-lines{
+      width:18px;
 
-      display: grid;
+      display:grid;
 
-      gap: 4px;
+      gap:4px;
     }
 
-    .menu-lines span {
-      height: 2px;
+    .menu-lines span{
+      height:2px;
 
-      border-radius: 10px;
+      border-radius:10px;
 
-      background:
-        #e1e1e5;
+      background:#e1e1e5;
+
+      transition:
+        transform .2s ease,
+        opacity .2s ease;
     }
 
-    .mobile-menu {
-      display: none;
-
-      padding-bottom: 18px;
+    .menu-button.open
+    .menu-lines span:nth-child(1){
+      transform:
+        translateY(6px)
+        rotate(45deg);
     }
 
-    .mobile-menu.open {
-      display: grid;
+    .menu-button.open
+    .menu-lines span:nth-child(2){
+      opacity:0;
     }
 
-    .mobile-menu a {
+    .menu-button.open
+    .menu-lines span:nth-child(3){
+      transform:
+        translateY(-6px)
+        rotate(-45deg);
+    }
+
+    .mobile-menu{
+      display:none;
+
+      padding-bottom:18px;
+    }
+
+    .mobile-menu.open{
+      display:grid;
+    }
+
+    .mobile-menu a{
       padding:
         13px 2px;
 
-      color:
-        #c8c7cf;
+      color:#c8c7cf;
 
       border-bottom:
         1px solid
         rgba(255,255,255,.055);
 
-      font-size: 14px;
-      font-weight: 800;
+      font-size:14px;
+      font-weight:800;
     }
 
     /* ========================================
-       HERO
+       BUTTONS
     ======================================== */
 
-    .hero {
-      position: relative;
+    .button{
+      min-height:52px;
 
-      min-height: 760px;
+      display:inline-flex;
 
-      display: flex;
-
-      align-items: center;
-
-      padding:
-        145px 0
-        95px;
-
-      overflow: hidden;
-    }
-
-    .hero::before {
-      content: "SERVICES";
-
-      position: absolute;
-
-      left: 50%;
-      top: 48%;
-
-      transform:
-        translate(-50%,-50%);
-
-      color:
-        rgba(255,255,255,.018);
-
-      font-size:
-        clamp(
-          140px,
-          22vw,
-          340px
-        );
-
-      font-weight: 900;
-
-      letter-spacing:
-        -14px;
-
-      white-space: nowrap;
-
-      pointer-events: none;
-    }
-
-    .hero-glow {
-      position: absolute;
-
-      width: 720px;
-      height: 720px;
-
-      right: -220px;
-      top: 40px;
-
-      border-radius: 50%;
-
-      pointer-events: none;
-
-      background:
-        radial-gradient(
-          circle,
-          rgba(157,117,255,.13),
-          rgba(111,76,255,.045) 40%,
-          transparent 70%
-        );
-
-      filter:
-        blur(22px);
-    }
-
-    .hero-content {
-      position: relative;
-
-      z-index: 2;
-
-      max-width: 900px;
-    }
-
-    .eyebrow {
-      display: inline-flex;
-
-      align-items: center;
-
-      gap: 9px;
-
-      margin-bottom: 23px;
-
-      padding:
-        8px 12px;
-
-      border-radius: 999px;
-
-      color:
-        #d5ceff;
-
-      background:
-        rgba(111,76,255,.08);
-
-      border:
-        1px solid
-        rgba(157,117,255,.24);
-
-      font-size: 10px;
-      font-weight: 900;
-
-      letter-spacing:
-        1.55px;
-
-      text-transform:
-        uppercase;
-    }
-
-    .eyebrow::before {
-      content: "";
-
-      width: 7px;
-      height: 7px;
-
-      border-radius: 50%;
-
-      background:
-        var(--gold);
-
-      box-shadow:
-        0 0 14px
-        rgba(211,166,78,.75);
-    }
-
-    h1 {
-      max-width: 900px;
-
-      font-size:
-        clamp(
-          60px,
-          9vw,
-          108px
-        );
-
-      line-height: .88;
-
-      letter-spacing:
-        -5px;
-    }
-
-    .gradient-text {
-      display: block;
-
-      background:
-        linear-gradient(
-          92deg,
-          #fff,
-          #dddde3 27%,
-          #b99cff 62%,
-          #7855ff
-        );
-
-      -webkit-background-clip:
-        text;
-
-      background-clip:
-        text;
-
-      color: transparent;
-    }
-
-    .hero-copy {
-      max-width: 690px;
-
-      margin-top: 27px;
-
-      color:
-        #a3a2ab;
-
-      font-size:
-        clamp(
-          16px,
-          2vw,
-          19px
-        );
-
-      line-height: 1.75;
-    }
-
-    .hero-actions {
-      display: flex;
-
-      flex-wrap: wrap;
-
-      gap: 12px;
-
-      margin-top: 31px;
-    }
-
-    .button {
-      min-height: 52px;
-
-      display: inline-flex;
-
-      align-items: center;
-      justify-content: center;
+      align-items:center;
+      justify-content:center;
 
       padding:
         0 22px;
 
-      border-radius: 13px;
+      border-radius:13px;
 
-      font-size: 12px;
-      font-weight: 900;
+      font-size:12px;
+      font-weight:900;
 
       transition:
         transform .2s ease,
-        box-shadow .2s ease,
-        border-color .2s ease;
+        border-color .2s ease,
+        box-shadow .2s ease;
     }
 
-    .button:hover {
+    .button:hover{
       transform:
         translateY(-2px);
     }
 
-    .button-primary {
-      color: #fff;
+    .button-primary{
+      color:#fff;
 
       background:
         linear-gradient(
@@ -740,12 +542,11 @@
 
       box-shadow:
         0 15px 44px
-        rgba(93,60,232,.28);
+        rgba(93,60,232,.26);
     }
 
-    .button-secondary {
-      color:
-        #d8d7de;
+    .button-secondary{
+      color:#d8d7de;
 
       background:
         rgba(255,255,255,.035);
@@ -755,19 +556,205 @@
         rgba(255,255,255,.1);
     }
 
-    .hero-trust {
-      max-width: 850px;
+    /* ========================================
+       HERO
+    ======================================== */
 
-      margin-top: 48px;
+    .hero{
+      position:relative;
 
-      display: grid;
+      min-height:760px;
+
+      display:flex;
+
+      align-items:center;
+
+      padding:
+        145px 0
+        95px;
+
+      overflow:hidden;
+    }
+
+    .hero::before{
+      content:"SERVICES";
+
+      position:absolute;
+
+      left:50%;
+      top:48%;
+
+      transform:
+        translate(-50%,-50%);
+
+      color:
+        rgba(255,255,255,.018);
+
+      font-size:
+        clamp(
+          140px,
+          22vw,
+          340px
+        );
+
+      font-weight:900;
+
+      letter-spacing:-14px;
+
+      white-space:nowrap;
+
+      pointer-events:none;
+    }
+
+    .hero-glow{
+      position:absolute;
+
+      width:660px;
+      height:660px;
+
+      right:-220px;
+      top:40px;
+
+      border-radius:50%;
+
+      pointer-events:none;
+
+      background:
+        radial-gradient(
+          circle,
+          rgba(157,117,255,.12),
+          rgba(111,76,255,.04) 40%,
+          transparent 70%
+        );
+    }
+
+    .hero-content{
+      position:relative;
+
+      z-index:2;
+
+      max-width:900px;
+    }
+
+    .eyebrow{
+      display:inline-flex;
+
+      align-items:center;
+
+      gap:9px;
+
+      margin-bottom:23px;
+
+      padding:
+        8px 12px;
+
+      border-radius:999px;
+
+      color:#d5ceff;
+
+      background:
+        rgba(111,76,255,.08);
+
+      border:
+        1px solid
+        rgba(157,117,255,.24);
+
+      font-size:10px;
+      font-weight:900;
+
+      letter-spacing:1.55px;
+
+      text-transform:uppercase;
+    }
+
+    .eyebrow::before{
+      content:"";
+
+      width:7px;
+      height:7px;
+
+      border-radius:50%;
+
+      background:var(--gold);
+
+      box-shadow:
+        0 0 14px
+        rgba(211,166,78,.75);
+    }
+
+    h1{
+      max-width:900px;
+
+      font-size:
+        clamp(
+          60px,
+          9vw,
+          108px
+        );
+
+      line-height:.88;
+
+      letter-spacing:-5px;
+    }
+
+    .gradient-text{
+      display:block;
+
+      background:
+        linear-gradient(
+          92deg,
+          #fff,
+          #dddde3 27%,
+          #b99cff 62%,
+          #7855ff
+        );
+
+      -webkit-background-clip:text;
+      background-clip:text;
+
+      color:transparent;
+    }
+
+    .hero-copy{
+      max-width:690px;
+
+      margin-top:27px;
+
+      color:#a3a2ab;
+
+      font-size:
+        clamp(
+          16px,
+          2vw,
+          19px
+        );
+
+      line-height:1.75;
+    }
+
+    .hero-actions{
+      display:flex;
+
+      flex-wrap:wrap;
+
+      gap:12px;
+
+      margin-top:31px;
+    }
+
+    .hero-trust{
+      max-width:850px;
+
+      margin-top:48px;
+
+      display:grid;
 
       grid-template-columns:
         repeat(3,1fr);
 
-      overflow: hidden;
+      overflow:hidden;
 
-      border-radius: 18px;
+      border-radius:18px;
 
       background:
         rgba(255,255,255,.022);
@@ -777,59 +764,60 @@
         rgba(255,255,255,.075);
     }
 
-    .trust-item {
-      padding:
-        21px;
+    .trust-item{
+      padding:21px;
 
       border-right:
         1px solid
         rgba(255,255,255,.065);
     }
 
-    .trust-item:last-child {
-      border-right: 0;
+    .trust-item:last-child{
+      border-right:0;
     }
 
-    .trust-item strong {
-      display: block;
+    .trust-item strong{
+      display:block;
 
-      font-size: 14px;
+      font-size:14px;
     }
 
-    .trust-item span {
-      display: block;
+    .trust-item span{
+      display:block;
 
-      margin-top: 4px;
+      margin-top:4px;
 
-      color:
-        #777681;
+      color:#777681;
 
-      font-size: 10px;
+      font-size:10px;
     }
 
     /* ========================================
-       SECTION BASE
+       SECTIONS
     ======================================== */
 
-    .section {
-      position: relative;
+    .section{
+      position:relative;
 
       padding:
         100px 0;
     }
 
-    .section::before {
-      content: "";
+    .section::before{
+      content:"";
 
-      position: absolute;
+      position:absolute;
 
-      top: 0;
-      left: 50%;
+      left:50%;
+      top:0;
 
       width:
-        min(900px,80%);
+        min(
+          900px,
+          80%
+        );
 
-      height: 1px;
+      height:1px;
 
       transform:
         translateX(-50%);
@@ -844,307 +832,298 @@
         );
     }
 
-    .section-head {
-      max-width: 800px;
+    .section-head{
+      max-width:780px;
 
-      margin-bottom: 45px;
+      margin-bottom:47px;
     }
 
-    .section-kicker {
-      color:
-        var(--gold);
+    .section-kicker{
+      color:var(--gold);
 
-      font-size: 10px;
-      font-weight: 900;
+      font-size:9px;
+      font-weight:900;
 
-      letter-spacing:
-        1.8px;
+      letter-spacing:1.7px;
 
-      text-transform:
-        uppercase;
+      text-transform:uppercase;
     }
 
-    .section-title {
-      margin-top: 10px;
+    .section-title{
+      margin-top:9px;
 
       font-size:
         clamp(
-          39px,
+          40px,
           6vw,
-          63px
+          65px
         );
 
-      line-height: .98;
+      line-height:.97;
 
-      letter-spacing:
-        -2.4px;
+      letter-spacing:-2.7px;
     }
 
-    .section-copy {
-      max-width: 700px;
+    .section-copy{
+      max-width:680px;
 
-      margin-top: 16px;
+      margin-top:16px;
 
-      color:
-        var(--muted);
+      color:#8e8d97;
 
-      font-size: 15px;
+      font-size:14px;
     }
 
     /* ========================================
-       SERVICE CARDS
+       SERVICES
     ======================================== */
 
-    .services-grid {
-      display: grid;
+    .services-grid{
+      display:grid;
 
       grid-template-columns:
         repeat(2,1fr);
 
-      gap: 18px;
+      gap:17px;
     }
 
-    .service-card {
-      position: relative;
+    .service-card{
+      position:relative;
 
-      min-height: 370px;
+      min-height:410px;
 
-      overflow: hidden;
+      overflow:hidden;
 
-      padding:
-        31px;
+      padding:29px;
 
-      border-radius: 24px;
+      border-radius:23px;
 
       background:
         radial-gradient(
           circle at
           var(--x,80%)
           var(--y,10%),
-          rgba(157,117,255,.12),
-          transparent 30%
+          rgba(157,117,255,.09),
+          transparent 37%
         ),
         linear-gradient(
           145deg,
-          rgba(255,255,255,.045),
+          rgba(255,255,255,.044),
           rgba(255,255,255,.014)
         );
 
       border:
         1px solid
-        rgba(255,255,255,.08);
+        rgba(255,255,255,.075);
 
       transition:
-        transform .25s ease,
-        border-color .25s ease,
-        box-shadow .25s ease;
+        transform .22s ease,
+        border-color .22s ease;
     }
 
-    .service-card:hover {
+    .service-card:hover{
       transform:
-        translateY(-5px);
+        translateY(-4px);
 
       border-color:
-        rgba(157,117,255,.28);
-
-      box-shadow:
-        0 28px 75px
-        rgba(0,0,0,.24);
+        rgba(157,117,255,.25);
     }
 
-    .service-number {
-      color:
-        var(--purple-bright);
+    .service-number{
+      color:var(--purple-bright);
 
-      font-size: 9px;
-      font-weight: 900;
+      font-size:9px;
+      font-weight:900;
 
-      letter-spacing:
-        1.7px;
+      letter-spacing:1.4px;
     }
 
-    .service-card h3 {
-      max-width: 480px;
-
-      margin-top: 28px;
+    .service-card h3{
+      margin-top:32px;
 
       font-size:
         clamp(
-          27px,
-          4vw,
-          36px
+          25px,
+          3vw,
+          34px
         );
 
-      line-height: 1;
-
-      letter-spacing:
-        -1.2px;
+      line-height:1;
     }
 
-    .service-card > p {
-      max-width: 530px;
+    .service-card > p{
+      max-width:570px;
 
-      margin-top: 14px;
+      margin-top:13px;
 
-      color:
-        #92919b;
+      color:#8d8c96;
 
-      font-size: 13px;
+      font-size:13px;
     }
 
-    .service-list {
-      display: grid;
+    .service-list{
+      display:grid;
 
-      gap: 8px;
+      gap:8px;
 
-      margin-top: 22px;
+      margin-top:22px;
+      padding-bottom:58px;
     }
 
-    .service-list div {
-      color:
-        #c7c6ce;
+    .service-list div{
+      color:#c0bfc7;
 
-      font-size: 12px;
+      font-size:11px;
     }
 
-    .service-list div::before {
-      content: "✓";
+    .service-list div::before{
+      content:"✓";
 
-      margin-right: 8px;
+      margin-right:8px;
 
-      color:
-        var(--gold-soft);
+      color:var(--gold-soft);
 
-      font-weight: 900;
+      font-weight:900;
     }
 
-    .service-card-bottom {
-      position: absolute;
+    .service-card-bottom{
+      position:absolute;
 
-      left: 31px;
-      right: 31px;
-      bottom: 26px;
+      left:29px;
+      right:29px;
+      bottom:25px;
 
-      padding-top: 18px;
+      display:flex;
 
-      display: flex;
+      align-items:center;
+      justify-content:space-between;
 
-      justify-content: space-between;
-      align-items: center;
+      gap:15px;
 
-      gap: 15px;
+      padding-top:18px;
 
       border-top:
         1px solid
-        rgba(255,255,255,.065);
+        rgba(255,255,255,.06);
     }
 
-    .service-card-bottom span {
-      color:
-        #74737d;
+    .service-card-bottom span{
+      color:#696873;
 
-      font-size: 9px;
-      font-weight: 900;
+      font-size:9px;
+      font-weight:900;
 
-      letter-spacing:
-        1px;
+      letter-spacing:1px;
 
-      text-transform:
-        uppercase;
+      text-transform:uppercase;
     }
 
-    .service-card-bottom a {
-      color:
-        #cfc6ff;
+    .service-card-bottom a{
+      color:#c9bdff;
 
-      font-size: 11px;
-      font-weight: 900;
+      font-size:10px;
+      font-weight:900;
     }
 
     /* ========================================
        PACKAGES
     ======================================== */
 
-    .packages-wrap {
-      position: relative;
+    .packages-wrap{
+      position:relative;
 
-      overflow: hidden;
+      overflow:hidden;
 
-      padding:
-        50px;
+      padding:50px;
 
-      border-radius: 30px;
+      border-radius:29px;
 
       background:
-        radial-gradient(
-          circle at 90% 0%,
-          rgba(157,117,255,.15),
-          transparent 33%
-        ),
         linear-gradient(
           145deg,
-          rgba(111,76,255,.1),
-          rgba(255,255,255,.025)
+          rgba(111,76,255,.105),
+          rgba(255,255,255,.024)
         );
 
       border:
         1px solid
-        rgba(157,117,255,.22);
+        rgba(157,117,255,.2);
     }
 
-    .package-grid {
-      position: relative;
+    .packages-wrap::after{
+      content:"";
 
-      z-index: 2;
+      position:absolute;
 
-      display: grid;
+      width:470px;
+      height:470px;
+
+      right:-230px;
+      top:-250px;
+
+      border-radius:50%;
+
+      background:
+        radial-gradient(
+          circle,
+          rgba(157,117,255,.17),
+          transparent 68%
+        );
+
+      pointer-events:none;
+    }
+
+    .package-grid{
+      position:relative;
+
+      z-index:2;
+
+      display:grid;
 
       grid-template-columns:
         repeat(3,1fr);
 
-      gap: 15px;
+      gap:15px;
 
-      margin-top: 34px;
+      margin-top:34px;
     }
 
-    .package {
-      position: relative;
+    .package{
+      position:relative;
 
-      padding:
-        27px;
+      padding:26px;
 
-      border-radius: 20px;
+      border-radius:18px;
 
       background:
-        rgba(5,5,8,.58);
+        rgba(6,6,9,.55);
 
       border:
         1px solid
         rgba(255,255,255,.08);
     }
 
-    .package.featured {
+    .package.featured{
       border-color:
-        rgba(211,166,78,.32);
+        rgba(211,166,78,.31);
 
       box-shadow:
-        0 20px 60px
-        rgba(0,0,0,.18);
+        inset 0 0 0 1px
+        rgba(211,166,78,.05);
     }
 
-    .popular {
-      position: absolute;
+    .popular{
+      position:absolute;
 
-      top: 16px;
-      right: 16px;
+      top:15px;
+      right:15px;
 
       padding:
         5px 8px;
 
-      border-radius: 999px;
+      border-radius:999px;
 
-      color:
-        #ddc991;
+      color:#d9c493;
 
       background:
         rgba(211,166,78,.08);
@@ -1153,100 +1132,94 @@
         1px solid
         rgba(211,166,78,.18);
 
-      font-size: 8px;
-      font-weight: 900;
+      font-size:8px;
+      font-weight:900;
 
-      text-transform:
-        uppercase;
+      letter-spacing:1px;
+
+      text-transform:uppercase;
     }
 
-    .package-label {
-      color:
-        var(--gold);
+    .package-label{
+      color:var(--gold);
 
-      font-size: 9px;
-      font-weight: 900;
+      font-size:9px;
+      font-weight:900;
 
-      letter-spacing:
-        1.4px;
+      letter-spacing:1.5px;
 
-      text-transform:
-        uppercase;
+      text-transform:uppercase;
     }
 
-    .package h3 {
-      margin-top: 8px;
+    .package h3{
+      margin-top:8px;
 
-      font-size: 23px;
+      font-size:23px;
     }
 
-    .package-price {
-      margin-top: 14px;
+    .package-price{
+      margin-top:13px;
 
-      font-size: 39px;
-      font-weight: 900;
+      font-size:38px;
+      font-weight:900;
 
-      line-height: 1;
+      line-height:1;
     }
 
-    .package-price span {
-      color:
-        #777681;
+    .package-price span{
+      color:#777681;
 
-      font-size: 9px;
-      font-weight: 700;
+      font-size:9px;
+      font-weight:700;
     }
 
-    .package p {
-      margin-top: 13px;
+    .package p{
+      margin-top:13px;
 
-      color:
-        #8e8d97;
+      color:#8e8d97;
 
-      font-size: 12px;
+      font-size:12px;
     }
 
-    .package-list {
-      display: grid;
+    .package-list{
+      display:grid;
 
-      gap: 8px;
+      gap:8px;
 
-      margin-top: 20px;
+      margin-top:20px;
     }
 
-    .package-list div {
-      color:
-        #c1c0c8;
+    .package-list div{
+      color:#c1c0c8;
 
-      font-size: 11px;
+      font-size:11px;
     }
 
-    .package-list div::before {
-      content: "✓";
+    .package-list div::before{
+      content:"✓";
 
-      margin-right: 8px;
+      margin-right:8px;
 
-      color:
-        var(--purple-bright);
+      color:var(--purple-bright);
 
-      font-weight: 900;
+      font-weight:900;
     }
 
-    .package-button {
-      width: 100%;
+    .package-button{
+      width:100%;
 
-      min-height: 46px;
+      min-height:46px;
 
-      margin-top: 24px;
+      margin-top:24px;
 
-      display: flex;
+      display:flex;
 
-      align-items: center;
-      justify-content: center;
+      align-items:center;
+      justify-content:center;
 
-      border-radius: 10px;
+      border-radius:10px;
 
-      color: #fff;
+      color:#fff;
 
       background:
         rgba(255,255,255,.05);
@@ -1255,12 +1228,12 @@
         1px solid
         rgba(255,255,255,.09);
 
-      font-size: 11px;
-      font-weight: 900;
+      font-size:11px;
+      font-weight:900;
     }
 
     .featured
-    .package-button {
+    .package-button{
       background:
         linear-gradient(
           100deg,
@@ -1270,25 +1243,24 @@
     }
 
     /* ========================================
-       WHY SURSUM
+       PRINCIPLES
     ======================================== */
 
-    .principles-grid {
-      display: grid;
+    .principles-grid{
+      display:grid;
 
       grid-template-columns:
         repeat(3,1fr);
 
-      gap: 16px;
+      gap:16px;
     }
 
-    .principle {
-      min-height: 250px;
+    .principle{
+      min-height:250px;
 
-      padding:
-        27px;
+      padding:27px;
 
-      border-radius: 22px;
+      border-radius:22px;
 
       background:
         rgba(255,255,255,.025);
@@ -1298,61 +1270,53 @@
         rgba(255,255,255,.07);
     }
 
-    .principle-number {
-      color:
-        var(--gold);
+    .principle-number{
+      color:var(--gold);
 
-      font-size: 9px;
-      font-weight: 900;
+      font-size:9px;
+      font-weight:900;
 
-      letter-spacing:
-        1.3px;
+      letter-spacing:1.3px;
     }
 
-    .principle h3 {
-      margin-top: 36px;
+    .principle h3{
+      margin-top:36px;
 
-      font-size: 24px;
+      font-size:24px;
 
-      line-height: 1.03;
+      line-height:1.03;
     }
 
-    .principle p {
-      margin-top: 12px;
+    .principle p{
+      margin-top:12px;
 
-      color:
-        #888791;
+      color:#888791;
 
-      font-size: 12px;
+      font-size:12px;
     }
 
     /* ========================================
-       MAINTENANCE TEASER
+       MAINTENANCE
     ======================================== */
 
-    .maintenance-box {
-      position: relative;
-
-      overflow: hidden;
-
-      display: grid;
+    .maintenance-box{
+      display:grid;
 
       grid-template-columns:
         1fr .8fr;
 
-      gap: 50px;
+      gap:50px;
 
-      align-items: center;
+      align-items:center;
 
-      padding:
-        60px;
+      padding:60px;
 
-      border-radius: 30px;
+      border-radius:30px;
 
       background:
         radial-gradient(
           circle at 90% 20%,
-          rgba(157,117,255,.18),
+          rgba(157,117,255,.16),
           transparent 35%
         ),
         rgba(255,255,255,.028);
@@ -1362,8 +1326,8 @@
         rgba(157,117,255,.2);
     }
 
-    .maintenance-box h2 {
-      margin-top: 10px;
+    .maintenance-box h2{
+      margin-top:10px;
 
       font-size:
         clamp(
@@ -1372,35 +1336,32 @@
           64px
         );
 
-      line-height: .96;
+      line-height:.96;
 
-      letter-spacing:
-        -2.5px;
+      letter-spacing:-2.5px;
     }
 
-    .maintenance-box p {
-      max-width: 620px;
+    .maintenance-box p{
+      max-width:620px;
 
-      margin-top: 16px;
+      margin-top:16px;
 
-      color:
-        #92919b;
+      color:#92919b;
     }
 
-    .maintenance-features {
-      display: grid;
+    .maintenance-features{
+      display:grid;
 
-      gap: 11px;
+      gap:11px;
     }
 
-    .maintenance-feature {
+    .maintenance-feature{
       padding:
         15px 16px;
 
-      border-radius: 12px;
+      border-radius:12px;
 
-      color:
-        #cbc9d2;
+      color:#cbc9d2;
 
       background:
         rgba(5,5,8,.48);
@@ -1409,44 +1370,39 @@
         1px solid
         rgba(255,255,255,.075);
 
-      font-size: 12px;
+      font-size:12px;
     }
 
-    .maintenance-feature::before {
-      content: "•";
+    .maintenance-feature::before{
+      content:"•";
 
-      margin-right: 10px;
+      margin-right:10px;
 
-      color:
-        var(--gold-soft);
+      color:var(--gold-soft);
     }
 
     /* ========================================
        CTA
     ======================================== */
 
-    .cta {
+    .cta{
       padding:
         90px 0
         115px;
     }
 
-    .cta-box {
-      position: relative;
-
-      overflow: hidden;
-
+    .cta-box{
       padding:
         75px 40px;
 
-      text-align: center;
+      text-align:center;
 
-      border-radius: 31px;
+      border-radius:31px;
 
       background:
         radial-gradient(
           circle at 50% 0%,
-          rgba(157,117,255,.2),
+          rgba(157,117,255,.19),
           transparent 43%
         ),
         rgba(255,255,255,.025);
@@ -1459,29 +1415,8 @@
         var(--shadow);
     }
 
-    .cta-box::after {
-      content: "";
-
-      position: absolute;
-
-      left: 10%;
-      right: 10%;
-      bottom: 0;
-
-      height: 1px;
-
-      background:
-        linear-gradient(
-          90deg,
-          transparent,
-          var(--gold),
-          var(--purple-bright),
-          transparent
-        );
-    }
-
-    .cta-box h2 {
-      max-width: 850px;
+    .cta-box h2{
+      max-width:850px;
 
       margin:
         10px auto 0;
@@ -1493,38 +1428,37 @@
           75px
         );
 
-      line-height: .94;
+      line-height:.94;
 
-      letter-spacing:
-        -3px;
+      letter-spacing:-3px;
     }
 
-    .cta-box p {
-      max-width: 620px;
+    .cta-box p{
+      max-width:620px;
 
       margin:
         18px auto 0;
 
-      color:
-        #8d8c96;
+      color:#8d8c96;
     }
 
-    .cta-actions {
-      display: flex;
+    .cta-actions{
+      display:flex;
 
-      justify-content: center;
-      flex-wrap: wrap;
+      justify-content:center;
 
-      gap: 11px;
+      flex-wrap:wrap;
 
-      margin-top: 28px;
+      gap:11px;
+
+      margin-top:28px;
     }
 
     /* ========================================
        FOOTER
     ======================================== */
 
-    footer {
+    footer{
       padding:
         42px 0
         34px;
@@ -1534,190 +1468,787 @@
         rgba(255,255,255,.06);
     }
 
-    .footer-grid {
-      display: grid;
+    .footer-grid{
+      display:grid;
 
       grid-template-columns:
-        1.3fr .7fr .7fr .7fr;
+        1.3fr
+        .7fr
+        .7fr
+        .7fr;
 
-      gap: 40px;
+      gap:40px;
 
-      padding-bottom: 38px;
+      padding-bottom:38px;
     }
 
-    .footer-brand p {
-      max-width: 350px;
+    .footer-brand p{
+      max-width:350px;
 
-      margin-top: 14px;
+      margin-top:14px;
 
-      color:
-        #74737d;
+      color:#74737d;
 
-      font-size: 12px;
+      font-size:12px;
     }
 
-    .footer-column {
-      display: flex;
+    .footer-column{
+      display:flex;
 
-      flex-direction: column;
+      flex-direction:column;
 
-      gap: 9px;
+      gap:9px;
 
-      color:
-        #7b7a84;
+      color:#7b7a84;
 
-      font-size: 11px;
+      font-size:11px;
     }
 
-    .footer-column strong {
-      margin-bottom: 3px;
+    .footer-column strong{
+      margin-bottom:3px;
 
-      color:
-        #c9c8d0;
+      color:#c9c8d0;
 
-      font-size: 9px;
-      font-weight: 900;
+      font-size:9px;
+      font-weight:900;
 
-      letter-spacing:
-        1.4px;
+      letter-spacing:1.4px;
 
-      text-transform:
-        uppercase;
+      text-transform:uppercase;
     }
 
-    .footer-column a:hover {
-      color:
-        #cfc7ff;
+    .footer-column a:hover{
+      color:#cfc7ff;
     }
 
-    .footer-bottom {
-      padding-top: 23px;
+    .footer-bottom{
+      padding-top:23px;
 
-      display: flex;
+      display:flex;
 
-      justify-content: space-between;
+      justify-content:space-between;
 
-      gap: 20px;
+      gap:20px;
 
       border-top:
         1px solid
         rgba(255,255,255,.05);
 
-      color:
-        #64636d;
+      color:#64636d;
 
-      font-size: 10px;
+      font-size:10px;
     }
 
     /* ========================================
        REVEALS
     ======================================== */
 
-    .reveal {
-      opacity: 0;
+    .reveal{
+      opacity:0;
 
       transform:
-        translateY(28px);
+        translateY(24px);
 
       transition:
-        opacity .75s ease,
-        transform .75s
+        opacity .62s ease,
+        transform .62s
         cubic-bezier(.2,.8,.2,1);
     }
 
-    .reveal.visible {
-      opacity: 1;
+    .reveal.visible{
+      opacity:1;
+
+      transform:none;
+    }
+
+    /* ========================================
+       FAST TRANSITIONS
+    ======================================== */
+
+    .page-transition{
+      position:fixed;
+      inset:0;
+
+      z-index:30000;
+
+      visibility:hidden;
+
+      pointer-events:none;
+
+      overflow:hidden;
+
+      background:
+        rgba(5,5,7,0);
+    }
+
+    .page-transition.active{
+      visibility:visible;
+      pointer-events:all;
+
+      animation:
+        transitionBg
+        .46s
+        ease
+        forwards;
+    }
+
+    @keyframes transitionBg{
+
+      from{
+        background:
+          rgba(5,5,7,0);
+      }
+
+      55%{
+        background:
+          rgba(5,5,7,.84);
+      }
+
+      to{
+        background:#050507;
+      }
+
+    }
+
+    .home-rise,
+    .transition-burn,
+    .transition-scan,
+    .transition-flash,
+    .transition-logo,
+    .transition-glass{
+      opacity:0;
+    }
+
+    /* HOME */
+
+    .home-rise{
+      position:absolute;
+
+      left:0;
+      right:0;
+      bottom:-20px;
+
+      height:6px;
+
+      background:
+        linear-gradient(
+          90deg,
+          transparent,
+          var(--purple),
+          #fff,
+          var(--gold-soft),
+          transparent
+        );
+
+      box-shadow:
+        0 0 25px
+        rgba(157,117,255,.9),
+        0 0 70px
+        rgba(211,166,78,.45);
+    }
+
+    .page-transition.home.active
+    .home-rise{
+      animation:
+        homeRise
+        .45s
+        cubic-bezier(.7,0,.3,1)
+        forwards;
+    }
+
+    @keyframes homeRise{
+
+      from{
+        opacity:0;
+
+        transform:
+          translateY(5vh);
+      }
+
+      10%{
+        opacity:1;
+      }
+
+      to{
+        opacity:1;
+
+        transform:
+          translateY(-112vh);
+      }
+
+    }
+
+    /* PORTFOLIO */
+
+    .transition-burn{
+      position:absolute;
+
+      left:-10%;
+      right:-10%;
+      top:-100px;
+
+      height:110px;
+
+      background:
+        linear-gradient(
+          180deg,
+          transparent,
+          rgba(111,76,255,.13) 25%,
+          rgba(211,166,78,.65) 50%,
+          #fff2c9 64%,
+          #fff 68%,
+          rgba(211,166,78,.88) 75%,
+          transparent
+        );
+
+      box-shadow:
+        0 0 35px
+        rgba(240,206,134,.9),
+        0 0 90px
+        rgba(111,76,255,.5);
+    }
+
+    .page-transition.portfolio.active
+    .transition-burn{
+      animation:
+        portfolioBurn
+        .46s
+        cubic-bezier(.7,0,.25,1)
+        forwards;
+    }
+
+    @keyframes portfolioBurn{
+
+      from{
+        opacity:0;
+
+        transform:
+          translateY(-10vh);
+      }
+
+      10%{
+        opacity:1;
+      }
+
+      to{
+        opacity:1;
+
+        transform:
+          translateY(125vh);
+      }
+
+    }
+
+    /* MAINTENANCE */
+
+    .transition-scan{
+      position:absolute;
+
+      left:-5%;
+      right:-5%;
+      top:-20px;
+
+      height:6px;
+
+      background:
+        linear-gradient(
+          90deg,
+          transparent,
+          var(--gold),
+          #fff3cb,
+          #fff,
+          var(--gold),
+          transparent
+        );
+
+      box-shadow:
+        0 0 20px
+        rgba(240,206,134,.95),
+        0 0 75px
+        rgba(211,166,78,.6);
+    }
+
+    .page-transition.maintenance.active
+    .transition-scan{
+      animation:
+        maintenanceScan
+        .45s
+        cubic-bezier(.7,0,.3,1)
+        forwards;
+    }
+
+    @keyframes maintenanceScan{
+
+      from{
+        opacity:0;
+
+        transform:
+          translateY(-5vh);
+      }
+
+      10%{
+        opacity:1;
+      }
+
+      to{
+        opacity:1;
+
+        transform:
+          translateY(112vh);
+      }
+
+    }
+
+    /* CONTACT */
+
+    .transition-flash{
+      position:absolute;
+
+      left:50%;
+      top:50%;
+
+      width:14px;
+      height:14px;
 
       transform:
-        translateY(0);
+        translate(-50%,-50%)
+        scale(0);
+
+      border-radius:50%;
+
+      background:#fff;
+
+      box-shadow:
+        0 0 22px #fff,
+        0 0 70px
+        rgba(157,117,255,.95),
+        0 0 160px
+        rgba(111,76,255,.75);
+    }
+
+    .page-transition.contact.active
+    .transition-flash{
+      animation:
+        contactFlash
+        .42s
+        cubic-bezier(.65,0,.2,1)
+        forwards;
+    }
+
+    @keyframes contactFlash{
+
+      0%{
+        opacity:0;
+
+        transform:
+          translate(-50%,-50%)
+          scale(0);
+      }
+
+      22%,
+      70%{
+        opacity:1;
+      }
+
+      100%{
+        opacity:0;
+
+        transform:
+          translate(-50%,-50%)
+          scale(85);
+      }
+
+    }
+
+    /* ABOUT */
+
+    .transition-logo{
+      position:absolute;
+
+      left:50%;
+      top:50%;
+
+      width:145px;
+      height:145px;
+
+      transform:
+        translate(-50%,-50%);
+    }
+
+    .page-transition.about.active
+    .transition-logo{
+      opacity:1;
+    }
+
+    .logo-piece{
+      position:absolute;
+      inset:0;
+    }
+
+    .logo-piece img{
+      width:100%;
+      height:100%;
+
+      object-fit:contain;
+    }
+
+    .piece-a{
+      clip-path:
+        polygon(
+          0 0,
+          52% 0,
+          50% 50%,
+          0 50%
+        );
+    }
+
+    .piece-b{
+      clip-path:
+        polygon(
+          52% 0,
+          100% 0,
+          100% 50%,
+          50% 50%
+        );
+    }
+
+    .piece-c{
+      clip-path:
+        polygon(
+          0 50%,
+          50% 50%,
+          52% 100%,
+          0 100%
+        );
+    }
+
+    .piece-d{
+      clip-path:
+        polygon(
+          50% 50%,
+          100% 50%,
+          100% 100%,
+          52% 100%
+        );
+    }
+
+    .page-transition.about.active
+    .piece-a{
+      animation:
+        pieceA
+        .42s ease
+        forwards;
+    }
+
+    .page-transition.about.active
+    .piece-b{
+      animation:
+        pieceB
+        .42s ease
+        forwards;
+    }
+
+    .page-transition.about.active
+    .piece-c{
+      animation:
+        pieceC
+        .42s ease
+        forwards;
+    }
+
+    .page-transition.about.active
+    .piece-d{
+      animation:
+        pieceD
+        .42s ease
+        forwards;
+    }
+
+    @keyframes pieceA{
+      from{
+        opacity:0;
+
+        transform:
+          translate(-85px,-70px)
+          rotate(-10deg);
+      }
+
+      to{
+        opacity:1;
+        transform:none;
+      }
+    }
+
+    @keyframes pieceB{
+      from{
+        opacity:0;
+
+        transform:
+          translate(85px,-70px)
+          rotate(10deg);
+      }
+
+      to{
+        opacity:1;
+        transform:none;
+      }
+    }
+
+    @keyframes pieceC{
+      from{
+        opacity:0;
+
+        transform:
+          translate(-85px,70px)
+          rotate(8deg);
+      }
+
+      to{
+        opacity:1;
+        transform:none;
+      }
+    }
+
+    @keyframes pieceD{
+      from{
+        opacity:0;
+
+        transform:
+          translate(85px,70px)
+          rotate(-8deg);
+      }
+
+      to{
+        opacity:1;
+        transform:none;
+      }
+    }
+
+    /* QUOTE */
+
+    .transition-glass{
+      position:absolute;
+      inset:0;
+    }
+
+    .page-transition.quote.active
+    .transition-glass{
+      opacity:1;
+    }
+
+    .glass-piece{
+      position:absolute;
+
+      inset:-2%;
+
+      background:
+        rgba(255,255,255,.07);
+
+      box-shadow:
+        inset 0 0 0 1px
+        rgba(255,255,255,.3);
+    }
+
+    .glass-one{
+      clip-path:
+        polygon(
+          0 0,
+          52% 0,
+          50% 50%,
+          0 62%
+        );
+    }
+
+    .glass-two{
+      clip-path:
+        polygon(
+          52% 0,
+          100% 0,
+          100% 62%,
+          50% 50%
+        );
+    }
+
+    .glass-three{
+      clip-path:
+        polygon(
+          0 62%,
+          50% 50%,
+          52% 100%,
+          0 100%
+        );
+    }
+
+    .glass-four{
+      clip-path:
+        polygon(
+          50% 50%,
+          100% 62%,
+          100% 100%,
+          52% 100%
+        );
+    }
+
+    .page-transition.quote.active
+    .glass-one{
+      animation:
+        glassOne
+        .44s ease
+        forwards;
+    }
+
+    .page-transition.quote.active
+    .glass-two{
+      animation:
+        glassTwo
+        .44s ease
+        forwards;
+    }
+
+    .page-transition.quote.active
+    .glass-three{
+      animation:
+        glassThree
+        .44s ease
+        forwards;
+    }
+
+    .page-transition.quote.active
+    .glass-four{
+      animation:
+        glassFour
+        .44s ease
+        forwards;
+    }
+
+    @keyframes glassOne{
+      to{
+        opacity:.14;
+
+        transform:
+          translate(-25vw,-22vh)
+          rotate(-8deg);
+      }
+    }
+
+    @keyframes glassTwo{
+      to{
+        opacity:.14;
+
+        transform:
+          translate(25vw,-22vh)
+          rotate(8deg);
+      }
+    }
+
+    @keyframes glassThree{
+      to{
+        opacity:.14;
+
+        transform:
+          translate(-25vw,23vh)
+          rotate(8deg);
+      }
+    }
+
+    @keyframes glassFour{
+      to{
+        opacity:.14;
+
+        transform:
+          translate(25vw,23vh)
+          rotate(-8deg);
+      }
     }
 
     /* ========================================
        RESPONSIVE
     ======================================== */
 
-    @media (max-width: 980px) {
+    @media(max-width:980px){
 
-      .services-grid {
-        grid-template-columns:
-          1fr;
+      .services-grid{
+        grid-template-columns:1fr;
       }
 
-      .package-grid {
-        grid-template-columns:
-          1fr;
+      .package-grid{
+        grid-template-columns:1fr;
       }
 
-      .principles-grid {
+      .principles-grid{
         grid-template-columns:
           1fr 1fr;
       }
 
-      .maintenance-box {
-        grid-template-columns:
-          1fr;
+      .maintenance-box{
+        grid-template-columns:1fr;
       }
 
-      .footer-grid {
+      .footer-grid{
         grid-template-columns:
           1fr 1fr;
       }
 
     }
 
-    @media (max-width: 820px) {
+    @media(max-width:820px){
 
-      .desktop-nav {
-        display: none;
+      .desktop-nav{
+        display:none;
       }
 
-      .menu-button {
-        display: grid;
+      .menu-button{
+        display:grid;
       }
 
     }
 
-    @media (max-width: 680px) {
+    @media(max-width:680px){
 
-      .container {
+      .container{
         width:
           calc(100% - 24px);
       }
 
-      .nav-wrap {
-        min-height: 70px;
+      .orb{
+        animation:none;
+
+        filter:
+          blur(70px);
       }
 
-      .brand-mark {
-        width: 40px;
-        height: 40px;
+      .nav-wrap{
+        min-height:70px;
       }
 
-      .brand-main {
-        font-size: 12px;
+      .brand-mark{
+        width:40px;
+        height:40px;
       }
 
-      .brand-sub {
-        font-size: 7px;
+      .brand-main{
+        font-size:12px;
       }
 
-      .hero {
-        min-height: auto;
+      .brand-sub{
+        font-size:7px;
+      }
+
+      .hero{
+        min-height:auto;
 
         padding:
           120px 0
           80px;
       }
 
-      .hero::before {
-        font-size:
-          120px;
+      .hero::before{
+        font-size:120px;
 
-        letter-spacing:
-          -8px;
+        letter-spacing:-8px;
       }
 
-      h1 {
+      h1{
         font-size:
           clamp(
             51px,
@@ -1725,101 +2256,96 @@
             70px
           );
 
-        letter-spacing:
-          -3px;
+        letter-spacing:-3px;
       }
 
-      .hero-actions {
-        flex-direction: column;
+      .hero-actions{
+        flex-direction:column;
       }
 
-      .hero-actions .button {
-        width: 100%;
+      .hero-actions .button{
+        width:100%;
       }
 
-      .hero-trust {
-        grid-template-columns:
-          1fr;
+      .hero-trust{
+        grid-template-columns:1fr;
       }
 
-      .trust-item {
-        border-right: 0;
+      .trust-item{
+        border-right:0;
 
         border-bottom:
           1px solid
           rgba(255,255,255,.065);
       }
 
-      .trust-item:last-child {
-        border-bottom: 0;
+      .trust-item:last-child{
+        border-bottom:0;
       }
 
-      .section {
+      .section{
         padding:
           80px 0;
       }
 
-      .service-card {
-        min-height: 400px;
+      .service-card{
+        min-height:400px;
 
-        padding:
-          24px;
+        padding:24px;
       }
 
-      .service-card-bottom {
-        left: 24px;
-        right: 24px;
+      .service-card-bottom{
+        left:24px;
+        right:24px;
       }
 
-      .packages-wrap {
+      .packages-wrap{
         padding:
           35px 20px;
       }
 
-      .principles-grid {
-        grid-template-columns:
-          1fr;
+      .principles-grid{
+        grid-template-columns:1fr;
       }
 
-      .maintenance-box {
+      .maintenance-box{
         padding:
           38px 23px;
       }
 
-      .cta-box {
+      .cta-box{
         padding:
           55px 22px;
       }
 
-      .cta-actions {
-        flex-direction: column;
+      .cta-actions{
+        flex-direction:column;
       }
 
-      .cta-actions .button {
-        width: 100%;
+      .cta-actions .button{
+        width:100%;
       }
 
-      .footer-grid {
-        grid-template-columns:
-          1fr;
+      .footer-grid{
+        grid-template-columns:1fr;
 
-        gap: 26px;
+        gap:26px;
       }
 
-      .footer-bottom {
-        flex-direction: column;
+      .footer-bottom{
+        flex-direction:column;
       }
 
     }
 
-    @media (
+    @media(
       prefers-reduced-motion:
       reduce
-    ) {
+    ){
 
       *,
       *::before,
-      *::after {
+      *::after{
         animation-duration:
           .01ms !important;
 
@@ -1833,18 +2359,79 @@
           auto !important;
       }
 
-      .reveal {
-        opacity: 1;
-
-        transform: none;
+      .reveal{
+        opacity:1;
+        transform:none;
       }
 
     }
 
   </style>
+
 </head>
 
 <body>
+
+  <!-- FAST PAGE TRANSITIONS -->
+
+  <div
+    class="page-transition"
+    id="pageTransition"
+    aria-hidden="true"
+  >
+
+    <div class="home-rise"></div>
+
+    <div class="transition-burn"></div>
+
+    <div class="transition-scan"></div>
+
+    <div class="transition-flash"></div>
+
+    <div class="transition-logo">
+
+      <div class="logo-piece piece-a">
+        <img
+          src="397D40D2-EA52-4B47-99D8-90CD02AD19E1.png"
+          alt=""
+        >
+      </div>
+
+      <div class="logo-piece piece-b">
+        <img
+          src="397D40D2-EA52-4B47-99D8-90CD02AD19E1.png"
+          alt=""
+        >
+      </div>
+
+      <div class="logo-piece piece-c">
+        <img
+          src="397D40D2-EA52-4B47-99D8-90CD02AD19E1.png"
+          alt=""
+        >
+      </div>
+
+      <div class="logo-piece piece-d">
+        <img
+          src="397D40D2-EA52-4B47-99D8-90CD02AD19E1.png"
+          alt=""
+        >
+      </div>
+
+    </div>
+
+    <div class="transition-glass">
+
+      <div class="glass-piece glass-one"></div>
+      <div class="glass-piece glass-two"></div>
+      <div class="glass-piece glass-three"></div>
+      <div class="glass-piece glass-four"></div>
+
+    </div>
+
+  </div>
+
+  <!-- AMBIENT -->
 
   <div
     class="ambient"
@@ -1867,7 +2454,7 @@
 
         <a
           href="index.html"
-          class="brand"
+          class="brand home-link"
           aria-label="Sursum Digital home"
         >
 
@@ -1906,25 +2493,37 @@
             Services
           </a>
 
-          <a href="portfolio.html">
+          <a
+            href="portfolio.html"
+            class="portfolio-link"
+          >
             Portfolio
           </a>
 
-          <a href="maintenance.html">
+          <a
+            href="maintenance.html"
+            class="maintenance-link"
+          >
             Maintenance
           </a>
 
-          <a href="about.html">
+          <a
+            href="about.html"
+            class="about-link"
+          >
             About
           </a>
 
-          <a href="contact.html">
+          <a
+            href="contact.html"
+            class="contact-link"
+          >
             Contact
           </a>
 
           <a
             href="quote.html"
-            class="nav-cta"
+            class="nav-cta quote-link"
           >
             Start a Project
           </a>
@@ -1940,11 +2539,9 @@
         >
 
           <span class="menu-lines">
-
             <span></span>
             <span></span>
             <span></span>
-
           </span>
 
         </button>
@@ -1957,7 +2554,10 @@
         aria-label="Mobile navigation"
       >
 
-        <a href="index.html">
+        <a
+          href="index.html"
+          class="home-link"
+        >
           Home
         </a>
 
@@ -1965,23 +2565,38 @@
           Services
         </a>
 
-        <a href="portfolio.html">
+        <a
+          href="portfolio.html"
+          class="portfolio-link"
+        >
           Portfolio
         </a>
 
-        <a href="maintenance.html">
+        <a
+          href="maintenance.html"
+          class="maintenance-link"
+        >
           Maintenance
         </a>
 
-        <a href="about.html">
+        <a
+          href="about.html"
+          class="about-link"
+        >
           About
         </a>
 
-        <a href="contact.html">
+        <a
+          href="contact.html"
+          class="contact-link"
+        >
           Contact
         </a>
 
-        <a href="quote.html">
+        <a
+          href="quote.html"
+          class="quote-link"
+        >
           Start a Project →
         </a>
 
@@ -2020,14 +2635,14 @@
           <p class="hero-copy">
 
             Sursum Digital builds custom websites
-            around the business they represent.
+            around the businesses they represent.
 
-            From the first layout
-            to domain setup,
-            customer contact paths,
+            From design
+            to customer contact paths,
+            domain setup,
             Google visibility,
-            and post-launch support,
-            each part is built to serve a purpose.
+            and continued support,
+            every part should serve a purpose.
 
           </p>
 
@@ -2035,7 +2650,7 @@
 
             <a
               href="quote.html"
-              class="button button-primary"
+              class="button button-primary quote-link"
             >
               Start Your Project →
             </a>
@@ -2044,7 +2659,7 @@
               href="#services"
               class="button button-secondary"
             >
-              Explore Services
+              Explore Services ↓
             </a>
 
           </div>
@@ -2058,7 +2673,7 @@
               </strong>
 
               <span>
-                Designed around the business
+                No recycled templates
               </span>
 
             </div>
@@ -2070,7 +2685,7 @@
               </strong>
 
               <span>
-                Built for every screen
+                Built around modern customers
               </span>
 
             </div>
@@ -2082,7 +2697,7 @@
               </strong>
 
               <span>
-                From design through deployment
+                From design to deployment
               </span>
 
             </div>
@@ -2107,25 +2722,21 @@
         <div class="section-head reveal">
 
           <div class="section-kicker">
-            What We Do
+            What Sursum Does
           </div>
 
           <h2 class="section-title">
-            Everything needed to build a stronger presence online.
+            Built around what the business actually needs.
           </h2>
 
           <p class="section-copy">
 
-            A website is usually only one part
-            of the job.
+            A website can solve more than one problem.
 
-            The structure,
-            messaging,
-            contact path,
-            launch,
-            domain,
-            and ongoing updates
-            all affect how useful that website becomes.
+            The right build can improve credibility,
+            make services easier to understand,
+            create better customer contact paths,
+            and give the business room to grow.
 
           </p>
 
@@ -2135,12 +2746,10 @@
 
           <!-- 01 -->
 
-          <article
-            class="service-card reveal"
-          >
+          <article class="service-card reveal">
 
             <div class="service-number">
-              01 / CUSTOM DESIGN
+              01 / DESIGN
             </div>
 
             <h3>
@@ -2149,30 +2758,31 @@
 
             <p>
 
-              Original layouts,
-              visual direction,
-              content hierarchy,
-              and responsive design
-              built specifically around your business.
+              A custom visual direction
+              built around your business,
+              customers,
+              services,
+              brand,
+              and goals.
 
             </p>
 
             <div class="service-list">
 
               <div>
-                Custom visual direction
+                Custom page layouts
               </div>
 
               <div>
-                Mobile responsive layouts
+                Brand-driven visual direction
               </div>
 
               <div>
-                Service and content structure
+                Mobile responsive design
               </div>
 
               <div>
-                Calls to action and conversion paths
+                Clear customer journey
               </div>
 
             </div>
@@ -2183,7 +2793,10 @@
                 Core Service
               </span>
 
-              <a href="quote.html">
+              <a
+                href="quote.html"
+                class="quote-link"
+              >
                 Start a Build →
               </a>
 
@@ -2193,9 +2806,7 @@
 
           <!-- 02 -->
 
-          <article
-            class="service-card reveal"
-          >
+          <article class="service-card reveal">
 
             <div class="service-number">
               02 / REDESIGN
@@ -2207,23 +2818,24 @@
 
             <p>
 
-              Existing websites can be rebuilt
-              when the design,
-              structure,
-              messaging,
-              or mobile experience
-              no longer represents the business well.
+              Keep what still works
+              and rebuild what doesn't.
+
+              Give an outdated,
+              cluttered,
+              or weak site
+              a clearer direction.
 
             </p>
 
             <div class="service-list">
 
               <div>
-                Modernized visual design
+                Modern visual redesign
               </div>
 
               <div>
-                Clearer content hierarchy
+                Better content hierarchy
               </div>
 
               <div>
@@ -2231,7 +2843,7 @@
               </div>
 
               <div>
-                Stronger customer journey
+                Stronger conversion paths
               </div>
 
             </div>
@@ -2239,10 +2851,13 @@
             <div class="service-card-bottom">
 
               <span>
-                Scope Based
+                Existing Websites
               </span>
 
-              <a href="quote.html">
+              <a
+                href="quote.html"
+                class="quote-link"
+              >
                 Start a Redesign →
               </a>
 
@@ -2252,9 +2867,7 @@
 
           <!-- 03 -->
 
-          <article
-            class="service-card reveal"
-          >
+          <article class="service-card reveal">
 
             <div class="service-number">
               03 / CONVERSION
@@ -2266,11 +2879,11 @@
 
             <p>
 
-              Give customers a clear way
-              to request estimates,
-              ask questions,
-              check availability,
-              or start working with your business.
+              Make it easier
+              for customers
+              to take the next step
+              instead of forcing them
+              to hunt for contact information.
 
             </p>
 
@@ -2281,7 +2894,7 @@
               </div>
 
               <div>
-                Contact forms
+                Contact systems
               </div>
 
               <div>
@@ -2289,7 +2902,7 @@
               </div>
 
               <div>
-                Custom intake flows
+                Project intake flows
               </div>
 
             </div>
@@ -2297,10 +2910,13 @@
             <div class="service-card-bottom">
 
               <span>
-                Conversion Focused
+                Customer Flow
               </span>
 
-              <a href="quote.html">
+              <a
+                href="quote.html"
+                class="quote-link"
+              >
                 Build the Flow →
               </a>
 
@@ -2310,12 +2926,10 @@
 
           <!-- 04 -->
 
-          <article
-            class="service-card reveal"
-          >
+          <article class="service-card reveal">
 
             <div class="service-number">
-              04 / GOOGLE
+              04 / LOCAL
             </div>
 
             <h3>
@@ -2324,9 +2938,10 @@
 
             <p>
 
-              Help connecting your website
-              to a stronger local presence
-              so customers can find accurate information
+              Help connect the website
+              to a stronger local online presence
+              so customers can find
+              accurate information
               and reach the right destination.
 
             </p>
@@ -2334,19 +2949,19 @@
             <div class="service-list">
 
               <div>
-                Website link setup
+                Google Business guidance
               </div>
 
               <div>
-                Business information guidance
+                Website connection
               </div>
 
               <div>
-                Local presence consistency
+                Business information consistency
               </div>
 
               <div>
-                Launch coordination
+                Local visibility foundations
               </div>
 
             </div>
@@ -2354,11 +2969,14 @@
             <div class="service-card-bottom">
 
               <span>
-                Local Support
+                Local Presence
               </span>
 
-              <a href="contact.html">
-                Ask About Setup →
+              <a
+                href="contact.html"
+                class="contact-link"
+              >
+                Ask About Google →
               </a>
 
             </div>
@@ -2367,12 +2985,10 @@
 
           <!-- 05 -->
 
-          <article
-            class="service-card reveal"
-          >
+          <article class="service-card reveal">
 
             <div class="service-number">
-              05 / DOMAIN
+              05 / LAUNCH
             </div>
 
             <h3>
@@ -2381,13 +2997,12 @@
 
             <p>
 
-              A finished site still needs
-              somewhere professional to live.
+              A finished website still needs
+              a proper home.
 
-              Sursum can help connect
-              the domain,
-              hosting,
-              and final launch details.
+              Sursum can help connect the domain,
+              configure the live site,
+              and check the final launch.
 
             </p>
 
@@ -2417,7 +3032,10 @@
                 Launch Support
               </span>
 
-              <a href="contact.html">
+              <a
+                href="contact.html"
+                class="contact-link"
+              >
                 Plan the Launch →
               </a>
 
@@ -2427,9 +3045,7 @@
 
           <!-- 06 -->
 
-          <article
-            class="service-card reveal"
-          >
+          <article class="service-card reveal">
 
             <div class="service-number">
               06 / SUPPORT
@@ -2441,15 +3057,15 @@
 
             <p>
 
-              Websites change with the business.
+              Websites change
+              with the business.
 
               Keep services,
               pricing,
               photos,
               content,
               and new ideas
-              from getting permanently frozen
-              at launch day.
+              from being frozen at launch.
 
             </p>
 
@@ -2479,7 +3095,10 @@
                 Post Launch
               </span>
 
-              <a href="maintenance.html">
+              <a
+                href="maintenance.html"
+                class="maintenance-link"
+              >
                 View Maintenance →
               </a>
 
@@ -2518,11 +3137,13 @@
             content,
             functionality,
             integrations,
-            and the needs of the business.
+            and what the business needs.
 
           </p>
 
           <div class="package-grid">
+
+            <!-- LAUNCH -->
 
             <article class="package">
 
@@ -2546,9 +3167,10 @@
 
               <p>
 
-                A focused custom site
-                for businesses that need
-                a professional presence online.
+                A focused custom website
+                for businesses
+                that need a professional
+                presence online.
 
               </p>
 
@@ -2577,13 +3199,15 @@
               </div>
 
               <a
-                href="quote.html"
-                class="package-button"
+                href="quote.html?package=launch"
+                class="package-button quote-link"
               >
-                Start With Launch
+                Start With Launch →
               </a>
 
             </article>
+
+            <!-- GROWTH -->
 
             <article class="package featured">
 
@@ -2643,13 +3267,15 @@
               </div>
 
               <a
-                href="quote.html"
-                class="package-button"
+                href="quote.html?package=growth"
+                class="package-button quote-link"
               >
                 Start With Growth →
               </a>
 
             </article>
+
+            <!-- ASCEND -->
 
             <article class="package">
 
@@ -2705,10 +3331,10 @@
               </div>
 
               <a
-                href="quote.html"
-                class="package-button"
+                href="quote.html?package=ascend"
+                class="package-button quote-link"
               >
-                Start With Ascend
+                Start With Ascend →
               </a>
 
             </article>
@@ -2741,7 +3367,7 @@
 
             Visual polish matters,
             but it only works
-            when the site also communicates clearly
+            when the site communicates clearly
             and helps customers move forward.
 
           </p>
@@ -2844,8 +3470,8 @@
 
             <p>
 
-              Launch does not have to be the end
-              of the relationship.
+              Launch does not have to be
+              the end of the relationship.
 
               Sursum can continue helping
               as services change,
@@ -2855,15 +3481,11 @@
 
             </p>
 
-            <div
-              style="
-                margin-top:25px;
-              "
-            >
+            <div style="margin-top:25px;">
 
               <a
                 href="maintenance.html"
-                class="button button-secondary"
+                class="button button-secondary maintenance-link"
               >
                 Explore Maintenance →
               </a>
@@ -2933,14 +3555,14 @@
 
             <a
               href="quote.html"
-              class="button button-primary"
+              class="button button-primary quote-link"
             >
               Start Your Project →
             </a>
 
             <a
               href="portfolio.html"
-              class="button button-secondary"
+              class="button button-secondary portfolio-link"
             >
               See Our Work
             </a>
@@ -2967,7 +3589,7 @@
 
           <a
             href="index.html"
-            class="brand"
+            class="brand home-link"
           >
 
             <div class="brand-mark">
@@ -3012,19 +3634,21 @@
             Explore
           </strong>
 
-          <a href="index.html">
-            Home
-          </a>
-
           <a href="services.html">
             Services
           </a>
 
-          <a href="portfolio.html">
+          <a
+            href="portfolio.html"
+            class="portfolio-link"
+          >
             Portfolio
           </a>
 
-          <a href="about.html">
+          <a
+            href="about.html"
+            class="about-link"
+          >
             About
           </a>
 
@@ -3036,15 +3660,24 @@
             Support
           </strong>
 
-          <a href="maintenance.html">
+          <a
+            href="maintenance.html"
+            class="maintenance-link"
+          >
             Maintenance
           </a>
 
-          <a href="contact.html">
+          <a
+            href="contact.html"
+            class="contact-link"
+          >
             Contact
           </a>
 
-          <a href="quote.html">
+          <a
+            href="quote.html"
+            class="quote-link"
+          >
             Start a Project
           </a>
 
@@ -3053,7 +3686,7 @@
         <div class="footer-column">
 
           <strong>
-            Contact
+            Sursum
           </strong>
 
           <a
@@ -3097,6 +3730,15 @@
 
   <script>
 
+    const reduceMotion =
+      window.matchMedia(
+        "(prefers-reduced-motion: reduce)"
+      ).matches;
+
+    /* ========================================
+       MOBILE MENU
+    ======================================== */
+
     const menuButton =
       document.getElementById(
         "menuButton"
@@ -3117,6 +3759,13 @@
             .toggle(
               "open"
             );
+
+        menuButton
+          .classList
+          .toggle(
+            "open",
+            open
+          );
 
         menuButton.setAttribute(
           "aria-expanded",
@@ -3145,6 +3794,12 @@
                   "open"
                 );
 
+              menuButton
+                .classList
+                .remove(
+                  "open"
+                );
+
               menuButton.setAttribute(
                 "aria-expanded",
                 "false"
@@ -3165,10 +3820,10 @@
         ".reveal"
       );
 
-    if (
+    if(
       "IntersectionObserver"
       in window
-    ) {
+    ){
 
       const observer =
         new IntersectionObserver(
@@ -3181,9 +3836,9 @@
             entries.forEach(
               entry => {
 
-                if (
+                if(
                   entry.isIntersecting
-                ) {
+                ){
 
                   entry.target
                     .classList
@@ -3191,9 +3846,10 @@
                       "visible"
                     );
 
-                  revealObserver.unobserve(
-                    entry.target
-                  );
+                  revealObserver
+                    .unobserve(
+                      entry.target
+                    );
 
                 }
 
@@ -3203,7 +3859,7 @@
           },
 
           {
-            threshold: .1,
+            threshold:.1,
 
             rootMargin:
               "0px 0px -40px 0px"
@@ -3221,14 +3877,16 @@
         }
       );
 
-    } else {
+    }else{
 
       reveals.forEach(
         element => {
 
-          element.classList.add(
-            "visible"
-          );
+          element
+            .classList
+            .add(
+              "visible"
+            );
 
         }
       );
@@ -3236,14 +3894,18 @@
     }
 
     /* ========================================
-       POINTER LIGHTING
+       LIGHTWEIGHT POINTER LIGHTING
     ======================================== */
 
-    if (
+    const finePointer =
       window.matchMedia(
         "(pointer: fine)"
-      ).matches
-    ) {
+      ).matches;
+
+    if(
+      finePointer &&
+      !reduceMotion
+    ){
 
       document
         .querySelectorAll(
@@ -3252,14 +3914,41 @@
         .forEach(
           card => {
 
+            let ticking =
+              false;
+
+            let x =
+              80;
+
+            let y =
+              10;
+
+            function updateLight(){
+
+              card.style.setProperty(
+                "--x",
+                x + "%"
+              );
+
+              card.style.setProperty(
+                "--y",
+                y + "%"
+              );
+
+              ticking =
+                false;
+
+            }
+
             card.addEventListener(
               "mousemove",
               event => {
 
                 const rect =
-                  card.getBoundingClientRect();
+                  card
+                    .getBoundingClientRect();
 
-                const x =
+                x =
                   (
                     (
                       event.clientX -
@@ -3269,7 +3958,7 @@
                   ) *
                   100;
 
-                const y =
+                y =
                   (
                     (
                       event.clientY -
@@ -3279,15 +3968,18 @@
                   ) *
                   100;
 
-                card.style.setProperty(
-                  "--x",
-                  x + "%"
-                );
+                if(
+                  !ticking
+                ){
 
-                card.style.setProperty(
-                  "--y",
-                  y + "%"
-                );
+                  requestAnimationFrame(
+                    updateLight
+                  );
+
+                  ticking =
+                    true;
+
+                }
 
               }
             );
@@ -3296,14 +3988,103 @@
               "mouseleave",
               () => {
 
-                card.style.setProperty(
-                  "--x",
-                  "80%"
-                );
+                x=80;
+                y=10;
 
-                card.style.setProperty(
-                  "--y",
-                  "10%"
+                updateLight();
+
+              }
+            );
+
+          }
+        );
+
+    }
+
+    /* ========================================
+       FAST PAGE TRANSITIONS
+    ======================================== */
+
+    const pageTransition =
+      document.getElementById(
+        "pageTransition"
+      );
+
+    let navigating=
+      false;
+
+    function runTransition(
+      link,
+      effect,
+      event
+    ){
+
+      const destination =
+        link.getAttribute(
+          "href"
+        );
+
+      if(
+        !destination ||
+        destination.startsWith("#") ||
+        link.target === "_blank" ||
+        reduceMotion ||
+        event.metaKey ||
+        event.ctrlKey ||
+        event.shiftKey ||
+        event.altKey
+      ){
+        return;
+      }
+
+      event.preventDefault();
+
+      if(
+        navigating
+      ){
+        return;
+      }
+
+      navigating=
+        true;
+
+      pageTransition.className =
+        "page-transition " +
+        effect +
+        " active";
+
+      window.setTimeout(
+        () => {
+
+          window.location.href =
+            destination;
+
+        },
+        460
+      );
+
+    }
+
+    function connectTransition(
+      selector,
+      effect
+    ){
+
+      document
+        .querySelectorAll(
+          selector
+        )
+        .forEach(
+          link => {
+
+            link.addEventListener(
+              "click",
+              event => {
+
+                runTransition(
+                  link,
+                  effect,
+                  event
                 );
 
               }
@@ -3314,7 +4095,51 @@
 
     }
 
+    connectTransition(
+      ".home-link",
+      "home"
+    );
+
+    connectTransition(
+      ".portfolio-link",
+      "portfolio"
+    );
+
+    connectTransition(
+      ".maintenance-link",
+      "maintenance"
+    );
+
+    connectTransition(
+      ".about-link",
+      "about"
+    );
+
+    connectTransition(
+      ".contact-link",
+      "contact"
+    );
+
+    connectTransition(
+      ".quote-link",
+      "quote"
+    );
+
+    window.addEventListener(
+      "pageshow",
+      () => {
+
+        navigating=
+          false;
+
+        pageTransition.className =
+          "page-transition";
+
+      }
+    );
+
   </script>
 
 </body>
+
 </html>
